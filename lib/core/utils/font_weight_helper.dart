@@ -2,4 +2,5 @@ import 'package:flutter/material.dart';
 
 class FontWeightHelper {
   static const FontWeight semiBold = FontWeight.w600;
+  static const FontWeight medium = FontWeight.w500;
 }

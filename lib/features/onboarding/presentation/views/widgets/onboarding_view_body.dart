@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ix/core/utils/app_colors.dart';
 import 'package:ix/core/utils/font_styles.dart';
 import 'package:ix/core/widgets/custom_button.dart';
+import 'package:ix/features/auth/presentation/views/login_view.dart';
 import 'package:ix/features/onboarding/presentation/views/widgets/custom_carousel_slider.dart';
 
 import '../../../../../core/utils/assets_data.dart';
@@ -38,7 +39,9 @@ class OnboardingViewBody extends StatelessWidget {
             SizedBox(height: 16.h),
             CustomButton(
               textStyle: TextStyles.font14SemiBoldOrange,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginView(),));
+              },
               text: 'Guest Login',
               color: AppColors.lightOrangeColor,
               colorSide: AppColors.lightOrangeColor,

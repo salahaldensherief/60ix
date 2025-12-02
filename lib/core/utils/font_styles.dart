@@ -18,4 +18,10 @@ class TextStyles{
     color: AppColors.primaryColor,
   );
 
+  static TextStyle font14MediumGray = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.gray300Color,
+  );
+
 }
