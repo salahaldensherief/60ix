@@ -8,11 +8,11 @@ import 'package:ix/core/widgets/custom_text_field.dart';
 import 'package:ix/core/widgets/dont_have_an_account_widget.dart';
 import 'package:ix/core/widgets/or_divider.dart';
 import 'package:ix/core/widgets/passwoed_field.dart';
-import 'package:ix/features/auth/presentation/views/widgets/forget_password_widget.dart';
-import 'package:ix/features/auth/presentation/views/widgets/phone_number_widget.dart';
+import 'package:ix/features/auth/presentation/login/views/widgets/forget_password_widget.dart';
 
-import '../../../../../core/utils/font_styles.dart';
-import '../../../../../core/widgets/social_login_botton.dart';
+import '../../../../../../core/utils/font_styles.dart';
+import '../../../../../../core/widgets/social_login_botton.dart';
+import '../../../widgets/phone_number_widget.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -33,12 +33,12 @@ class LoginViewBody extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               PhoneNumberWidget(),
-              SizedBox(height: 20.h),
-              PasswordField(),
+              SizedBox(height: 12.h),
+              PasswordField(hintText: 'Password'),
               SizedBox(height: 12.h),
               ForgetPasswordWidget(),
               SizedBox(height: 20.h),
-          
+
               CustomButton(
                 onPressed: () {},
                 text: 'Sign in',
@@ -48,7 +48,7 @@ class LoginViewBody extends StatelessWidget {
                 textStyle: TextStyles.font14SemiBold,
               ),
               SizedBox(height: 16.h),
-          
+
               CustomButton(
                 onPressed: () {},
                 text: 'Guest Login',
@@ -58,13 +58,12 @@ class LoginViewBody extends StatelessWidget {
                 textStyle: TextStyles.font14SemiBoldOrange,
               ),
               SizedBox(height: 32.h),
-          
+
               OrDivider(),
               SizedBox(height: 32.h),
-              SocialLoginBotton( ),
+              SocialLoginBotton(),
               SizedBox(height: 32.h),
-              DontHaveAnAccountWidget()
-          
+              DontHaveAnAccountWidget(),
             ],
           ),
         ),

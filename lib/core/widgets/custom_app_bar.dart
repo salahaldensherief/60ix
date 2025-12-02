@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:ix/core/utils/assets_data.dart';
 import '../utils/font_styles.dart';
 
 class CustomAppBar extends StatelessWidget{
@@ -27,10 +29,25 @@ class CustomAppBar extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-              title,
-              style: TextStyles.font20SemiBoldBlue
-            ),
+          Row(
+            children: [
+              if(showBack)
+                GestureDetector(
+                  onTap: onBack ?? () {
+                    Navigator.of(context).pop();
+                  },
+                  child:  SvgPicture.asset(AssetsData.backIcon),
+                ),
+
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: showBack == true ? 12.w : 0),
+                child: Text(
+                    title,
+                    style: TextStyles.font20SemiBoldBlue
+                  ),
+              ),
+            ],
+          ),
           SizedBox(height: 16.h,),
           Text(
               subtitle,

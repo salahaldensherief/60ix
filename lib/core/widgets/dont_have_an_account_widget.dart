@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/auth/presentation/views/signup_view.dart';
+import '../../features/auth/presentation/signup/views/signup_view.dart';
 import '../utils/app_colors.dart';
 import '../utils/font_styles.dart';
 
@@ -25,7 +26,7 @@ class DontHaveAnAccountWidget extends StatelessWidget {
             ),
             TextSpan(
               recognizer: TapGestureRecognizer()..onTap= (){
-                // Navigator.pushNamed(context, SignupView.routeName);
+                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => SignupView(),));
               },
               text: 'SignUp',style: TextStyles.font14BoldOrange,),
           ],
