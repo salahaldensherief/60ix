@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
-import '../utils/app_colors.dart';
-import '../utils/assets_data.dart';
 import '../utils/font_styles.dart';
 
 class CustomAppBar extends StatelessWidget{
@@ -27,23 +23,20 @@ class CustomAppBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 20,top: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-                title,
-                style: TextStyles.font20SemiBold
-              ),
-            SizedBox(height: 16.h,),
-            Text(
-                subtitle,
-                style: TextStyles.font14MediumGray
-              ),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+              title,
+              style: TextStyles.font20SemiBoldBlue
+            ),
+          SizedBox(height: 16.h,),
+          Text(
+              subtitle,
+              style: TextStyles.font14MediumGray
+            ),
+        ],
       ),
     );
   }

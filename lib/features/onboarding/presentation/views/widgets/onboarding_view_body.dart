@@ -24,7 +24,7 @@ class OnboardingViewBody extends StatelessWidget {
             Expanded(child: CustomCarouselSlider()),
             Text(
               'Care services, quality products,\n and a loving community all in one\n app',
-              style: TextStyles.font20SemiBold,
+              style: TextStyles.font20SemiBoldBlue,
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 40.h),
