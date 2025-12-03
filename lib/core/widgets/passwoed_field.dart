@@ -31,10 +31,6 @@ class _PasswordFieldState extends State<PasswordField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Password', style:
-        TextStyles.font14MediumGray
-        ),
-        SizedBox(height: 10.h),
 
         CustomTextFormField(
 

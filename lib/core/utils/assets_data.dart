@@ -6,4 +6,5 @@ static const eye = 'assets/images/eye-svgrepo-com.svg';
 static const googleLogo = 'assets/images/google.svg';
 static const facebookLogo = 'assets/images/facebook.svg';
 static const appleLogo = 'assets/images/apple.svg';
+static const backIcon = 'assets/images/Back Icon.svg';
 }

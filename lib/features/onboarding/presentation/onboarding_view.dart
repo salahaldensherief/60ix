@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ix/core/utils/app_colors.dart';
 import 'package:ix/core/utils/font_styles.dart';
 import 'package:ix/core/widgets/custom_button.dart';
+import 'package:ix/features/auth/presentation/login/views/login_view.dart';
+import 'package:ix/features/onboarding/presentation/views/widgets/custom_carousel_slider.dart';
 import 'package:ix/features/auth/presentation/views/login_view.dart';
 import 'package:ix/features/onboarding/presentation/widgets/custom_carousel_slider.dart';
 
