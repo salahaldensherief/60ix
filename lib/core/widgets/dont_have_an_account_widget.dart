@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/auth/presentation/views/signup_view.dart';
 import '../utils/app_colors.dart';
 import '../utils/font_styles.dart';
 

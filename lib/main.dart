@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/core/utils/app_colors.dart';
-import 'package:ix/features/splash/presntation/views/splash_view.dart';
+import 'package:ix/features/splash/presntation/splash_view.dart';
 
 void main() {
   runApp(const MyApp());
