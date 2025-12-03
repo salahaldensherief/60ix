@@ -18,6 +18,15 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: AppColors.whiteColor,
   );
+  static TextStyle font14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.semiBold,
+  ); static TextStyle font12Small = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.small,
+
+
+  );
   static TextStyle font14SemiBoldOrange = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.semiBold,

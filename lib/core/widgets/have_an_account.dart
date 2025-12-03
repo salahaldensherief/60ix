@@ -11,25 +11,28 @@ class HaveAnAccountWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-        children: [
-          TextSpan(
-            text: 'Already Have Account?  ',
-            style: TextStyle(color: Colors.black),
-          ),
+    return Center(
+      child: Text.rich(
+        TextSpan(
 
-          TextSpan(
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                // Navigator.pushNamed(context, LoginView.routeName);
-              },
-            text: 'Login',
-            style: TextStyles.font14MediumGray.copyWith(color: AppColors.primaryColor),
-          ),
-        ],
+          children: [
+            TextSpan(
+              text: 'Already Have Account?  ',
+              style: TextStyle(color: Colors.black),
+            ),
+
+            TextSpan(
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  // Navigator.pushNamed(context, LoginView.routeName);
+                },
+              text: 'Login',
+              style: TextStyles.font14MediumGray.copyWith(color: AppColors.primaryColor),
+            ),
+          ],
+        ),
+        textAlign: TextAlign.center,
       ),
-      textAlign: TextAlign.center,
     );
   }
 }

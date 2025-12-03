@@ -7,24 +7,29 @@ import '../utils/font_styles.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
+     this.readOnly = false,
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
     required this.textInputType,
     this.onSaved,
+    this.text,
     this.controller,
     this.obscureText = false,
-    this.validator,
+    this.validator, this.onTap,
   });
 
   final String? hintText;
+  final String? text;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final TextInputType textInputType;
   final void Function(String?)? onSaved;
   final String? Function(String?)? validator;
+  final void Function()? onTap;
   final TextEditingController? controller;
   final bool obscureText;
+ final bool  readOnly;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +44,9 @@ class CustomTextFormField extends StatelessWidget {
           ),
         ],
         TextFormField(
+
+           onTap: onTap,
+          readOnly: readOnly,
           controller: controller,
           obscureText: obscureText,
           keyboardType: textInputType,
@@ -52,6 +60,10 @@ class CustomTextFormField extends StatelessWidget {
                 return null;
               },
           decoration: InputDecoration(
+            hintText: text,
+            hintStyle: TextStyles.font12Small.copyWith(
+              color: AppColors.textColorSecondary
+            ),
             contentPadding: EdgeInsets.symmetric(
               vertical: 12.h,
               horizontal: 12.w,
@@ -80,6 +92,7 @@ class CustomTextFormField extends StatelessWidget {
               borderSide: BorderSide(color: AppColors.primaryColor),
             ),
           ),
+
         ),
       ],
     );
