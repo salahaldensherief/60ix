@@ -23,6 +23,7 @@ class OtpPinWidget extends StatelessWidget {
       ),
       pinTheme: PinTheme(
 
+
         disabledColor: AppColors.white20,
         borderRadius: BorderRadius.circular(8.r),
         shape: PinCodeFieldShape.box,
@@ -32,7 +33,7 @@ class OtpPinWidget extends StatelessWidget {
         inactiveFillColor: AppColors.white10,
         selectedFillColor: AppColors.white10,
         activeColor: AppColors.primaryColor,
-        inactiveColor: AppColors.whiteColor,
+        inactiveColor: AppColors.white20,
         selectedColor: AppColors.primaryColor,
         borderWidth: .3,
          activeBorderWidth: 1,

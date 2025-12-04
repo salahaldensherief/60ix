@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/foget_password_view.dart';
+import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/forget_password_view.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/font_styles.dart';

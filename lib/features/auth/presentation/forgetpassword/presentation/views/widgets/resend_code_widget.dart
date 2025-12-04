@@ -8,27 +8,30 @@ class ResendCodeWidget extends StatelessWidget {
   const ResendCodeWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-        children: [
-          TextSpan(
-            text: 'Don’t receive the code  ',
-            style: TextStyles.font14mediumRegular.copyWith(
-              color: AppColors.textColorSecondary
+    return Center(
+      child: Text.rich(
+        TextSpan(
+
+          children: [
+            TextSpan(
+              text: 'Don’t receive the code  ',
+              style: TextStyles.font14mediumRegular.copyWith(
+                color: AppColors.textColorSecondary
+              ),
             ),
-          ),
-          TextSpan(
-            recognizer: TapGestureRecognizer()..onTap = () async {},
-            text: 'Resend Code',
-            style: TextStyles.font14BoldOrange.copyWith(
-              fontFamily: 'mulish',
+            TextSpan(
+              recognizer: TapGestureRecognizer()..onTap = () async {},
+              text: 'Resend Code',
+              style: TextStyles.font14BoldOrange.copyWith(
+                fontFamily: 'mulish',
 
 
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
+        textAlign: TextAlign.center,
       ),
-      textAlign: TextAlign.center,
     );
   }
 }

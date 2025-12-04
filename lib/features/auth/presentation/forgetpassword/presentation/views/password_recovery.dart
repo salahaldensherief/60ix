@@ -12,21 +12,23 @@ import '../../../../../../core/utils/font_styles.dart';
 import '../../../../../../core/widgets/custom_app_bar.dart';
 
 class PasswordRecovery extends StatelessWidget {
-  const PasswordRecovery({super.key});
-
+  const PasswordRecovery({super.key,  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20).w,
         child: Column(
+
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomAppBar(
+              // phoneNumber: '01002658542',
               showBack: true,
               title: 'Password Recovery',
               subtitle: 'Please enter your email to recover your password',
             ),
-            SizedBox(height: 20.h),
+            SizedBox(height: 4.h),
             OtpPinWidget(),
             SizedBox(height: 20.h),
             CustomButton(onPressed: (){
