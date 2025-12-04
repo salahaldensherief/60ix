@@ -22,7 +22,6 @@ class TimeCountWidget extends StatelessWidget {
               const Duration(
                   seconds: 30)),
           finishedText: "00:00",
-        secondsTextLong: '00:',
           style: TextStyle(color: AppColors.textColorPrimary),
         ),
       ],
