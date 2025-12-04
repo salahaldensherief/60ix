@@ -10,16 +10,14 @@ import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/font_styles.dart';
 import '../../../../../../core/widgets/custom_app_bar.dart';
-
 class PasswordRecovery extends StatelessWidget {
-  const PasswordRecovery({super.key,  });
+  const PasswordRecovery({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20).w,
         child: Column(
-
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomAppBar(
@@ -31,9 +29,20 @@ class PasswordRecovery extends StatelessWidget {
             SizedBox(height: 4.h),
             OtpPinWidget(),
             SizedBox(height: 20.h),
-            CustomButton(onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => CreateNewPasswordView(),));
-            }, text: 'Verify', color: AppColors.primaryColor, colorSide: AppColors.primaryColor,                    textStyle: TextStyles.font16SemiBold.copyWith(color: AppColors.whiteColor),
+            CustomButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => CreateNewPasswordView(),
+                  ),
+                );
+              },
+              text: 'Verify',
+              color: AppColors.primaryColor,
+              colorSide: AppColors.primaryColor,
+              textStyle: TextStyles.font16SemiBold.copyWith(
+                color: AppColors.whiteColor,
+              ),
             ),
             SizedBox(height: 20.h),
 
@@ -41,12 +50,9 @@ class PasswordRecovery extends StatelessWidget {
 
             SizedBox(height: 10.h),
             ResendCodeWidget(),
-
           ],
         ),
       ),
     );
   }
 }
-
-
