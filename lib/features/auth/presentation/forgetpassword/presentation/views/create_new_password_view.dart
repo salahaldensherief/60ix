@@ -39,7 +39,6 @@ class CreateNewPasswordView extends StatelessWidget {
               text: 'Continue',
               color: AppColors.primaryColor,
               colorSide: AppColors.primaryColor,
-              fontColor: AppColors.primaryColor,
               textStyle: TextStyles.font14SemiBold,
             ),
           ],

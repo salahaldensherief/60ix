@@ -29,7 +29,7 @@ class SocialIconWidget extends StatelessWidget {
 
         ),
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(16),
           child: SvgPicture.asset(image),
         ),
       ),

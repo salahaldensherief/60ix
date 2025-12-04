@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ix/core/utils/app_colors.dart';
 import 'package:ix/core/utils/assets_data.dart';
 import '../utils/font_styles.dart';
 
@@ -43,16 +44,19 @@ class CustomAppBar extends StatelessWidget{
                 padding:  EdgeInsets.symmetric(horizontal: showBack == true ? 12.w : 0),
                 child: Text(
                     title,
-                    style: TextStyles.font20SemiBoldBlue
+                    style: TextStyles.font16SemiBold
                   ),
               ),
             ],
           ),
-          SizedBox(height: 16.h,),
+          SizedBox(height: 8.h,),
           Text(
               subtitle,
-              style: TextStyles.font14MediumGray
-            ),
+              style: TextStyles.font14mediumRegular.copyWith(
+    color:AppColors.textColorSecondary
+
+              )
+    ),
         ],
       ),
     );

@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/create_new_password_view.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/otp_pin_widget.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/resend_code_widget.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/time_count_widget.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/font_styles.dart';
@@ -30,9 +31,13 @@ class PasswordRecovery extends StatelessWidget {
             SizedBox(height: 20.h),
             CustomButton(onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => CreateNewPasswordView(),));
-            }, text: 'Verify', color: AppColors.primaryColor, colorSide: AppColors.primaryColor, fontColor: AppColors.primaryColor, textStyle: TextStyles.font14SemiBold),
+            }, text: 'Verify', color: AppColors.primaryColor, colorSide: AppColors.primaryColor,  textStyle: TextStyles.font14SemiBold),
             SizedBox(height: 20.h),
-            ResendCodeWidget()
+
+            TimeCountWidget(),
+
+            SizedBox(height: 10.h),
+            ResendCodeWidget(),
 
           ],
         ),
@@ -40,4 +45,5 @@ class PasswordRecovery extends StatelessWidget {
     );
   }
 }
+
 

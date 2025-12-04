@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:ix/core/utils/app_colors.dart';
 
 import '../../../../../../../core/utils/font_styles.dart';
 
@@ -11,14 +12,18 @@ class ResendCodeWidget extends StatelessWidget {
       TextSpan(
         children: [
           TextSpan(
-            text: 'Didn’t receive a code?  ',
-            style: TextStyles.font14MediumGray,
+            text: 'Don’t receive the code  ',
+            style: TextStyles.font14mediumRegular.copyWith(
+              color: AppColors.textColorSecondary
+            ),
           ),
           TextSpan(
             recognizer: TapGestureRecognizer()..onTap = () async {},
-            text: 'Resend code',
+            text: 'Resend Code',
             style: TextStyles.font14BoldOrange.copyWith(
-              decoration: TextDecoration.underline,
+              fontFamily: 'mulish',
+
+
             ),
           ),
         ],

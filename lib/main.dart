@@ -16,16 +16,20 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
 
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          useMaterial3: false,
-          scaffoldBackgroundColor: AppColors.whiteColor,
+      child: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
 
-            fontFamily: 'montserrat',
-            primaryColor: AppColors.primaryColor),
-        home: SplashView(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            useMaterial3: false,
+            scaffoldBackgroundColor: AppColors.whiteColor,
+            fontFamily: 'Source Sans 3',
+            primaryColor: AppColors.primaryColor,
+          ),
+          home: SplashView(),
+        ),
       ),
     );
   }

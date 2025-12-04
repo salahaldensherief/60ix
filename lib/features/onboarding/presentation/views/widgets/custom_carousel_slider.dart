@@ -28,6 +28,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
       body: Column(
         children: [
           slider.CarouselSlider(
+
             items: imgList
                 .map(
                   (item) => Container(
@@ -61,6 +62,8 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
           ),
           SizedBox(height: 10.h),
           AnimatedSmoothIndicator(
+
+            textDirection:TextDirection.rtl ,
             activeIndex: _current,
             count: imgList.length,
             effect: CustomizableEffect(

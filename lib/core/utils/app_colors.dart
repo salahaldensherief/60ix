@@ -11,5 +11,6 @@ class AppColors {
  static const Color transparent = Color(0xffFFFFFF);
  static const Color textColorPrimary = Color(0xff1A1A1A);
  static const Color textColorSecondary = Color(0xff727272);
+ static const Color colorBtnSecondaryLabel = Color(0xff1C1A30);
 
 }

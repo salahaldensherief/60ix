@@ -24,7 +24,10 @@ class ForgetPasswordView extends StatelessWidget {
               subtitle: 'Please Verify your phone number',
             ),
             SizedBox(height: 10.h),
-            PhoneNumberWidget(),
+            PhoneNumberWidget(
+              textFieldHint: 'Enter your phone number ...',
+
+            ),
             SizedBox(height: 20.h),
             CustomButton(
               onPressed: () {
@@ -33,7 +36,6 @@ class ForgetPasswordView extends StatelessWidget {
               text: 'Next',
               color: AppColors.primaryColor,
               colorSide: AppColors.primaryColor,
-              fontColor: AppColors.whiteColor,
               textStyle: TextStyles.font14SemiBold,
             ),
           ],

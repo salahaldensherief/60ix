@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/foget_password_view.dart';
 
+import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/font_styles.dart';
 
 class ForgetPasswordWidget extends StatelessWidget {
@@ -14,7 +15,9 @@ class ForgetPasswordWidget extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgetPasswordView(),));
         },
-        child: Text('Forget Password?', style: TextStyles.font14SemiBoldBlue),
+        child: Text('Forget Password?', style: TextStyles.font14mediumRegular.copyWith(
+          color: AppColors.primaryColor
+        )),
       ),
     );
   }

@@ -31,9 +31,8 @@ class _PasswordFieldState extends State<PasswordField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         CustomTextFormField(
-
+          text: 'Enter your password',
           controller: widget.controller,
           obscureText: obscureText,
           onSaved: widget.onSaved,
@@ -47,12 +46,11 @@ class _PasswordFieldState extends State<PasswordField> {
                 return null;
               },
           textInputType: TextInputType.visiblePassword,
-
           suffixIcon: IconButton(
             splashColor:  AppColors.transparent,
             icon: Icon(
               size: 20.sp,
-              obscureText ? Icons.visibility : Icons.visibility_off,
+              obscureText ? Icons.visibility_off : Icons.visibility,
               color: Colors.grey,
             ),
             onPressed: () {

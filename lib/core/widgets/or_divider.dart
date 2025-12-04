@@ -18,7 +18,7 @@ class OrDivider extends StatelessWidget {
         Text(
           textAlign: TextAlign.center,
           'Or Continue With',
-          style: TextStyles.font14MediumGray,
+          style: TextStyles.font12Regular,
         ),
         SizedBox(width: 18),
 
