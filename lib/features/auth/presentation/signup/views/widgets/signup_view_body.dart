@@ -8,6 +8,7 @@ import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/core/widgets/custom_text_field.dart';
 import 'package:ix/core/widgets/have_an_account.dart';
 import 'package:ix/core/widgets/or_divider.dart';
+import 'package:ix/features/auth/presentation/login/views/login_view.dart';
 
 import '../../../../../../core/widgets/custom_app_bar.dart';
 import '../../../../../../core/widgets/drop_down_menu_widget.dart';
@@ -33,7 +34,6 @@ class SignupViewBody extends StatelessWidget {
                   subtitle: 'Create an Account to Continue your allCourses',
                   title: 'Getting Started.!',
                 ),
-                SizedBox(height: 10),
 
                 CustomTextFormField(
                   text: 'Enter your full name ...',
@@ -113,17 +113,19 @@ class SignupViewBody extends StatelessWidget {
                   text: 'Next',
                   color: AppColors.primaryColor,
                   colorSide: AppColors.primaryColor,
-                  textStyle: TextStyles.font14SemiBold,
+                  textStyle: TextStyles.font16SemiBold.copyWith(color: AppColors.whiteColor),
                 ),
                 SizedBox(height: 12.h),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginView(),));
+                  },
                   text: 'Guest Login',
                   color: AppColors.lightOrangeColor,
                   colorSide: AppColors.lightOrangeColor,
-                  textStyle: TextStyles.font14.copyWith(
-                    color: AppColors.textColorPrimary,
-                  ),
+                  textStyle: TextStyles.font16SemiBold,
+
+
                 ),
                 SizedBox(height: 20.h),
 

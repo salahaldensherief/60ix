@@ -31,7 +31,6 @@ class LoginViewBody extends StatelessWidget {
                 subtitle: 'Login to Continue your account',
                 title: 'Let’s Sign In.!',
               ),
-              SizedBox(height: 20.h),
               PhoneNumberWidget(
                 textFieldHint: 'Enter your phone number ...',
 

@@ -36,7 +36,7 @@ class ForgetPasswordView extends StatelessWidget {
               text: 'Next',
               color: AppColors.primaryColor,
               colorSide: AppColors.primaryColor,
-              textStyle: TextStyles.font14SemiBold,
+              textStyle: TextStyles.font16SemiBold.copyWith(color: AppColors.whiteColor),
             ),
           ],
         ),

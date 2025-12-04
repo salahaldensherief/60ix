@@ -31,7 +31,8 @@ class PasswordRecovery extends StatelessWidget {
             SizedBox(height: 20.h),
             CustomButton(onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => CreateNewPasswordView(),));
-            }, text: 'Verify', color: AppColors.primaryColor, colorSide: AppColors.primaryColor,  textStyle: TextStyles.font14SemiBold),
+            }, text: 'Verify', color: AppColors.primaryColor, colorSide: AppColors.primaryColor,                    textStyle: TextStyles.font16SemiBold.copyWith(color: AppColors.whiteColor),
+            ),
             SizedBox(height: 20.h),
 
             TimeCountWidget(),
