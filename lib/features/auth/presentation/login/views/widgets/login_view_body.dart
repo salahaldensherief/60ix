@@ -31,21 +31,22 @@ class LoginViewBody extends StatelessWidget {
                 subtitle: 'Login to Continue your account',
                 title: 'Let’s Sign In.!',
               ),
-              SizedBox(height: 20.h),
-              PhoneNumberWidget(),
+              PhoneNumberWidget(
+                textFieldHint: 'Enter your phone number ...',
+
+              ),
               SizedBox(height: 12.h),
               PasswordField(hintText: 'Password'),
               SizedBox(height: 12.h),
               ForgetPasswordWidget(),
-              SizedBox(height: 20.h),
+              SizedBox(height: 10.h),
 
               CustomButton(
                 onPressed: () {},
-                text: 'Sign in',
+                text: 'Sign In',
                 color: AppColors.primaryColor,
                 colorSide: AppColors.primaryColor,
-                fontColor: AppColors.whiteColor,
-                textStyle: TextStyles.font14SemiBold,
+                textStyle: TextStyles.font16SemiBold.copyWith(color: AppColors.whiteColor),
               ),
               SizedBox(height: 16.h),
 
@@ -54,11 +55,9 @@ class LoginViewBody extends StatelessWidget {
                 text: 'Guest Login',
                 color: AppColors.lightOrangeColor,
                 colorSide: AppColors.lightOrangeColor,
-                fontColor: AppColors.primaryColor,
-                textStyle: TextStyles.font14SemiBoldOrange,
+                textStyle: TextStyles.font16SemiBold,
               ),
               SizedBox(height: 32.h),
-
               OrDivider(),
               SizedBox(height: 32.h),
               SocialLoginBotton(),

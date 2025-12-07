@@ -7,7 +7,7 @@ import '../utils/font_styles.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-     this.readOnly = false,
+    this.readOnly = false,
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
@@ -16,7 +16,8 @@ class CustomTextFormField extends StatelessWidget {
     this.text,
     this.controller,
     this.obscureText = false,
-    this.validator, this.onTap,
+    this.validator,
+    this.onTap,
   });
 
   final String? hintText;
@@ -29,7 +30,7 @@ class CustomTextFormField extends StatelessWidget {
   final void Function()? onTap;
   final TextEditingController? controller;
   final bool obscureText;
- final bool  readOnly;
+  final bool readOnly;
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +41,11 @@ class CustomTextFormField extends StatelessWidget {
         if (hintText != null) ...[
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Text(hintText!, style: TextStyles.font14MediumGray),
+            child: Text(hintText!, style: TextStyles.font14mediumRegular),
           ),
         ],
         TextFormField(
-
-           onTap: onTap,
+          onTap: onTap,
           readOnly: readOnly,
           controller: controller,
           obscureText: obscureText,
@@ -60,9 +60,10 @@ class CustomTextFormField extends StatelessWidget {
                 return null;
               },
           decoration: InputDecoration(
+
             hintText: text,
             hintStyle: TextStyles.font12Small.copyWith(
-              color: AppColors.textColorSecondary
+              color: AppColors.textColorSecondary,
             ),
             contentPadding: EdgeInsets.symmetric(
               vertical: 12.h,
@@ -89,10 +90,11 @@ class CustomTextFormField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
 
-              borderSide: BorderSide(color: AppColors.primaryColor),
+              borderSide: BorderSide(
+                  width: .8.w,
+                  color: AppColors.primaryColor),
             ),
           ),
-
         ),
       ],
     );

@@ -21,14 +21,16 @@ class DontHaveAnAccountWidget extends StatelessWidget {
         TextSpan(
           children: [
             TextSpan(
-              text: 'Dont Have an acount?  ',
-              style: TextStyles.font14SemiBoldGray
+              text: 'Don’t have an Account?  ',
+              style: TextStyles.font14lightRegular
             ),
             TextSpan(
               recognizer: TapGestureRecognizer()..onTap= (){
                 Navigator.of(context).push(CupertinoPageRoute(builder: (context) => SignupView(),));
               },
-              text: 'SignUp',style: TextStyles.font14BoldOrange,),
+              text: 'SIGN UP',style: TextStyles.font14BoldOrange.copyWith(
+              fontFamily: 'mulish'
+            ),),
           ],
         ),
         textAlign: TextAlign.center,

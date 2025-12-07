@@ -15,17 +15,19 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          useMaterial3: false,
-          scaffoldBackgroundColor: AppColors.whiteColor,
-
-            fontFamily: 'montserrat',
-            primaryColor: AppColors.primaryColor),
-        home: SplashView(),
+      child: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            useMaterial3: true,
+            scaffoldBackgroundColor: AppColors.whiteColor,
+            fontFamily: 'Source Sans 3',
+            primaryColor: AppColors.primaryColor,
+          ),
+          home: SplashView(),
+        ),
       ),
     );
   }

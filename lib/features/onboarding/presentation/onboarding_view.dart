@@ -5,6 +5,7 @@ import 'package:ix/core/utils/app_colors.dart';
 import 'package:ix/core/utils/font_styles.dart';
 import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/features/auth/presentation/login/views/login_view.dart';
+import 'package:ix/features/auth/presentation/signup/views/signup_view.dart';
 import 'package:ix/features/onboarding/presentation/widgets/custom_carousel_slider.dart';
 
 import '../../../../core/utils/assets_data.dart';
@@ -23,29 +24,34 @@ class OnboardingView extends StatelessWidget {
             SizedBox(height: 40.h),
             Expanded(child: CustomCarouselSlider()),
             Text(
-              'Care services, quality products,\n and a loving community all in one\n app',
-              style: TextStyles.font20SemiBoldBlue,
+              'Care services, quality products, and a loving \n community all in one app',
+              style: TextStyles.font18MediumGray.copyWith(
+                color: AppColors.blue500
+              ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 40.h),
+            SizedBox(height: 80.h),
             CustomButton(
-              onPressed: () {},
-              textStyle: TextStyles.font14SemiBold,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignupView(),));
+
+              },
+              textStyle: TextStyles.font16SemiBold.copyWith(
+                color: AppColors.whiteColor
+              ),
               text: 'Create A New Account',
               color: AppColors.primaryColor,
               colorSide: AppColors.primaryColor,
-              fontColor: AppColors.whiteColor,
             ),
             SizedBox(height: 16.h),
             CustomButton(
-              textStyle: TextStyles.font14SemiBoldOrange,
+              textStyle: TextStyles.font16SemiBold,
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginView(),));
               },
               text: 'Guest Login',
               color: AppColors.lightOrangeColor,
               colorSide: AppColors.lightOrangeColor,
-              fontColor: AppColors.primaryColor,
             ),
             SizedBox(height: 20.h),
           ],

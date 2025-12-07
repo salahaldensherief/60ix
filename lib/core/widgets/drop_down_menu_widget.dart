@@ -25,11 +25,12 @@ class DropDownMenuWidget<T> extends StatelessWidget {
         if (hintText != null) ...[
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Text(hintText!, style: TextStyles.font14MediumGray),
+            child: Text(hintText!, style: TextStyles.font14mediumRegular),
           ),
         ],
         DropdownMenu(
           menuStyle: MenuStyle(
+
             elevation: WidgetStatePropertyAll(.2),
             shape: MaterialStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
@@ -54,7 +55,12 @@ class DropDownMenuWidget<T> extends StatelessWidget {
           hintText: text,
 
           dropdownMenuEntries: dropdownMenuEntries,
+          trailingIcon: Icon(
+            Icons.arrow_drop_down_sharp,
+            color: AppColors.colorBtnSecondaryLabel,
+          ),
         ),
+
       ],
     );
   }

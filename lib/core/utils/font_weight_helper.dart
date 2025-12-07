@@ -4,5 +4,6 @@ class FontWeightHelper {
   static const FontWeight semiBold = FontWeight.w600;
   static const FontWeight bold = FontWeight.w800;
   static const FontWeight medium = FontWeight.w500;
-  static const FontWeight small = FontWeight.w200;
+  static const small = FontWeight.w200;
+  static const FontWeight Regular = FontWeight.w400;
 }

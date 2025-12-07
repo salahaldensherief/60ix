@@ -8,24 +8,26 @@ import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/intl_phone_widget.dart';
 
 class PhoneNumberWidget extends StatelessWidget {
-  const PhoneNumberWidget({super.key});
+  const PhoneNumberWidget({super.key, required this.textFieldHint});
+  final String textFieldHint;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('phone number', style: TextStyles.font14MediumGray),
+        Text('Phone Number', style: TextStyles.font14mediumRegular),
         SizedBox(height: 10.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
-              child: IntlPhoneWidget(),
-            ),
-            SizedBox(width: 10.w),
+                flex: 2,
+                 child: IntlPhoneWidget()),
+            SizedBox(width: 16.w),
             Expanded(
-              flex: 3,
+              flex: 5,
               child: CustomTextFormField(
+                text: textFieldHint,
                 textInputType: TextInputType.phone,
               ),
             ),
@@ -35,4 +37,3 @@ class PhoneNumberWidget extends StatelessWidget {
     );
   }
 }
-

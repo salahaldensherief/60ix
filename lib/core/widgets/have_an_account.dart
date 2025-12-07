@@ -5,7 +5,6 @@ import '../../features/auth/presentation/login/views/login_view.dart';
 import '../utils/app_colors.dart';
 import '../utils/font_styles.dart';
 
-
 class HaveAnAccountWidget extends StatelessWidget {
   const HaveAnAccountWidget({super.key});
 
@@ -14,20 +13,21 @@ class HaveAnAccountWidget extends StatelessWidget {
     return Center(
       child: Text.rich(
         TextSpan(
-
           children: [
             TextSpan(
               text: 'Already Have Account?  ',
-              style: TextStyle(color: Colors.black),
+              style: TextStyles.font14lightRegular,
             ),
-
             TextSpan(
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  // Navigator.pushNamed(context, LoginView.routeName);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginView()),
+                  );
                 },
-              text: 'Login',
-              style: TextStyles.font14MediumGray.copyWith(color: AppColors.primaryColor),
+              text: 'SIGN IN',
+              style: TextStyles.font14BoldOrange.copyWith(fontFamily: 'mulish'),
             ),
           ],
         ),
