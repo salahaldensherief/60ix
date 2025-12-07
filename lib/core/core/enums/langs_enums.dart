@@ -1,0 +1,1 @@
+enum LangEnums { en, ar }
