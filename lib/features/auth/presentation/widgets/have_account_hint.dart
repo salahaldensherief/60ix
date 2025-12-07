@@ -1,12 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/auth/presentation/login/views/login_view.dart';
-import '../utils/app_colors.dart';
-import '../utils/font_styles.dart';
+import '../login/login_view.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/font_styles.dart';
 
-class HaveAnAccountWidget extends StatelessWidget {
-  const HaveAnAccountWidget({super.key});
+class HaveAccountHint extends StatelessWidget {
+  const HaveAccountHint({super.key, required this.title, required this.actionTitle, this.onTap});
+final String title;
+final String actionTitle;
+final  void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -15,18 +18,13 @@ class HaveAnAccountWidget extends StatelessWidget {
         TextSpan(
           children: [
             TextSpan(
-              text: 'Already Have Account?  ',
+              text: '$title ',
               style: TextStyles.font14lightRegular,
             ),
             TextSpan(
               recognizer: TapGestureRecognizer()
-                ..onTap = () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginView()),
-                  );
-                },
-              text: 'SIGN IN',
+                ..onTap = onTap,
+              text: actionTitle,
               style: TextStyles.font14BoldOrange.copyWith(fontFamily: 'mulish'),
             ),
           ],

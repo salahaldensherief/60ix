@@ -62,7 +62,6 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
           ),
           SizedBox(height: 10.h),
           AnimatedSmoothIndicator(
-
             textDirection:TextDirection.rtl ,
             activeIndex: _current,
             count: imgList.length,

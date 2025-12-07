@@ -6,14 +6,14 @@ import 'package:ix/core/utils/assets_data.dart';
 import 'package:ix/core/utils/font_styles.dart';
 import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/core/widgets/custom_text_field.dart';
-import 'package:ix/core/widgets/have_an_account.dart';
-import 'package:ix/core/widgets/or_divider.dart';
-import 'package:ix/features/auth/presentation/login/views/login_view.dart';
+import 'package:ix/features/auth/presentation/widgets/have_account_hint.dart';
+import 'package:ix/features/auth/presentation/widgets/or_divider.dart';
+import 'package:ix/features/auth/presentation/login/login_view.dart';
 
 import '../../../../../../core/widgets/custom_app_bar.dart';
 import '../../../../../../core/widgets/drop_down_menu_widget.dart';
-import '../../../../../../core/widgets/social_login_botton.dart';
-import '../../../widgets/phone_number_widget.dart';
+import '../../widgets/phone_number_widget.dart';
+import '../../widgets/social_login_botton.dart';
 
 class SignupViewBody extends StatelessWidget {
   const SignupViewBody({super.key});
@@ -134,7 +134,14 @@ class SignupViewBody extends StatelessWidget {
 
                 SocialLoginBotton(),
                 SizedBox(height: 20.h),
-                HaveAnAccountWidget(),
+                HaveAccountHint(
+                  title: 'Already have an Account?',
+                  actionTitle: ' SIGN IN',
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginView(),));
+                  },
+
+                ),
               ],
             ),
           ),

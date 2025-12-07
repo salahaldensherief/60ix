@@ -10,6 +10,7 @@ import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/font_styles.dart';
 import '../../../../../../core/widgets/custom_app_bar.dart';
+
 class PasswordRecovery extends StatelessWidget {
   const PasswordRecovery({super.key});
   @override
@@ -45,9 +46,7 @@ class PasswordRecovery extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
-
             TimeCountWidget(),
-
             SizedBox(height: 10.h),
             ResendCodeWidget(),
           ],

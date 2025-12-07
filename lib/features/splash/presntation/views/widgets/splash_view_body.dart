@@ -34,7 +34,6 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       ),
     );
   }
-
   void excuteNavigation() async {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => OnboardingView(),));

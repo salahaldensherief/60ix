@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-import '../utils/app_colors.dart';
-import '../utils/font_styles.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/font_styles.dart';
 
 class IntlPhoneWidget extends StatelessWidget {
   const IntlPhoneWidget({super.key});
