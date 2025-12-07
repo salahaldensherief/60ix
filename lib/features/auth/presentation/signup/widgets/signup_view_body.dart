@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ix/core/utils/app_colors.dart';
-import 'package:ix/core/utils/assets_data.dart';
-import 'package:ix/core/utils/font_styles.dart';
-import 'package:ix/core/widgets/custom_button.dart';
-import 'package:ix/core/widgets/custom_text_field.dart';
 import 'package:ix/features/auth/presentation/widgets/have_account_hint.dart';
 import 'package:ix/features/auth/presentation/widgets/or_divider.dart';
 import 'package:ix/features/auth/presentation/login/login_view.dart';
 
-import '../../../../../../core/widgets/custom_app_bar.dart';
-import '../../../../../../core/widgets/drop_down_menu_widget.dart';
+import '../../../../../art_core/utils/app_colors.dart';
+import '../../../../../art_core/utils/assets_data.dart';
+import '../../../../../art_core/utils/font_styles.dart';
+import '../../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../../art_core/widgets/custom_app_bar.dart';
+import '../../../../../art_core/widgets/drop_down_menu/drop_down_menu_widget.dart';
+import '../../../../../art_core/widgets/text_fields/custom_text_field.dart';
 import '../../widgets/phone_number_widget.dart';
 import '../../widgets/social_login_botton.dart';
 
@@ -112,7 +112,8 @@ class SignupViewBody extends StatelessWidget {
                   onPressed: () {},
                   text: 'Next',
                   color: AppColors.primaryColor,
-                  colorSide: AppColors.primaryColor,
+                  colorSide:
+                  AppColors.primaryColor,
                   textStyle: TextStyles.font16SemiBold.copyWith(color: AppColors.whiteColor),
                 ),
                 SizedBox(height: 12.h),

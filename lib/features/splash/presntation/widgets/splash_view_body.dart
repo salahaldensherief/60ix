@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ix/core/utils/assets_data.dart';
-import 'package:ix/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:ix/features/onboarding/presentation/onboarding_view.dart';
+
+import '../../../../art_core/utils/assets_data.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

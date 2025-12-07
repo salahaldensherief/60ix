@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/create_new_password_view.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/otp_pin_widget.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/resend_code_widget.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/time_count_widget.dart';
 
-import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/font_styles.dart';
-import '../../../../../../core/widgets/custom_app_bar.dart';
+import '../../../../../../art_core/utils/app_colors.dart';
+import '../../../../../../art_core/utils/font_styles.dart';
+import '../../../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../../../art_core/widgets/custom_app_bar.dart';
 
 class PasswordRecovery extends StatelessWidget {
   const PasswordRecovery({super.key});

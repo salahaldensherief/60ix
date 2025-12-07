@@ -1,11 +1,24 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/core/utils/app_colors.dart';
-import 'package:ix/features/splash/presntation/views/splash_view.dart';
+import 'package:ix/features/splash/presntation/splash_view.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'art_core/utils/app_colors.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+    EasyLocalization(
+        supportedLocales: [Locale('en',), Locale('ar')],
+        path: 'assets/translations/',
+        fallbackLocale: Locale('en'),
+        child: MyApp()
+    ),
+  );
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -17,6 +30,9 @@ class MyApp extends StatelessWidget {
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: MaterialApp(
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(

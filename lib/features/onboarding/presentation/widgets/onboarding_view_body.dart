@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ix/core/utils/app_colors.dart';
-import 'package:ix/core/utils/font_styles.dart';
-import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/features/auth/presentation/login/login_view.dart';
 import 'package:ix/features/auth/presentation/signup/signup_view.dart';
-import 'package:ix/features/onboarding/presentation/views/widgets/custom_carousel_slider.dart';
-import '../../../../../core/utils/assets_data.dart';
+import '../../../../art_core/utils/app_colors.dart';
+import '../../../../art_core/utils/assets_data.dart';
+import '../../../../art_core/utils/font_styles.dart';
+import '../../../../art_core/widgets/buttons/custom_button.dart';
+import 'custom_carousel_slider.dart';
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({super.key});
   @override

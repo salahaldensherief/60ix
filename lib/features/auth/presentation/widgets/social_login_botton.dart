@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ix/core/utils/app_colors.dart';
-import 'package:ix/core/utils/assets_data.dart';
-import 'package:ix/core/utils/helper.dart';
+import 'package:ix/features/auth/presentation/widgets/url_links.dart';
 import 'package:ix/features/auth/presentation/widgets/social_icon_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../art_core/utils/assets_data.dart';
 
 
 class SocialLoginBotton extends StatelessWidget {

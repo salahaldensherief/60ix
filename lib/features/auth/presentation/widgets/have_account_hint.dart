@@ -1,9 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../art_core/utils/font_styles.dart';
 import '../login/login_view.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/font_styles.dart';
 
 class HaveAccountHint extends StatelessWidget {
   const HaveAccountHint({super.key, required this.title, required this.actionTitle, this.onTap});

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:ix/core/utils/font_styles.dart';
-
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/widgets/custom_text_field.dart';
+import '../../../../art_core/utils/font_styles.dart';
+import '../../../../art_core/widgets/text_fields/custom_text_field.dart';
 import 'intl_phone_widget.dart';
 
 class PhoneNumberWidget extends StatelessWidget {

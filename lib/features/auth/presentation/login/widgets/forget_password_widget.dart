@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/forget_password_view.dart';
 
-import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/font_styles.dart';
+import '../../../../../art_core/utils/app_colors.dart';
+import '../../../../../art_core/utils/font_styles.dart';
 
 class ForgetPasswordWidget extends StatelessWidget {
   const ForgetPasswordWidget({super.key});

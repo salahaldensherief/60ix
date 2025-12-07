@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../utils/font_styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({

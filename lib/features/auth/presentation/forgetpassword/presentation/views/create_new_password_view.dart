@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/core/widgets/custom_app_bar.dart';
-import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/features/auth/presentation/widgets/passwoed_field.dart';
 import 'package:ix/features/auth/presentation/login/login_view.dart';
 
-import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/font_styles.dart';
+import '../../../../../../art_core/utils/app_colors.dart';
+import '../../../../../../art_core/utils/font_styles.dart';
+import '../../../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../../../art_core/widgets/custom_app_bar.dart';
 
 class CreateNewPasswordView extends StatelessWidget {
   const CreateNewPasswordView({super.key});

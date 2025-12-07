@@ -1,7 +1,7 @@
 import 'package:date_count_down/date_count_down.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../../core/utils/app_colors.dart';
+import '../../../../../../../art_core/utils/app_colors.dart';
 
 class TimeCountWidget extends StatelessWidget {
   const TimeCountWidget({

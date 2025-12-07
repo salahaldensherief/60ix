@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:ix/core/utils/app_colors.dart';
 
-import '../../../../../../../core/utils/font_styles.dart';
+import '../../../../../../../art_core/utils/app_colors.dart';
+import '../../../../../../../art_core/utils/font_styles.dart';
 
 class ResendCodeWidget extends StatelessWidget {
   const ResendCodeWidget({super.key});

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/core/utils/app_colors.dart';
-import 'package:ix/core/utils/font_styles.dart';
-import 'package:ix/core/widgets/custom_app_bar.dart';
-import 'package:ix/core/widgets/custom_button.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/password_recovery.dart';
 import 'package:ix/features/auth/presentation/widgets/phone_number_widget.dart';
+
+import '../../../../../../art_core/utils/app_colors.dart';
+import '../../../../../../art_core/utils/font_styles.dart';
+import '../../../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../../../art_core/widgets/custom_app_bar.dart';
 
 class ForgetPasswordView extends StatelessWidget {
   const ForgetPasswordView({super.key});

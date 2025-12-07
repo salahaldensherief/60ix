@@ -2,7 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart' as slider;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../../../../core/utils/app_colors.dart';
+
+import '../../../../art_core/utils/app_colors.dart';
 
 class CustomCarouselSlider extends StatefulWidget {
   const CustomCarouselSlider({super.key});

@@ -1,9 +1,9 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/core/utils/font_styles.dart';
 
-import '../utils/app_colors.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/font_styles.dart';
 
 class DropDownMenuWidget<T> extends StatelessWidget {
   final String? hintText;
