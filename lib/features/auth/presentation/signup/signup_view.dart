@@ -13,14 +13,13 @@ import 'package:ix/features/auth/presentation/login/views/login_view.dart';
 import '../../../../../../core/widgets/custom_app_bar.dart';
 import '../../../../../../core/widgets/drop_down_menu_widget.dart';
 import '../../../../../../core/widgets/social_login_botton.dart';
-import '../../../widgets/phone_number_widget.dart';
-
-class SignupViewBody extends StatelessWidget {
-  const SignupViewBody({super.key});
+import '../widgets/phone_number_widget.dart';
+class SignupView extends StatelessWidget {
+  const SignupView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return  GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         body: SingleChildScrollView(
