@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ix/art_core/theme/text_theme.dart';
+import 'package:ix/art_core/theme/text_theme_toggle.dart';
+import 'package:ix/art_core/theme/theme.dart';
 import '../utils/app_colors.dart';
 import '../utils/assets_data.dart';
 import '../utils/font_styles.dart';
@@ -26,6 +29,9 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,23 +46,24 @@ class CustomAppBar extends StatelessWidget {
                       () {
                         Navigator.of(context).pop();
                       },
-                  child: SvgPicture.asset(AssetsData.backIcon),
+                  child: SvgPicture.asset(AssetsData.backIcon,color: isDark ? AppColors.appBarDarkColor : null ,),
                 ),
 
               Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: showBack == true ? 12.w : 0,
                 ),
-                child: Text(title, style: TextStyles.font16SemiBold),
+                child: Text(title, style:TextThemeToggle.textTheme(context).headlineLarge,
+                )
               ),
             ],
           ),
           SizedBox(height: 8.h),
           Text(
             subtitle,
-            style: TextStyles.font14mediumRegular.copyWith(
-              color: AppColors.textColorSecondary,
-            ),
+            // style: TextStyles.font12mediumRegular.copyWith(
+              // color: AppColors.textColorSecondary,
+            // ),
           ),
           // Text(phoneNumber! ,style: TextStyles.font12Medium.copyWith(
           //   color: Colors.black

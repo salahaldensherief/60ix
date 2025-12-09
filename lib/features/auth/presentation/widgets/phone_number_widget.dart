@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:ix/art_core/utils/app_strings.dart';
 import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/text_fields/custom_text_field.dart';
 import 'intl_phone_widget.dart';
@@ -13,14 +15,16 @@ class PhoneNumberWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Phone Number', style: TextStyles.font14mediumRegular),
+        Text(AppStrings.phoneNumber.tr(), style: TextStyles.font14mediumRegular),
         SizedBox(height: 10.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
                 flex: 2,
-                 child: IntlPhoneWidget()),
+                 child: IntlPhoneWidget(
+
+                 )),
             SizedBox(width: 16.w),
             Expanded(
               flex: 5,

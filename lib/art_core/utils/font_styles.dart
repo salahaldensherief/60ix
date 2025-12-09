@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/art_core/utils/font_weight_helper.dart';
-
 import 'app_colors.dart';
+import 'font_weight_helper.dart';
+
 
 class TextStyles {
-  static TextStyle font20SemiBoldBlue = TextStyle(
+  static TextStyle font20SemiBold = TextStyle(
     fontSize: 20,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColors.blue500,
+    // color: AppColors.blue500,
+  );
+  static TextStyle font12SemiBold = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    // color: AppColors.textColorLightPrimary,
   );
   static TextStyle font14SemiBoldBlue = TextStyle(
     fontSize: 14,
@@ -22,31 +27,32 @@ class TextStyles {
   );
   static TextStyle font14 = TextStyle(
     fontSize: 14,
-    color: AppColors.textColorPrimary,
 
+    // color: AppColors.textColorPrimary,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font16SemiBold = TextStyle(
     fontSize: 16.sp,
-    color: AppColors.textColorPrimary,
+    color: AppColors.textColorLightPrimary,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font12Small = TextStyle(
     fontSize: 12,
     fontWeight: FontWeightHelper.small,
-  );static TextStyle font12bold = TextStyle(
+  );
+  static TextStyle font12bold = TextStyle(
     fontSize: 12,
     fontWeight: FontWeightHelper.bold,
   );
   static TextStyle font14SemiBoldOrange = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColors.primaryColor,
+    color: AppColors.primaryBtnColor,
   );
   static TextStyle font14BoldOrange = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.bold,
-    color: AppColors.primaryColor,
+    color: AppColors.primaryBtnColor,
   );
 
   static TextStyle font14MediumGray = TextStyle(
@@ -57,12 +63,12 @@ class TextStyles {
   static TextStyle font12Medium = TextStyle(
     fontSize: 12,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColors.textColorPrimary,
+    // color: AppColors.textColorPrimary,
   );
-  static TextStyle font18MediumGray = TextStyle(
+  static TextStyle font18SemiBold = TextStyle(
     fontSize: 18,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColors.gray300Color,
+    // color: AppColors.gray300Color,
   );
   static TextStyle font14SemiBoldGray = TextStyle(
     fontSize: 14,
@@ -72,21 +78,111 @@ class TextStyles {
   static TextStyle font14mediumRegular = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.medium,
-    color: AppColors.textColorPrimary,
+    // color: AppColors.textColorPrimary,
+  );
+  static TextStyle font12mediumRegular = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.medium,
+    // color: AppColors.textColorPrimary,
   );
   static TextStyle font14lightRegular = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.small,
-    color: AppColors.textColorPrimary,
   );
   static TextStyle font12Regular = TextStyle(
     fontSize: 12,
     fontWeight: FontWeightHelper.Regular,
-    color: AppColors.textColorSecondary,
+    // color: AppColors.textColorSecondary,
   );
   static TextStyle font12light = TextStyle(
     fontSize: 12,
     fontWeight: FontWeightHelper.small,
-    color: AppColors.textColorSecondary,
+    // color: AppColors.textColorSecondary,
   );
 }
+
+// class TextStyles {
+//   static TextStyle font20SemiBoldBlue = TextStyle(
+//     fontSize: 20,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.blue500,
+//   );
+//   static TextStyle font14SemiBoldBlue = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.blue500,
+//   );
+//   static TextStyle font14SemiBold = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.whiteColor,
+//   );
+//   static TextStyle font14 = TextStyle(
+//     fontSize: 14,
+//     color: AppColors.textColorPrimary,
+//
+//     fontWeight: FontWeightHelper.semiBold,
+//   );
+//   static TextStyle font16SemiBold = TextStyle(
+//     fontSize: 16.sp,
+//     color: AppColors.textColorPrimary,
+//     fontWeight: FontWeightHelper.semiBold,
+//   );
+//   static TextStyle font12Small = TextStyle(
+//     fontSize: 12,
+//     fontWeight: FontWeightHelper.small,
+//   );static TextStyle font12bold = TextStyle(
+//     fontSize: 12,
+//     fontWeight: FontWeightHelper.bold,
+//   );
+//   static TextStyle font14SemiBoldOrange = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.primaryColor,
+//   );
+//   static TextStyle font14BoldOrange = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.bold,
+//     color: AppColors.primaryColor,
+//   );
+//
+//   static TextStyle font14MediumGray = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.medium,
+//     color: AppColors.gray300Color,
+//   );
+//   static TextStyle font12Medium = TextStyle(
+//     fontSize: 12,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.textColorPrimary,
+//   );
+//   static TextStyle font18MediumGray = TextStyle(
+//     fontSize: 18,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.gray300Color,
+//   );
+//   static TextStyle font14SemiBoldGray = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.semiBold,
+//     color: AppColors.gray300Color,
+//   );
+//   static TextStyle font14mediumRegular = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.medium,
+//     color: AppColors.textColorPrimary,
+//   );
+//   static TextStyle font14lightRegular = TextStyle(
+//     fontSize: 14,
+//     fontWeight: FontWeightHelper.small,
+//     color: AppColors.textColorPrimary,
+//   );
+//   static TextStyle font12Regular = TextStyle(
+//     fontSize: 12,
+//     fontWeight: FontWeightHelper.Regular,
+//     color: AppColors.textColorSecondary,
+//   );
+//   static TextStyle font12light = TextStyle(
+//     fontSize: 12,
+//     fontWeight: FontWeightHelper.small,
+//     color: AppColors.textColorSecondary,
+//   );

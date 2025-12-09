@@ -1,0 +1,87 @@
+{
+  "createAccount": "إنشاء حساب",
+  "letsSignIn": "هيا نسجّل الدخول!",
+  "loginToContinueAccount": "سجّل الدخول للمتابعة في حسابك",
+
+  "userName": "اسم المستخدم",
+  "userNameHint": "أدخل اسم المستخدم ...",
+
+  "email": "البريد الإلكتروني",
+  "emailHint": "أدخل عنوان بريدك الإلكتروني ...",
+
+  "phone_number": "رقم الهاتف",
+  "phone_number_hint": "أدخل رقم هاتفك ...",
+
+  "password": "كلمة المرور",
+  "passwordHint": "أدخل كلمة المرور ...",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "pleaseConfirmPassword": "يرجى تأكيد كلمة المرور ...",
+  "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين",
+  "createPassword": "انشاء كلمة مرور",
+  "createPasswordSubTitle": "أنشئ كلمة مرور قوية ومميزة لحماية حسابك",
+
+
+  "signUp": "إنشاء حساب",
+  "signIn": "تسجيل الدخول",
+
+  "country": "الدولة",
+  "countryHint": "اختر دولتك...",
+
+  "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
+  "dontHaveAccount": "ليس لديك حساب؟ ",
+  "signInToContinue": "سجّل الدخول للمتابعة",
+
+  "onboardingTitle": "خدمات رعاية، منتجات عالية الجودة، ومجتمع داعم في تطبيق واحد",
+
+  "createNewAccount": "إنشاء حساب جديد",
+  "guestLogin": "الدخول كضيف",
+  "orContinueWith": "أو المتابعة باستخدام",
+
+  "forgotPassword": "نسيت كلمة المرور",
+  "resetPassword": "إعادة تعيين كلمة المرور",
+  "enterEmailToReceive": "أدخل بريدك الإلكتروني لاستلام تعليمات إعادة تعيين كلمة المرور",
+  "send": "إرسال",
+  "backToLogin": "العودة إلى تسجيل الدخول",
+
+  "newPassword": "كلمة المرور الجديدة",
+  "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+  "passwordResetSuccessMessage": "تمت إعادة تعيين كلمة المرور بنجاح. يرجى استخدام كلمة المرور الجديدة",
+  "successfully": "بنجاح",
+
+  "createAccountToContinueCourses": "أنشئ حسابًا للمتابعة والوصول إلى الدورات",
+
+  "fullName": "الاسم الكامل",
+  "fullNameHint": "أدخل اسمك الكامل ...",
+
+  "city": "المدينة",
+  "cityHint": "اختر مدينتك...",
+
+  "gender": "النوع",
+  "genderHint": "اختر النوع...",
+
+  "male": "ذكر",
+  "female": "أنثى",
+
+  "dateOfBirth": "تاريخ الميلاد",
+  "dateOfBirthHint": "اختر تاريخ الميلاد...",
+
+  "next": "التالي",
+
+  "verifyYourPhone": "يرجى تأكيد رقم الهاتف ...",
+  "verify": "تأكيد",
+
+  "passwordRecovery": "استعادة كلمة المرور",
+  "otpAppBarHint": "يرجى إدخال رمز التحقق الذي تم إرساله إلى رقم هاتفك",
+
+  "dontReceiveCode": "لم يصلك الرمز؟",
+  "resendCode": "إعادة إرسال الرمز",
+
+  "createNewPassword": "إنشاء كلمة مرور جديدة",
+  "appBarForgetPasswordHint": "يرجى تأكيد رقم الهاتف ...",
+  "appBarCreateNewPasswordHint": "أنشئ كلمة مرور قوية وفريدة لتعزيز أمان حسابك.",
+
+  "continueText": "متابعة",
+  "gettingStarted": "هيا نبدأ!",
+  "agree": "اوافق علي",
+  "terms": " الشروط و الأحكام"
+}

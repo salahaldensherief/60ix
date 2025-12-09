@@ -16,6 +16,8 @@ class SocialLoginBotton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -37,7 +39,7 @@ class SocialLoginBotton extends StatelessWidget {
           onPressed: () {
             _appleLaunchUrl();
           },
-          image: AssetsData.appleLogo,
+          image:  isDark ? AssetsData.appleLogoDark : AssetsData.appleLogo,
         ),
       ],
     );

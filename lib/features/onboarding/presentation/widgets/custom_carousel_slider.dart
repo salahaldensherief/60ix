@@ -70,13 +70,13 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
               activeDotDecoration: DotDecoration(
                 width: 40,
                 height: 8,
-                color: AppColors.primaryColor,
+                color: AppColors.primaryBtnColor,
                 borderRadius: BorderRadius.circular(24),
               ),
               dotDecoration: DotDecoration(
                 width: 8,
                 height: 8,
-                color: AppColors.primaryColor.withOpacity(0.3),
+                color: AppColors.primaryBtnColor.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(8),
               ),
             ),

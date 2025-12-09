@@ -13,7 +13,7 @@ class TimeCountWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('00:',style: TextStyle(color: AppColors.textColorPrimary),
+        Text('00:',style: TextStyle(color: AppColors.textColorLightPrimary),
         ),
 
         CountDownText(
@@ -22,7 +22,7 @@ class TimeCountWidget extends StatelessWidget {
               const Duration(
                   seconds: 30)),
           finishedText: "00:00",
-          style: TextStyle(color: AppColors.textColorPrimary),
+          style: TextStyle(color: AppColors.textColorLightPrimary),
         ),
       ],
     );

@@ -1,0 +1,86 @@
+{
+  "createAccount": "Create account",
+  "letsSignIn": "Let’s sign in!",
+  "loginToContinueAccount": "Login to continue your account",
+
+  "userName": "User name",
+  "userNameHint": "Enter your user name",
+
+  "email": "Email address",
+  "emailHint": "Enter your email address",
+
+  "phone_number": "Phone Number",
+  "phone_number_hint": "Enter your phone number ...",
+
+  "password": "Password",
+  "passwordHint": "Enter your password ...",
+  "confirmPassword": "Confirm password",
+  "pleaseConfirmPassword": "Please confirm your password ...",
+  "passwordsDoNotMatch": "Passwords do not match",
+  "createPassword": "Create Password",
+  "createPasswordSubTitle": "Create a strong, unique password to enhance the security of your account",
+
+  "signUp": "Sign up",
+  "signIn": "Sign In",
+
+  "country": "Country",
+  "countryHint": "Select your country...",
+
+  "alreadyHaveAccount": "Already have an account?",
+  "dontHaveAccount": "Don’t have an account?",
+  "signInToContinue": "Sign in to continue",
+
+  "onboardingTitle": "Care services, quality products, and a loving community all in one app",
+
+  "createNewAccount": "Create a new account",
+  "guestLogin": "Guest login",
+  "orContinueWith": "Or continue with",
+
+  "forgotPassword": "Forgot password",
+  "resetPassword": "Reset password",
+  "enterEmailToReceive": "Enter your email to receive password reset instructions",
+  "send": "Send",
+  "backToLogin": "Back to login",
+
+  "newPassword": "New password",
+  "confirmNewPassword": "Confirm new password",
+  "passwordResetSuccessMessage": "Your password has been successfully reset. Please use your new password",
+  "successfully": "Successfully",
+
+  "createAccountToContinueCourses": "Create an Account to Continue your allCourses",
+
+  "fullName": "Full name",
+  "fullNameHint": "Enter your full name ...",
+
+  "city": "City",
+  "cityHint": "Select your city...",
+
+  "gender": "Gender",
+  "genderHint": "Select your gender...",
+
+  "male": "Male",
+  "female": "Female",
+
+  "dateOfBirth": "Date of birth",
+  "dateOfBirthHint": "Select date of birth...",
+
+  "next": "Next",
+
+  "verifyYourPhone": "Please verify your phone number ...",
+  "verify": "Verify",
+
+  "passwordRecovery": "Password recovery",
+  "otpAppBarHint": "Please enter the verification code sent to your phone number",
+
+  "dontReceiveCode": "Didn’t receive the code?",
+  "resendCode": "Resend code",
+
+  "createNewPassword": "Create new password",
+  "appBarForgetPasswordHint": "Please verify your phone number",
+  "appBarCreateNewPasswordHint": "Create a strong, unique password to enhance the security of your account.",
+
+  "continueText": "Continue",
+  "gettingStarted": "Getting started!",
+  "agree": "Agree to",
+  "terms": "Terms & Conditions"
+}

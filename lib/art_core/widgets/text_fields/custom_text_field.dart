@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../theme/text_field_theme.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/font_styles.dart';
 
@@ -34,6 +35,8 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
@@ -51,6 +54,9 @@ class CustomTextFormField extends StatelessWidget {
           obscureText: obscureText,
           keyboardType: textInputType,
           onSaved: onSaved,
+          onTapOutside: (event) {
+            FocusScope.of(context).unfocus();
+          },
           validator:
               validator ??
               (value) {
@@ -63,7 +69,7 @@ class CustomTextFormField extends StatelessWidget {
 
             hintText: text,
             hintStyle: TextStyles.font12Small.copyWith(
-              color: AppColors.textColorSecondary,
+              color: AppTextFieldTheme.textFieldColor(context),
             ),
             contentPadding: EdgeInsets.symmetric(
               vertical: 12.h,
@@ -72,19 +78,24 @@ class CustomTextFormField extends StatelessWidget {
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
 
-              borderSide: BorderSide(color: AppColors.white20),
+              borderSide: BorderSide(color: AppColors.textFieldLightBorderColor),
             ),
-            focusColor: AppColors.white10,
+            focusColor: AppTextFieldTheme.textFieldColor(context),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
 
-              borderSide: BorderSide(color: AppColors.white20),
+              borderSide: BorderSide(
+              width: isDark ? 0.1 : 1,
+              color: isDark
+              ? AppColors.textFieldDarkBorderColor.withOpacity(.5)
+                  : AppColors.textFieldLightBorderColor,
+              ),
             ),
             isDense: true,
             filled: true,
-            fillColor: AppColors.white10,
+            fillColor: AppTextFieldTheme.textFieldColor(context),
             prefixIcon: prefixIcon,
-            prefixIconColor: AppColors.white20,
+            prefixIconColor: AppColors.textFieldLightBorderColor,
             suffixIcon: suffixIcon,
             border: InputBorder.none,
             focusedBorder: OutlineInputBorder(
@@ -92,7 +103,7 @@ class CustomTextFormField extends StatelessWidget {
 
               borderSide: BorderSide(
                   width: .8.w,
-                  color: AppColors.primaryColor),
+                  color: AppColors.primaryBtnColor),
             ),
           ),
         ),

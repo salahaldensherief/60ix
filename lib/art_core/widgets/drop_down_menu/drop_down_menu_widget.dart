@@ -2,6 +2,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../theme/text_field_theme.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/font_styles.dart';
 
@@ -18,6 +19,8 @@ class DropDownMenuWidget<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     double width = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,14 +43,14 @@ class DropDownMenuWidget<T> extends StatelessWidget {
           ),
           inputDecorationTheme: InputDecorationTheme(
             filled: true,
-            fillColor: AppColors.white10,
+            fillColor:  AppTextFieldTheme.textFieldColor(context),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(color: AppColors.white20),
+              borderSide: BorderSide(color: AppColors.textFieldLightBorderColor.withOpacity(.2),width: .3),
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(color: AppColors.white10),
+              borderSide: BorderSide(color: AppColors.textFieldLightFillColor,width: .3),
             ),
           ),
           width: width,
@@ -57,7 +60,7 @@ class DropDownMenuWidget<T> extends StatelessWidget {
           dropdownMenuEntries: dropdownMenuEntries,
           trailingIcon: Icon(
             Icons.arrow_drop_down_sharp,
-            color: AppColors.colorBtnSecondaryLabel,
+            color:  isDark ? AppColors.textColorDarkSecondary:  AppColors.colorBtnSecondaryLabel,
           ),
         ),
 

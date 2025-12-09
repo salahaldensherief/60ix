@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:ix/art_core/utils/app_colors.dart';
 
 import '../../../../art_core/utils/font_styles.dart';
 import '../login/login_view.dart';
@@ -12,13 +13,18 @@ final  void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Center(
       child: Text.rich(
         TextSpan(
           children: [
             TextSpan(
               text: '$title ',
-              style: TextStyles.font14lightRegular,
+              style: TextStyles.font14lightRegular.copyWith(
+                color:  AppColors.textColorDarkSecondary
+              ),
+
             ),
             TextSpan(
               recognizer: TapGestureRecognizer()

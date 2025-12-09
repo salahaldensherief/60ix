@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ix/art_core/utils/app_strings.dart';
 
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/widgets/text_fields/custom_text_field.dart';
@@ -31,7 +33,7 @@ class _PasswordFieldState extends State<PasswordField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomTextFormField(
-          text: 'Enter your password',
+          text: AppStrings.passwordHint.tr(),
           controller: widget.controller,
           obscureText: obscureText,
           onSaved: widget.onSaved,

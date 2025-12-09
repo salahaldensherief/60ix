@@ -4,44 +4,47 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../../../../../../art_core/utils/app_colors.dart';
 
-
 class OtpPinWidget extends StatelessWidget {
-  const OtpPinWidget({
-    super.key,
-  });
+  const OtpPinWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return PinCodeTextField(
       appContext: context,
       length: 6,
       keyboardType: TextInputType.number,
-      cursorColor: AppColors.textColorPrimary,
+      cursorColor: AppColors.textColorLightPrimary,
       animationType: AnimationType.fade,
-      textStyle: const TextStyle(
-        fontSize: 15,
-        fontWeight: FontWeight.bold,
-      ),
+      textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
       pinTheme: PinTheme(
-
-
-        disabledColor: AppColors.white20,
+        disabledColor: AppColors.textFieldLightBorderColor,
         borderRadius: BorderRadius.circular(8.r),
         shape: PinCodeFieldShape.box,
         fieldHeight: 50,
-        fieldWidth: 50,
-        activeFillColor: AppColors.whiteColor,
-        inactiveFillColor: AppColors.white10,
-        selectedFillColor: AppColors.white10,
-        activeColor: AppColors.primaryColor,
-        inactiveColor: AppColors.white20,
-        selectedColor: AppColors.primaryColor,
+        fieldWidth: 55,
+        activeFillColor: isDark
+            ? AppColors.textFieldDarkFillColor
+            : AppColors.whiteColor,
+        inactiveFillColor: isDark
+            ? AppColors.textFieldDarkFillColor
+            : AppColors.textFieldLightFillColor,
+        selectedFillColor: isDark
+            ? AppColors.textFieldDarkFillColor
+            : AppColors.textFieldLightFillColor,
+        activeColor: AppColors.primaryBtnColor,
+        inactiveColor: isDark
+            ? AppColors.textFieldDarkBorderColor.withOpacity(.2)
+            : AppColors.textFieldLightBorderColor,
+        selectedColor: AppColors.primaryBtnColor,
         borderWidth: .3,
-         activeBorderWidth: 1,
-        disabledBorderWidth: 1,
-        inactiveBorderWidth: 1,
-        selectedBorderWidth: 1
+        activeBorderWidth: .8,
+        disabledBorderWidth: .8,
+        inactiveBorderWidth: isDark ? .4 : .8,
+        selectedBorderWidth: .8,
       ),
+
       enableActiveFill: true,
       onChanged: (_) {},
     );
