@@ -5,25 +5,25 @@ import 'package:ix/art_core/theme/theme.dart';
 import 'package:ix/features/splash/presntation/splash_view.dart';
 
 import 'art_core/utils/app_colors.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
-
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('ar')],
+      supportedLocales: [Locale('en')],
       path: 'assets/translations',
-      fallbackLocale: Locale('ar'),
+      fallbackLocale: Locale('en'),
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
-          child: MyApp()),
+        child: MyApp(),
+      ),
     ),
   );
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override

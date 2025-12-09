@@ -1,7 +1,7 @@
 {
   "createAccount": "Create account",
-  "letsSignIn": "Let’s sign in!",
-  "loginToContinueAccount": "Login to continue your account",
+  "letsSignIn": "Let’s Sign In!",
+  "loginToContinueAccount": "Login To Continue Your Account",
 
   "userName": "User name",
   "userNameHint": "Enter your user name",
@@ -20,8 +20,8 @@
   "createPassword": "Create Password",
   "createPasswordSubTitle": "Create a strong, unique password to enhance the security of your account",
 
-  "signUp": "Sign up",
-  "signIn": "Sign In",
+  "signUp": "SIGN UP",
+  "signIn": "SIGN IN",
 
   "country": "Country",
   "countryHint": "Select your country...",
@@ -32,17 +32,17 @@
 
   "onboardingTitle": "Care services, quality products, and a loving community all in one app",
 
-  "createNewAccount": "Create a new account",
-  "guestLogin": "Guest login",
-  "orContinueWith": "Or continue with",
+  "createNewAccount": "Create A New Account",
+  "guestLogin": "Guest Login",
+  "orContinueWith": "Or Continue With",
 
-  "forgotPassword": "Forgot password",
+  "forgotPassword": "Forgot Password",
   "resetPassword": "Reset password",
   "enterEmailToReceive": "Enter your email to receive password reset instructions",
   "send": "Send",
   "backToLogin": "Back to login",
 
-  "newPassword": "New password",
+  "newPassword": "New Password",
   "confirmNewPassword": "Confirm new password",
   "passwordResetSuccessMessage": "Your password has been successfully reset. Please use your new password",
   "successfully": "Successfully",
@@ -66,21 +66,21 @@
 
   "next": "Next",
 
-  "verifyYourPhone": "Please verify your phone number ...",
+  "verifyYourPhone": " verify your phone number ...",
   "verify": "Verify",
 
-  "passwordRecovery": "Password recovery",
+  "passwordRecovery": "Password Recovery",
   "otpAppBarHint": "Please enter the verification code sent to your phone number",
 
-  "dontReceiveCode": "Didn’t receive the code?",
+  "dontReceiveCode": "Don’t receive the code?",
   "resendCode": "Resend code",
 
-  "createNewPassword": "Create new password",
+  "createNewPassword": "Create New Password",
   "appBarForgetPasswordHint": "Please verify your phone number",
   "appBarCreateNewPasswordHint": "Create a strong, unique password to enhance the security of your account.",
 
   "continueText": "Continue",
   "gettingStarted": "Getting started!",
-  "agree": "Agree to",
+  "agree": "Agree to ",
   "terms": "Terms & Conditions"
 }

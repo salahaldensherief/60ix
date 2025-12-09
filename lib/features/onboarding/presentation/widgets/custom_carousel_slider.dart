@@ -25,6 +25,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       body: Column(
         children: [
@@ -76,7 +77,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
               dotDecoration: DotDecoration(
                 width: 8,
                 height: 8,
-                color: AppColors.primaryBtnColor.withOpacity(0.3),
+                color:  isDark ? AppColors.whiteColor : AppColors.primaryBtnColor.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
