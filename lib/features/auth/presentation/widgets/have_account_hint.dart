@@ -22,7 +22,7 @@ final  void Function()? onTap;
             TextSpan(
               text: '$title ',
               style: TextStyles.font14lightRegular.copyWith(
-                color:  AppColors.textColorDarkSecondary
+                color:  AppColors.textColorLightSecondary
               ),
 
             ),

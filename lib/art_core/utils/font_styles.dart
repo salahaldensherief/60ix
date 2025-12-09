@@ -23,7 +23,7 @@ class TextStyles {
   static TextStyle font14SemiBold = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColors.whiteColor,
+    // color: AppColors.whiteColor,
   );
   static TextStyle font14 = TextStyle(
     fontSize: 14,
@@ -78,6 +78,7 @@ class TextStyles {
   static TextStyle font14mediumRegular = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.medium,
+
     // color: AppColors.textColorPrimary,
   );
   static TextStyle font12mediumRegular = TextStyle(

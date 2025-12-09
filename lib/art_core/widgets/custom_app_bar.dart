@@ -61,9 +61,9 @@ class CustomAppBar extends StatelessWidget {
           SizedBox(height: 8.h),
           Text(
             subtitle,
-            // style: TextStyles.font12mediumRegular.copyWith(
-              // color: AppColors.textColorSecondary,
-            // ),
+            style: TextStyles.font14mediumRegular.copyWith(
+
+            ),
           ),
           // Text(phoneNumber! ,style: TextStyles.font12Medium.copyWith(
           //   color: Colors.black

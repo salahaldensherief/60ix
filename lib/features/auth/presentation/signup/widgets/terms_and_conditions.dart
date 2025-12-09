@@ -40,15 +40,15 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
               children: [
                 TextSpan(
                   text: AppStrings.agree.tr(),
-                  style: isDark ? TextStyles.font14lightRegular.copyWith(
+                  style: isDark ? TextStyles.font14SemiBold.copyWith(
                       color:  AppColors.textColorDarkSecondary
                   ): TextStyle(color: Colors.black),
                 ),
                 TextSpan(text: '  '),
                 TextSpan(
                   text: AppStrings.terms.tr(),
-                  style: TextStyle(color: AppColors.primaryBtnColor),
-                ),
+                  style: TextStyles.font14SemiBold.copyWith(color: AppColors.primaryBtnColor)),
+
               ],
             ),
           ),

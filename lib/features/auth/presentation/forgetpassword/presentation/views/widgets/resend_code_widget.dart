@@ -18,7 +18,7 @@ class ResendCodeWidget extends StatelessWidget {
             TextSpan(
               text: AppStrings.dontReceiveCode.tr(),
               style: TextStyles.font14lightRegular.copyWith(
-                  color:  AppColors.textColorDarkSecondary
+                  color:  AppColors.textColorLightSecondary,
               ),
             ),
             TextSpan(
