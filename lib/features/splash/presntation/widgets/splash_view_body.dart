@@ -20,6 +20,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    ///TODO: instead of this try
+    ///extension ContextExtensions on BuildContext {
+    /// double get width => MediaQuery.of(this).size.width;
+    ///   double get height => MediaQuery.of(this).size.height;
+    ///   double get topPadding => MediaQuery.of(this).padding.top;
+    ///   double get bottomPadding => MediaQuery.of(this).padding.bottom;
+    /// }
+
     final width = MediaQuery
         .of(context)
         .size
@@ -29,14 +37,20 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       body: Center(
         child:
         SvgPicture.asset(
+          /// width: context.width * 0.4,
             width: width / 2.5,
             AssetsData.logo),
 
       ),
     );
   }
+  ///TODO: keep correct spelling in mind
   void excuteNavigation() async {
+    ///TODO: this way is not the best option .
+    ///try using Timer
     Future.delayed(const Duration(seconds: 3), () {
+///TODO: try to ues pushNamed .
+      /// note: you will need to create a file for routes
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => OnboardingView(),));
 
     });

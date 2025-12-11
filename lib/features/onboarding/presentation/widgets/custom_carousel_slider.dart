@@ -18,6 +18,8 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
   int _current = 0;
 
   final List<String> imgList = [
+    ///TODO: keep all images paths in one place/ file
+    ///exp: assetsManager.onboarding1
     'assets/images/onboarding1.png',
     'assets/images/onboarding1.png',
     'assets/images/onboarding1.png',
@@ -26,6 +28,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    ///TODO: Scaffold is for the screen /view only . do not use it in widgets
     return Scaffold(
       body: Column(
         children: [

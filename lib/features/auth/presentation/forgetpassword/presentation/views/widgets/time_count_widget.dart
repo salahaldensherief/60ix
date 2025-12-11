@@ -21,6 +21,7 @@ class TimeCountWidget extends StatelessWidget {
           due: DateTime.now().add(
               const Duration(
                   seconds: 30)),
+          ///TODO: this is the reason why it show 00:00:00 when finished
           finishedText: "00:00",
           style: TextStyle(color: AppColors.textColorLightPrimary),
         ),

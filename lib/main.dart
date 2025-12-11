@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: MaterialApp(
         darkTheme: AppTheme.darkTheme,
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.light,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,

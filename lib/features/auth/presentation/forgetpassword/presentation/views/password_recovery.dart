@@ -13,23 +13,29 @@ import '../../../../../../art_core/utils/app_strings.dart';
 import '../../../../../../art_core/utils/font_styles.dart';
 import '../../../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../../../art_core/widgets/custom_app_bar.dart';
-
+///PasswordRecovery what?
+///TODO: always add the widget type or identifier to its name
+///exp: PasswordRecovery(View) , UserInfo(Card) , requests(List),anyName(bottomSheet)
 class PasswordRecovery extends StatelessWidget {
   const PasswordRecovery({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      ///TODO: you can add appBarWidget here
+     // appBar:
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20).w,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ///TODO
         CustomAppBar(
               // phoneNumber: '01002658542',
               showBack: true,
               title:AppStrings.passwordRecovery.tr(),
               subtitle: AppStrings.otpAppBarHint.tr(),
             ),
+            ///TODO:
             SizedBox(height: 4.h),
             OtpPinWidget(),
             SizedBox(height: 20.h),

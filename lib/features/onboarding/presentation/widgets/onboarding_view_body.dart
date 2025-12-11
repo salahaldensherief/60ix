@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ix/art_core/theme/text_botton_theme.dart';
+///TODO: remove unused imports
+///always keep files clean
 import 'package:ix/art_core/theme/theme.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
 import 'package:ix/features/auth/presentation/login/login_view.dart';
@@ -18,13 +20,46 @@ class OnboardingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
+    ///TODO: try dividing the screen into 3 sections : header/ top , body , footer/ bottom
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
+            ///top
+            ///TODO: using SizedBox as space holder her is not the best thing to do , try using padding
+            ///note : you can add new extension for padding
+            /// exp: extension PaddingExtensions on Widget {
+            ///   // All padding
+            ///   Widget padAll(double value) => Padding(
+            ///         padding: EdgeInsets.all(value.w),
+            ///         child: this,
+            ///       );
+            ///
+            ///   // Horizontal + Vertical
+            ///   Widget padSymmetric({double horizontal = 0, double vertical = 0}) => Padding(
+            ///         padding: EdgeInsets.symmetric(
+            ///           horizontal: horizontal.w,
+            ///           vertical: vertical.h,
+            ///         ),
+            ///         child: this,
+            ///       );
+            ///
+            ///   // Only specific sides
+            ///   Widget padOnly({double left = 0, double top = 0, double right = 0, double bottom = 0}) =>
+            ///       Padding(
+            ///         padding: EdgeInsets.only(
+            ///           left: left.w,
+            ///           top: top.h,
+            ///           right: right.w,
+            ///           bottom: bottom.h,
+            ///         ),
+            ///         child: this,
+            ///       );
+            /// }
             SizedBox(height: 40.h),
             Center(child: SvgPicture.asset(width: 90.w, AssetsData.logo)),
             SizedBox(height: 40.h),
+            ///body
             Expanded(child: CustomCarouselSlider()),
             Text(
               AppStrings.onboardingTitle.tr(),
@@ -36,8 +71,10 @@ class OnboardingViewBody extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 80.h),
+            ///bottom
             CustomButton(
               onPressed: () {
+                ///TODO
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context) => SignupView()),
                 );
