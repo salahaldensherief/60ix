@@ -27,7 +27,7 @@ class SignupVerify extends StatelessWidget {
             CustomAppBar(
               // phoneNumber: '01002658542',
               showBack: true,
-              title: AppStrings.createPassword.tr(),
+              title: AppStrings.verifyYourPhone.tr(),
               subtitle: AppStrings.otpAppBarHint.tr(),
             ),
             SizedBox(height: 4.h),
