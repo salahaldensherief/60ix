@@ -22,7 +22,7 @@ class TimeCountWidget extends StatelessWidget {
               const Duration(
                   seconds: 30)),
           ///TODO: this is the reason why it show 00:00:00 when finished
-          finishedText: "00:00",
+          finishedText: "00",
           style: TextStyle(color: AppColors.textColorLightPrimary),
         ),
       ],

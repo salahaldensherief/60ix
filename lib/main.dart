@@ -2,10 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/theme/theme.dart';
+import 'package:ix/core/router/router.dart';
+import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/password_recovery_view.dart';
+import 'package:ix/features/auth/presentation/login/login_view.dart';
 import 'package:ix/features/splash/presntation/splash_view.dart';
-
-import 'art_core/utils/app_colors.dart';
-
+import 'features/auth/presentation/signup/signup_view_body.dart';
+import 'features/onboarding/presentation/onboarding_view.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -32,20 +34,23 @@ class MyApp extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: MaterialApp(
         darkTheme: AppTheme.darkTheme,
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.system,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
-        // ThemeData(
-        //   useMaterial3: false,
-        //   scaffoldBackgroundColor: AppColors.whiteColor,
-        //   fontFamily: 'Source Sans 3',
-        //   primaryColor: AppColors.primaryColor,
-        // ),
-        home: SplashView(),
+        initialRoute: NavigatorKeys.splash,
+        routes: <String, WidgetBuilder>{
+          NavigatorKeys.splash: (BuildContext context) => SplashView(),
+          NavigatorKeys.onBoardingPage: (BuildContext context) => OnboardingView(),
+          NavigatorKeys.signIn: (BuildContext context) => LoginView(),
+          NavigatorKeys.signUp: (BuildContext context) => SignupView(),
+          NavigatorKeys.passwordRecovery: (BuildContext context) => PasswordRecoveryView(),
+        },
       ),
     );
   }
 }
+
+

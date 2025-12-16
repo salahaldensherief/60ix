@@ -9,9 +9,8 @@ import '../../../../art_core/utils/app_strings.dart';
 import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../art_core/widgets/custom_app_bar.dart';
-import '../forgetpassword/presentation/views/create_new_password_view.dart';
 import '../forgetpassword/presentation/views/widgets/otp_pin_widget.dart';
-import '../forgetpassword/presentation/views/widgets/resend_code_widget.dart';
+import '../forgetpassword/presentation/views/widgets/resend_code_hint.dart';
 import '../forgetpassword/presentation/views/widgets/time_count_widget.dart';
 
 class SignupVerify extends StatelessWidget {
@@ -54,7 +53,7 @@ class SignupVerify extends StatelessWidget {
             // ResendCodeWidget()],
             TimeCountWidget(),
             SizedBox(height: 10.h),
-            ResendCodeWidget(),
+            ResendCodeHint(),
           ],
         ),
       ),

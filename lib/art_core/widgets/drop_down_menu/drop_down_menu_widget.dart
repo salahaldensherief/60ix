@@ -45,10 +45,12 @@ class DropDownMenuWidget<T> extends StatelessWidget {
             filled: true,
             fillColor:  AppTextFieldTheme.textFieldColor(context),
             enabledBorder: OutlineInputBorder(
+
               borderRadius: BorderRadius.circular(8.r),
               borderSide: BorderSide(color: AppColors.textFieldLightBorderColor.withOpacity(.2),width: .3),
             ),
             border: OutlineInputBorder(
+
               borderRadius: BorderRadius.circular(8.r),
               borderSide: BorderSide(color: AppColors.textFieldLightFillColor,width: .3),
             ),

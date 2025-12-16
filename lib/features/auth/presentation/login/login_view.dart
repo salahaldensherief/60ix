@@ -1,13 +1,32 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:ix/features/auth/presentation/login/widgets/login_view_body.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ix/art_core/extensions/padding.dart';
+import 'package:ix/features/auth/presentation/login/widgets/login_bottons.dart';
+import 'package:ix/features/auth/presentation/login/widgets/login_form.dart';
+import '../../../../art_core/utils/app_strings.dart';
+import '../../../../art_core/widgets/custom_app_bar.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
-
   @override
   Widget build(BuildContext context) {
-    ///TODO
-
-    return LoginViewBody();
+    return Scaffold(
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ///TODO
+            CustomAppBar(
+              subtitle: AppStrings.loginToContinueAccount.tr(),
+              title: AppStrings.letsSignIn.tr(),
+            ),
+            LoginForm(),
+            LoginActions(),
+          ],
+        ),
+      ).padSymmetric(vertical: 20.h, horizontal: 18.w),
+    );
   }
 }

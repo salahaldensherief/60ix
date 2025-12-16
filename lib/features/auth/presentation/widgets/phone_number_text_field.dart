@@ -1,14 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
 import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/text_fields/custom_text_field.dart';
 import 'intl_phone_widget.dart';
 ///TODO: name
-class PhoneNumberWidget extends StatelessWidget {
-  const PhoneNumberWidget({super.key, required this.textFieldHint});
+class PhoneNumberTextField extends StatelessWidget {
+  const PhoneNumberTextField({super.key, required this.textFieldHint});
   final String textFieldHint;
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,6 @@ class PhoneNumberWidget extends StatelessWidget {
             Expanded(
                 flex: 2,
                  child: IntlPhoneWidget(
-
                  )),
             SizedBox(width: 16.w),
             Expanded(

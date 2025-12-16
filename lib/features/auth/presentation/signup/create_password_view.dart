@@ -1,9 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ix/features/auth/presentation/signup/signup_verify_view.dart';
 import 'package:ix/features/auth/presentation/signup/widgets/terms_and_conditions.dart';
-
 import '../../../../art_core/theme/text_botton_theme.dart';
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/app_strings.dart';
@@ -11,7 +9,7 @@ import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../art_core/widgets/custom_app_bar.dart';
 import '../login/login_view.dart';
-import '../widgets/passwoed_field.dart';
+import '../widgets/password_text_field.dart';
 
 class CreatePasswordView extends StatelessWidget {
   const CreatePasswordView({super.key});
@@ -30,14 +28,13 @@ class CreatePasswordView extends StatelessWidget {
               AppStrings.createPasswordSubTitle.tr(),
               showBack: true,
             ),
-            PasswordField(hintText: AppStrings.newPassword.tr()),
+            PasswordTextField(hintText: AppStrings.newPassword.tr()),
             SizedBox(height: 20.h),
-            PasswordField(hintText: AppStrings.confirmPassword.tr()),
+            PasswordTextField(hintText: AppStrings.confirmPassword.tr()),
             SizedBox(height: 20.h),
             TermsAndConditions(onChanged: (value) => null,),
             SizedBox(height: 20.h),
             ///TODO
-
             CustomButton(
               onPressed: () {
                 Navigator.of(

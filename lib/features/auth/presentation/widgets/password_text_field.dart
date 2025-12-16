@@ -7,8 +7,8 @@ import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/widgets/text_fields/custom_text_field.dart';
 ///TODO: try PasswordTextField
 
-class PasswordField extends StatefulWidget {
-  const PasswordField({
+class PasswordTextField extends StatefulWidget {
+  const PasswordTextField({
     super.key,
     this.onSaved,
      this.hintText,
@@ -22,10 +22,10 @@ class PasswordField extends StatefulWidget {
   final String? hintText;
 
   @override
-  State<PasswordField> createState() => _PasswordFieldState();
+  State<PasswordTextField> createState() => _PasswordTextFieldState();
 }
 
-class _PasswordFieldState extends State<PasswordField> {
+class _PasswordTextFieldState extends State<PasswordTextField> {
   bool obscureText = true;
 
   @override

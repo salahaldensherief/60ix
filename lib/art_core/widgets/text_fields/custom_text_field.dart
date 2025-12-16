@@ -20,7 +20,6 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     this.onTap,
   });
-
   final String? hintText;
   final String? text;
   final Widget? prefixIcon;

@@ -15,7 +15,6 @@ final  void Function()? onTap;
   Widget build(BuildContext context) {
     ///TODO : get rid of dead code
 
-    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Center(
       child: Text.rich(

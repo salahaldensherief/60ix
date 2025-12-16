@@ -1,10 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart' as slider;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ix/art_core/utils/assets_data.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../../../../art_core/utils/app_colors.dart';
-
 class CustomCarouselSlider extends StatefulWidget {
   const CustomCarouselSlider({super.key});
 
@@ -20,17 +19,16 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
   final List<String> imgList = [
     ///TODO: keep all images paths in one place/ file
     ///exp: assetsManager.onboarding1
-    'assets/images/onboarding1.png',
-    'assets/images/onboarding1.png',
-    'assets/images/onboarding1.png',
+    AssetsData.onBoardingImage1,
+    AssetsData.onBoardingImage1,
+    AssetsData.onBoardingImage1,
   ];
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     ///TODO: Scaffold is for the screen /view only . do not use it in widgets
-    return Scaffold(
-      body: Column(
+    return  Column(
         children: [
           slider.CarouselSlider(
 
@@ -86,7 +84,6 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }

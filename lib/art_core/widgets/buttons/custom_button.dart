@@ -4,22 +4,25 @@ import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    required this.onPressed,
-    required this.text,
-    required this.color,
+    this.alignment ,
+
+    this.onPressed,
+    this.text ='',
+    this.color,
      this.colorSide = Colors.transparent,
-   required this.textStyle,
+    this.textStyle,
   });
-  final VoidCallback onPressed;
-  final String text;
-  final Color color;
+  final VoidCallback? onPressed;
+  final String? text;
+  final Color? color;
  final  Color? colorSide;
-  final TextStyle textStyle;
+  final TextStyle? textStyle;
+  final Alignment? alignment;
   @override
   Widget build(BuildContext context) {
     return TextButton(
-
       style: TextButton.styleFrom(
+        alignment: alignment,
         backgroundColor: color,
         fixedSize: Size(364, 50),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -27,7 +30,7 @@ class CustomButton extends StatelessWidget {
       ),
       onPressed: onPressed,
       child: Text(
-          text,
+          text!,
           style:textStyle),
     );
   }
