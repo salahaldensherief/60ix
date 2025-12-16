@@ -48,6 +48,10 @@ class SignupVerify extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
+            ///TODO: you can make it as one widget
+           //[ TimeCountWidget(),
+            // SizedBox(height: 10.h),
+            // ResendCodeWidget()],
             TimeCountWidget(),
             SizedBox(height: 10.h),
             ResendCodeWidget(),

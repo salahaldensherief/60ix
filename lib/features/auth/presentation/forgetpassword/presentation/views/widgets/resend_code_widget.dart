@@ -5,7 +5,7 @@ import 'package:ix/art_core/utils/app_strings.dart';
 
 import '../../../../../../../art_core/utils/app_colors.dart';
 import '../../../../../../../art_core/utils/font_styles.dart';
-
+///TODO: try name it ResendCodeHint
 class ResendCodeWidget extends StatelessWidget {
   const ResendCodeWidget({super.key});
   @override
@@ -16,7 +16,8 @@ class ResendCodeWidget extends StatelessWidget {
 
           children: [
             TextSpan(
-              text: AppStrings.dontReceiveCode.tr(),
+              ///TODO:
+              text:"${ AppStrings.dontReceiveCode.tr()} ",
               style: TextStyles.font14lightRegular.copyWith(
                   color:  AppColors.textColorLightSecondary,
               ),

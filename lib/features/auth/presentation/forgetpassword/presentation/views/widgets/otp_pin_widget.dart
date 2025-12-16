@@ -35,6 +35,7 @@ class OtpPinWidget extends StatelessWidget {
             : AppColors.textFieldLightFillColor,
         activeColor: AppColors.primaryBtnColor,
         inactiveColor: isDark
+        ///TODO: do not use deprecated extension '.withOpacity(.2)' , because it means it will be removed soon
             ? AppColors.textFieldDarkBorderColor.withOpacity(.2)
             : AppColors.textFieldLightBorderColor,
         selectedColor: AppColors.primaryBtnColor,

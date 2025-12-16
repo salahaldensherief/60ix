@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../art_core/utils/assets_data.dart';
 
+///TODO
 
 class SocialLoginBotton extends StatelessWidget {
   SocialLoginBotton({super.key});
@@ -21,6 +22,8 @@ class SocialLoginBotton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        ///TODO : try List.generate
+
         SocialIconWidget(
           onPressed: () {
             _googleLaunchUrl();

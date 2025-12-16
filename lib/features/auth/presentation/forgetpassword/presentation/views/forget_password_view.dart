@@ -18,15 +18,18 @@ class ForgetPasswordView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
+        ///TODO: you need to use fixed padding for all screens
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20).w,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ///TODO
             CustomAppBar(
               showBack: true,
               title: AppStrings.forgotPassword.tr(),
               subtitle: AppStrings.verifyYourPhone.tr(),
             ),
+            ///TODO
             SizedBox(height: 10.h),
             PhoneNumberWidget(
               textFieldHint: AppStrings.appBarForgetPasswordHint.tr(),

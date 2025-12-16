@@ -17,11 +17,14 @@ class CreateNewPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      ///TODO
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20).w,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ///TODO
+
             CustomAppBar(
               title: AppStrings.createNewAccount.tr(),
               subtitle:
@@ -29,9 +32,12 @@ class CreateNewPasswordView extends StatelessWidget {
               showBack: true,
             ),
             PasswordField(hintText: AppStrings.newPassword.tr()),
+            ///TODO
+
             SizedBox(height: 20.h),
             PasswordField(hintText: AppStrings.confirmPassword.tr()),
             SizedBox(height: 20.h),
+            ///TODO
 
             CustomButton(
               onPressed: () {

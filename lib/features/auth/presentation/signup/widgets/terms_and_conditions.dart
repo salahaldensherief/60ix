@@ -19,6 +19,7 @@ class TermsAndConditions extends StatefulWidget {
 class _TermsAndConditionsState extends State<TermsAndConditions> {
 
   @override
+  ///TODO why????
   bool isTermsAccepted = false;
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -39,11 +40,15 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
             TextSpan(
               children: [
                 TextSpan(
-                  text: AppStrings.agree.tr(),
+                  ///TODO: to add space
+
+                text: '${AppStrings.agree.tr()} ',
                   style: isDark ? TextStyles.font14SemiBold.copyWith(
                       color:  AppColors.textColorDarkSecondary
                   ): TextStyle(color: Colors.black),
                 ),
+                ///TODO ???
+
                 TextSpan(text: '  '),
                 TextSpan(
                   text: AppStrings.terms.tr(),

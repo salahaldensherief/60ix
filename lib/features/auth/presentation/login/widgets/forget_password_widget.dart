@@ -14,8 +14,12 @@ class ForgetPasswordWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerRight,
+      ///TODO: too many types of buttons , use one, customized only
+
       child: TextButton(
         onPressed: () {
+          ///TODO
+
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgetPasswordView(),));
         },
         child: Text(AppStrings.forgotPassword.tr(), style:TextThemeToggle.textTheme(context).titleSmall  ),

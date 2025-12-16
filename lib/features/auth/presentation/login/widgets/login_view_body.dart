@@ -25,17 +25,23 @@ class LoginViewBody extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 20.w),
+        ///TODO
+
+      padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 20.w),
         child: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               CustomAppBar(
+              ///TODO
+
+              CustomAppBar(
                 subtitle: AppStrings.loginToContinueAccount.tr(),
                 title: AppStrings.letsSignIn.tr(),
               ),
               PhoneNumberWidget(textFieldHint: AppStrings.phoneNumberHint.tr()),
+              ///TODO
+
               SizedBox(height: 12.h),
               PasswordField(hintText: AppStrings.password.tr()),
               SizedBox(height: 12.h),
@@ -66,6 +72,8 @@ class LoginViewBody extends StatelessWidget {
                 title: AppStrings.dontHaveAccount.tr(),
                 actionTitle: AppStrings.signUp.tr(),
                 onTap: () {
+                  ///TODO
+
                   Navigator.of(
                     context,
                   ).push(MaterialPageRoute(builder: (context) => SignupView()));

@@ -36,6 +36,7 @@ class CreatePasswordView extends StatelessWidget {
             SizedBox(height: 20.h),
             TermsAndConditions(onChanged: (value) => null,),
             SizedBox(height: 20.h),
+            ///TODO
 
             CustomButton(
               onPressed: () {

@@ -4,6 +4,7 @@ import 'package:ix/art_core/utils/app_strings.dart';
 
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/font_styles.dart';
+///TODO: name
 
 class OrDivider extends StatelessWidget {
   const OrDivider({super.key});
