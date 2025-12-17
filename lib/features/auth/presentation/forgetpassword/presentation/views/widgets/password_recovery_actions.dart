@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ix/core/router/router.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/resend_code_hint.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/time_count_widget.dart';
 
@@ -9,7 +10,6 @@ import '../../../../../../../art_core/utils/app_colors.dart';
 import '../../../../../../../art_core/utils/app_strings.dart';
 import '../../../../../../../art_core/utils/font_styles.dart';
 import '../../../../../../../art_core/widgets/buttons/custom_button.dart';
-import '../create_new_password_view.dart';
 
 class PasswordRecoveryActions extends StatelessWidget {
   const PasswordRecoveryActions({super.key});
@@ -20,10 +20,7 @@ class PasswordRecoveryActions extends StatelessWidget {
       children: [
         CustomButton(
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => CreateNewPasswordView(),
-              ),
+            Navigator.of(context).pushNamed(NavigatorKeys.createNewPasswordView
             );
           },
           text: AppStrings.verify.tr(),

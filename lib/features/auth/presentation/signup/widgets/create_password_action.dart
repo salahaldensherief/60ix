@@ -7,7 +7,7 @@ import '../../../../../art_core/utils/app_colors.dart';
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/utils/font_styles.dart';
 import '../../../../../art_core/widgets/buttons/custom_button.dart';
-import '../../login/login_view.dart';
+import '../../../../../core/router/router.dart';
 
 class CreatePasswordAction extends StatelessWidget {
   const CreatePasswordAction({
@@ -19,7 +19,7 @@ class CreatePasswordAction extends StatelessWidget {
       onPressed: () {
         Navigator.of(
           context,
-        ).push(MaterialPageRoute(builder: (context) => LoginView()));
+        ).pushNamed(NavigatorKeys.signIn);
       },
       text: AppStrings.continueText.tr(),
       color: AppTextButtonStyles.primaryColor(context),

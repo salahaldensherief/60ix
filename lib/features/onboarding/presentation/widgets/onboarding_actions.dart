@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:ix/art_core/extensions/padding.dart';
+import 'package:ix/core/router/router.dart';
 import '../../../../art_core/theme/text_botton_theme.dart';
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/app_strings.dart';
@@ -19,8 +20,7 @@ class OnboardingActions extends StatelessWidget {
       children: [
         CustomButton(
           onPressed: () {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => SignupView()),
+            Navigator.of(context).pushReplacementNamed(NavigatorKeys.signUp
             );
           },
           textStyle: TextStyles.font16SemiBold.copyWith(
@@ -32,8 +32,7 @@ class OnboardingActions extends StatelessWidget {
         CustomButton(
           textStyle: theme.headlineLarge!,
           onPressed: () {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => LoginView()),
+            Navigator.of(context).pushReplacementNamed(NavigatorKeys.signIn
             );
           },
           text: AppStrings.guestLogin.tr(),

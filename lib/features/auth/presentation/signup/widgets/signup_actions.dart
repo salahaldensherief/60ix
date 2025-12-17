@@ -7,6 +7,7 @@ import '../../../../../art_core/utils/app_colors.dart';
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/utils/font_styles.dart';
 import '../../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../../core/router/router.dart';
 import '../../login/login_view.dart';
 import '../../widgets/have_account_hint.dart';
 import '../../widgets/social_login_buttons.dart';
@@ -18,13 +19,13 @@ class SignupActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
-    return  Column(
+    return Column(
       children: [
         CustomButton(
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => SignupVerify()),
-            );
+            Navigator.of(
+              context,
+            ).pushNamed(NavigatorKeys.signIn);
           },
           text: AppStrings.next.tr(),
           color: AppTextButtonStyles.primaryColor(context),
@@ -35,23 +36,22 @@ class SignupActions extends StatelessWidget {
         ).padOnly(bottom: 12),
         CustomButton(
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => LoginView()),
-            );
+            Navigator.of(
+              context,
+            ).pushNamed(NavigatorKeys.signIn);
           },
           text: AppStrings.guestLogin.tr(),
           color: AppTextButtonStyles.secondaryColor(context),
           textStyle: theme.headlineLarge!,
         ),
-
         SocialLoginButtons().padOnly(bottom: 24),
         HaveAccountHint(
           title: AppStrings.alreadyHaveAccount.tr(),
           actionTitle: AppStrings.signIn.tr(),
           onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => LoginView()),
-            );
+            Navigator.of(
+              context,
+            ).pushNamed(NavigatorKeys.signIn);
           },
         ),
       ],

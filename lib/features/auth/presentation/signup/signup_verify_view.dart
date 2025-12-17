@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/features/auth/presentation/signup/create_password_view.dart';
+import 'package:ix/features/auth/presentation/signup/widgets/resend_code_section.dart';
 
 import '../../../../art_core/theme/text_botton_theme.dart';
 import '../../../../art_core/utils/app_colors.dart';
@@ -10,6 +11,7 @@ import '../../../../art_core/utils/app_strings.dart';
 import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../art_core/widgets/custom_app_bar.dart';
+import '../../../../core/router/router.dart';
 import '../forgetpassword/presentation/views/widgets/otp_pin_widget.dart';
 import '../forgetpassword/presentation/views/widgets/resend_code_hint.dart';
 import '../forgetpassword/presentation/views/widgets/time_count_widget.dart';
@@ -20,7 +22,7 @@ class SignupVerify extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:   CustomAppBar(
+      appBar: CustomAppBar(
         // phoneNumber: '01002658542',
         showBack: true,
         title: AppStrings.verifyYourPhone.tr(),
@@ -29,15 +31,12 @@ class SignupVerify extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           SizedBox(height: 4.h),
           OtpPinWidget(),
           SizedBox(height: 20.h),
           CustomButton(
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => CreatePasswordView()),
-              );
+              Navigator.of(context).pushNamed(NavigatorKeys.createPasswordView);
             },
             text: AppStrings.verify.tr(),
             color: AppTextButtonStyles.primaryColor(context),
@@ -47,15 +46,14 @@ class SignupVerify extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20.h),
+
           ///TODO: you can make it as one widget
-         //[ TimeCountWidget(),
+          //[ TimeCountWidget(),
           // SizedBox(height: 10.h),
           // ResendCodeWidget()],
-          TimeCountWidget(),
-          SizedBox(height: 10.h),
-          ResendCodeHint(),
+          ResendCodeSection(),
         ],
-      ).padSymmetric( horizontal: 18.w),
+      ).padSymmetric(horizontal: 18.w),
     );
   }
 }
