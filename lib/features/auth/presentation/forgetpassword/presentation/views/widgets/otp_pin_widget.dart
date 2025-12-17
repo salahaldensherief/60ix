@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ix/art_core/extensions/padding.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../../../../../../art_core/utils/app_colors.dart';
@@ -23,7 +24,7 @@ class OtpPinWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.r),
         shape: PinCodeFieldShape.box,
         fieldHeight: 50,
-        fieldWidth: 55,
+        fieldWidth: 50,
         activeFillColor: isDark
             ? AppColors.textFieldDarkFillColor
             : AppColors.whiteColor,
@@ -48,6 +49,6 @@ class OtpPinWidget extends StatelessWidget {
 
       enableActiveFill: true,
       onChanged: (_) {},
-    );
+    ).padAll(8);
   }
 }

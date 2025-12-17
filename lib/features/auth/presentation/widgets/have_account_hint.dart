@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:ix/art_core/utils/app_colors.dart';
 
 import '../../../../art_core/utils/font_styles.dart';
-import '../login/login_view.dart';
 
 class HaveAccountHint extends StatelessWidget {
   const HaveAccountHint({super.key, required this.title, required this.actionTitle, this.onTap});
@@ -15,13 +14,12 @@ final  void Function()? onTap;
   Widget build(BuildContext context) {
     ///TODO : get rid of dead code
 
-
     return Center(
       child: Text.rich(
         TextSpan(
           children: [
             TextSpan(
-              text: '$title ',
+              text: '$title  ',
               style: TextStyles.font14lightRegular.copyWith(
                 color:  AppColors.textColorLightSecondary
               ),

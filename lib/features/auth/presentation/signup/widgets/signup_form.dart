@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ix/art_core/extensions/padding.dart';
 
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/utils/assets_data.dart';
@@ -20,19 +20,16 @@ class SignupForm extends StatelessWidget {
           text: AppStrings.fullNameHint.tr(),
           hintText: AppStrings.fullName.tr(),
           textInputType: TextInputType.name,
-        ),
-        SizedBox(height: 12.h),
+        ).padOnly(bottom: 10),
         PhoneNumberTextField(
           textFieldHint: AppStrings.phoneNumberHint.tr(),
-        ),
-        SizedBox(height: 12.h),
+        ).padOnly(bottom: 10),
         CustomTextFormField(
           text: AppStrings.emailHint.tr(),
 
           hintText: AppStrings.email.tr(),
           textInputType: TextInputType.emailAddress,
-        ),
-        SizedBox(height: 12.h),
+        ).padOnly(bottom: 10),
         DropDownMenuWidget(
           text: AppStrings.countryHint.tr(),
           hintText: AppStrings.country.tr(),
@@ -41,8 +38,7 @@ class SignupForm extends StatelessWidget {
             DropdownMenuEntry(value: 'EG', label: 'Egypt'),
             DropdownMenuEntry(value: 'EG', label: 'Egypt'),
           ],
-        ),
-        SizedBox(height: 12.h),
+        ).padOnly(bottom: 10),
         DropDownMenuWidget(
           text: AppStrings.city.tr(),
           hintText: AppStrings.cityHint.tr(),
@@ -51,8 +47,7 @@ class SignupForm extends StatelessWidget {
             DropdownMenuEntry(value: 'ef', label: 'sad'),
             DropdownMenuEntry(value: 'ef', label: 'sad'),
           ],
-        ),
-        SizedBox(height: 12.h),
+        ).padOnly(bottom: 10),
         DropDownMenuWidget(
           text: AppStrings.genderHint.tr(),
           hintText: AppStrings.gender.tr(),
@@ -60,8 +55,7 @@ class SignupForm extends StatelessWidget {
             DropdownMenuEntry(value: 'm', label: 'male'),
             DropdownMenuEntry(value: 'f', label: 'female'),
           ],
-        ),
-        SizedBox(height: 12.h),
+        ).padOnly(bottom: 10),
         CustomTextFormField(
           text: AppStrings.dateOfBirth.tr(),
           onTap: () {

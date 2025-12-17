@@ -13,25 +13,23 @@ class CreateNewPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      ///TODO
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20).w,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ///TODO
-            CustomAppBar(
-              title: AppStrings.createNewAccount.tr(),
-              subtitle: AppStrings.appBarCreateNewPasswordHint.tr(),
-              showBack: true,
-            ),
-
-        CreateNewPasswordForm(),
-            ///TODO
-            CreateNewAccountButton().padOnly(top: 24),
-          ],
-        ),
+      appBar:  CustomAppBar(
+        title: AppStrings.createNewAccount.tr(),
+        subtitle: AppStrings.appBarCreateNewPasswordHint.tr(),
+        showBack: true,
       ),
+      ///TODO
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ///TODO
+
+
+      CreateNewPasswordForm(),
+          ///TODO
+          CreateNewAccountButton().padOnly(top: 24),
+        ],
+      ).padSymmetric( horizontal: 18.w),
     );
   }
 }

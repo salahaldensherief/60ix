@@ -12,21 +12,21 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        subtitle: AppStrings.loginToContinueAccount.tr(),
+        title: AppStrings.letsSignIn.tr(),
+      ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ///TODO
-            CustomAppBar(
-              subtitle: AppStrings.loginToContinueAccount.tr(),
-              title: AppStrings.letsSignIn.tr(),
-            ),
             LoginForm(),
             LoginActions(),
           ],
         ),
-      ).padSymmetric(vertical: 20.h, horizontal: 18.w),
+      ).padSymmetric( horizontal: 18.w),
     );
   }
 }

@@ -14,7 +14,6 @@ class SocialIconWidget extends StatelessWidget {
 
   final VoidCallback onPressed;
   final String  image;
-
   @override
   Widget build(BuildContext context) {
 

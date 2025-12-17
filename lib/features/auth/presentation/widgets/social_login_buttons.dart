@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/art_core/utils/url_links.dart';
 import 'package:ix/features/auth/presentation/widgets/social_icon_widget.dart';
+import 'package:ix/features/auth/presentation/widgets/social_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../art_core/utils/assets_data.dart';
@@ -15,36 +16,27 @@ class SocialLoginButtons extends StatelessWidget {
   final Uri facebook = Uri.parse(UrlLinks.facebook);
   final Uri apple = Uri.parse(UrlLinks.apple);
 
+  late final List<SocialModel> socialData = [
+    SocialModel(image: AssetsData.googleLogo, onPressed: _googleLaunchUrl),
+    SocialModel(image: AssetsData.facebookLogo, onPressed: _facebookLaunchUrl),
+    SocialModel(image: AssetsData.appleLogo, onPressed: _appleLaunchUrl),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Column(
       children: [
         AuthOrDividerWidget().padOnly(top: 30),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ///TODO : try List.generate,
-            SocialIconWidget(
-              onPressed: () {
-                _googleLaunchUrl();
-              },
-              image: AssetsData.googleLogo,
+          children: List.generate(
+            socialData.length,
+            (index) => SocialIconWidget(
+              onPressed: socialData[index].onPressed,
+              image: socialData[index].image,
             ),
-            SocialIconWidget(
-              onPressed: () {
-                _facebookLaunchUrl();
-              },
-              image: AssetsData.facebookLogo,
-            ),
-            SocialIconWidget(
-              onPressed: () {
-                _appleLaunchUrl();
-              },
-              image: isDark ? AssetsData.appleLogoDark : AssetsData.appleLogo,
-            ),
-          ],
+          ),
         ).padOnly(top: 30),
       ],
     );

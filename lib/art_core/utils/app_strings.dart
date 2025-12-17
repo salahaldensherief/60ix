@@ -82,7 +82,6 @@ class AppStrings {
       'appBarForgetPasswordHint';
   static const String appBarCreateNewPasswordHint =
       'appBarCreateNewPasswordHint';
-
   static const String continueText = 'continueText';
   static const String gettingStarted = 'gettingStarted';
   static const String agree = 'agree';

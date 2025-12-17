@@ -1,4 +1,3 @@
-// Flutter imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
@@ -18,7 +17,6 @@ class TermsAndConditions extends StatefulWidget {
 
 class _TermsAndConditionsState extends State<TermsAndConditions> {
 
-  @override
   ///TODO why????
   bool isTermsAccepted = false;
   Widget build(BuildContext context) {
@@ -41,15 +39,12 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
               children: [
                 TextSpan(
                   ///TODO: to add space
-
-                text: '${AppStrings.agree.tr()} ',
+                text: '${AppStrings.agree.tr()}  ',
                   style: isDark ? TextStyles.font14SemiBold.copyWith(
                       color:  AppColors.textColorDarkSecondary
                   ): TextStyle(color: Colors.black),
                 ),
                 ///TODO ???
-
-                TextSpan(text: '  '),
                 TextSpan(
                   text: AppStrings.terms.tr(),
                   style: TextStyles.font14SemiBold.copyWith(color: AppColors.primaryBtnColor)),

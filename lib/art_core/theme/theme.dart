@@ -12,7 +12,6 @@ class AppTheme{
       fontFamily: 'Source Sans 3',
       primaryColor: AppColors.primaryBtnColor,
     textTheme: TTextTheme.lightTextTheme,
-
   );
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
@@ -21,5 +20,4 @@ class AppTheme{
     primaryColor: AppColors.primaryBtnColor,
       textTheme: TTextTheme.darkTextTheme,
   );
-
  }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ix/art_core/extensions/padding.dart';
 import 'otp_pin_widget.dart';
 
 class PasswordRecoveryForm extends StatelessWidget {
@@ -9,8 +10,7 @@ class PasswordRecoveryForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        OtpPinWidget(),
-        SizedBox(height: 20.h),
+        OtpPinWidget().padOnly(bottom: 10),
       ],
     );
   }

@@ -14,22 +14,21 @@ class SignupView extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        appBar:   CustomAppBar(
+          subtitle: AppStrings.createAccountToContinueCourses.tr(),
+          title: AppStrings.gettingStarted.tr(),
+        ),
+
         body: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 20.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CustomAppBar(
-                  subtitle: AppStrings.createAccountToContinueCourses.tr(),
-                  title: AppStrings.gettingStarted.tr(),
-                ),
-                SignupForm().padOnly(bottom: 24),
-                SignupActions(),
-              ],
-            ),
-          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+
+              SignupForm().padOnly(bottom: 24),
+              SignupActions(),
+            ],
+          ).padSymmetric( horizontal: 18.w),
         ),
       ),
     );

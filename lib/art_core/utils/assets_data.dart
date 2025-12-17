@@ -13,4 +13,5 @@ static const appleLogoDark = '$_pathIcons /logos_apple_dark.svg';
 static const backIcon = '$_pathIcons/Back Icon.svg';
 static const trueIcon = '$_pathIcons/Fill 6.svg';
 static const calendarIcon = '$_pathIcons/Calendar Icon.svg';
+static const translations = 'assets/translations';
 }

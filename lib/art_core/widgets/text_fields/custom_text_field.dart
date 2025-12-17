@@ -67,9 +67,7 @@ class CustomTextFormField extends StatelessWidget {
           decoration: InputDecoration(
 
             hintText: text,
-            hintStyle: TextStyles.font12Small.copyWith(
-              color: AppTextFieldTheme.textFieldColor(context),
-            ),
+            hintStyle: TextStyles.font12Small,
             contentPadding: EdgeInsets.symmetric(
               vertical: 12.h,
               horizontal: 12.w,
