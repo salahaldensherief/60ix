@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/features/auth/presentation/signup/widgets/terms_and_conditions.dart';
 

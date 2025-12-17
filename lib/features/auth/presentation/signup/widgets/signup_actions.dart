@@ -8,10 +8,8 @@ import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/utils/font_styles.dart';
 import '../../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../../core/router/router.dart';
-import '../../login/login_view.dart';
 import '../../widgets/have_account_hint.dart';
 import '../../widgets/social_login_buttons.dart';
-import '../signup_verify_view.dart';
 
 class SignupActions extends StatelessWidget {
   const SignupActions({super.key});
