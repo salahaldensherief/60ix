@@ -23,7 +23,7 @@ class SignupActions extends StatelessWidget {
           onPressed: () {
             Navigator.of(
               context,
-            ).pushNamed(NavigatorKeys.signIn);
+            ).pushNamed(NavigatorKeys.signupVerify);
           },
           text: AppStrings.next.tr(),
           color: AppTextButtonStyles.primaryColor(context),

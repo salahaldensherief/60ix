@@ -4,8 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/theme/theme.dart';
 import 'package:ix/art_core/utils/assets_data.dart';
 import 'package:ix/core/router/router.dart';
+import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/create_new_password_view.dart';
+import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/forget_password_view.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/password_recovery_view.dart';
 import 'package:ix/features/auth/presentation/login/login_view.dart';
+import 'package:ix/features/auth/presentation/signup/create_password_view.dart';
+import 'package:ix/features/auth/presentation/signup/signup_verify_view.dart';
 import 'package:ix/features/splash/presntation/splash_view.dart';
 import 'features/auth/presentation/signup/signup_view_body.dart';
 import 'features/onboarding/presentation/onboarding_view.dart';
@@ -50,6 +54,10 @@ class MyApp extends StatelessWidget {
           NavigatorKeys.signUp: (BuildContext context) => SignupView(),
           NavigatorKeys.passwordRecovery: (BuildContext context) =>
               PasswordRecoveryView(),
+          NavigatorKeys.forgetPasswordView:(BuildContext context) => ForgetPasswordView(),
+          NavigatorKeys.createNewPasswordView:(BuildContext context) => CreateNewPasswordView(),
+          NavigatorKeys.signupVerify:(BuildContext context) => SignupVerify(),
+          NavigatorKeys.createPasswordView:(BuildContext context) => CreatePasswordView(),
         },
       ),
     );

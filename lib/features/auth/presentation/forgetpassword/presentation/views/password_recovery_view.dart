@@ -31,7 +31,7 @@ class PasswordRecoveryView extends StatelessWidget {
           PasswordRecoveryForm(),
           PasswordRecoveryActions(),
         ],
-      ).padSymmetric( horizontal: 18.w),
+      ).padSymmetric( horizontal: 18.w,),
     );
   }
 }

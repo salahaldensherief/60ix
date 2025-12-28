@@ -71,7 +71,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60.h);
+  Size get preferredSize => Size.fromHeight(75.h);
 }
 
 // Text(phoneNumber! ,style: TextStyles.font12Medium.copyWith(
