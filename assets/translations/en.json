@@ -82,5 +82,14 @@
   "continueText": "Continue",
   "gettingStarted": "Getting started!",
   "agree": "Agree to ",
-  "terms": "Terms & Conditions"
+  "terms": "Terms & Conditions",
+  "phoneRequired": "Phone number is required",
+  "phoneInvalid": "Invalid phone number",
+
+  "passwordRequired": "Password is required",
+  "passwordInvalid": "Password must be at least 6 characters",
+  "loading": "Loading...",
+  "password_too_short": "Password is too short"
+
+
 }

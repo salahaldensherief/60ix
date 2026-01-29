@@ -83,5 +83,12 @@
   "continueText": "متابعة",
   "gettingStarted": "هيا نبدأ!",
   "agree": "اوافق علي",
-  "terms": " الشروط و الأحكام"
+  "terms": " الشروط و الأحكام",
+  "phoneRequired": "رقم الهاتف مطلوب",
+  "phoneInvalid": "رقم الهاتف غير صحيح",
+
+  "passwordRequired": "كلمة المرور مطلوبة",
+  "passwordInvalid": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
+  "loading": "جاري التحميل...",
+  "password_too_short": "كلمة المرور قصيرة جدًا"
 }

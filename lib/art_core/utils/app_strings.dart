@@ -86,4 +86,13 @@ class AppStrings {
   static const String gettingStarted = 'gettingStarted';
   static const String agree = 'agree';
   static const String terms = 'terms';
+  static const phoneRequired = 'phoneRequired';
+  static const phoneInvalid = 'phoneInvalid';
+
+  static const passwordRequired = 'passwordRequired';
+  static const passwordInvalid = 'passwordInvalid';
+  static const loading = 'loading';
+  static const passwordTooShort = 'password_too_short';
+
+
 }

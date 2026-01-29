@@ -10,7 +10,6 @@ class CustomCarouselSlider extends StatefulWidget {
   @override
   State<CustomCarouselSlider> createState() => _CustomCarouselSliderState();
 }
-
 class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
   final slider.CarouselSliderController _carouselController =
       slider.CarouselSliderController();
@@ -49,11 +48,10 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
             carouselController: _carouselController,
             options: slider.CarouselOptions(
               height: 297,
-
               viewportFraction: .70,
               padEnds: true,
               enableInfiniteScroll: true,
-              autoPlay: false,
+              autoPlay: true,
               autoPlayCurve: Curves.fastOutSlowIn,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
               onPageChanged: (index, reason) {

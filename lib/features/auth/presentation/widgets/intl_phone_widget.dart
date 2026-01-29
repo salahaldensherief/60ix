@@ -1,32 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl_phone_field/countries.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:intl_phone_field/phone_number.dart';
 
 import '../../../../art_core/theme/text_field_theme.dart';
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/font_styles.dart';
+
 ///TODO name
 
 class IntlPhoneWidget extends StatelessWidget {
-  const IntlPhoneWidget({super.key});
+  final void Function(Country)? onCountryChanged;
+  final TextEditingController? controller;
+
+  const IntlPhoneWidget({super.key,  this.onCountryChanged, this.controller, });
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
     return Container(
       height: 40.h,
       decoration: BoxDecoration(
         color: AppTextFieldTheme.textFieldColor(context),
         borderRadius: BorderRadius.circular(8.r),
-        border: BoxBorder.all(
+        border: Border.all(
           width: isDark ? 0.1 : 1,
           color: isDark
               ? AppColors.textFieldDarkBorderColor
               : AppColors.textFieldLightBorderColor,
         ),
       ),
-      // I have done everything in my power to find a solution to this problem.
       child: IntlPhoneField(
+        controller: controller,
+        onCountryChanged: onCountryChanged,
         flagsButtonPadding: EdgeInsets.only(left: 2),
         dropdownTextStyle: TextStyles.font12bold,
         dropdownIconPosition: IconPosition.trailing,
@@ -35,18 +41,18 @@ class IntlPhoneWidget extends StatelessWidget {
           Icons.arrow_drop_down,
           color: AppColors.textColorLightPrimary,
         ),
-        readOnly: true,
-        showCursor: false,
         showDropdownIcon: true,
+        readOnly: true,
+         showCursor: false,
         disableLengthCheck: true,
         decoration: InputDecoration(
+
           border: OutlineInputBorder(borderSide: BorderSide.none),
           focusedBorder: OutlineInputBorder(borderSide: BorderSide.none),
           enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
         ),
         initialCountryCode: 'EG',
         disableAutoFillHints: true,
-        onChanged: (phone) {},
       ),
     );
   }

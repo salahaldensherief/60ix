@@ -44,6 +44,19 @@ dependencies:
   url_launcher: ^6.3.2
   date_count_down: ^4.0.0
   easy_localization: ^3.0.8
+  dio: ^5.9.0
+  dio_cookie_manager: ^3.3.0
+  get_it: ^8.2.0
+  shared_preferences: ^2.5.3
+  cookie_jar: ^4.0.8
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
+
+
+
+
+
+
 
 
 dev_dependencies:
