@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ix/art_core/extensions/padding.dart';
-
+import 'package:ix/features/auth/presentation/signup/register_cubit.dart';
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/utils/assets_data.dart';
 import '../../../../../art_core/widgets/drop_down_menu/drop_down_menu_widget.dart';
@@ -14,68 +17,90 @@ class SignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomTextFormField(
-          text: AppStrings.fullNameHint.tr(),
-          hintText: AppStrings.fullName.tr(),
-          textInputType: TextInputType.name,
-        ).padOnly(bottom: 10),
-        PhoneNumberTextField(
-          textFieldHint: AppStrings.phoneNumberHint.tr(),
-        ).padOnly(bottom: 10),
-        CustomTextFormField(
-          text: AppStrings.emailHint.tr(),
+    final cubit = context.read<RegisterCubit>();
 
-          hintText: AppStrings.email.tr(),
-          textInputType: TextInputType.emailAddress,
-        ).padOnly(bottom: 10),
-        DropDownMenuWidget(
-          text: AppStrings.countryHint.tr(),
-          hintText: AppStrings.country.tr(),
-          dropdownMenuEntries: [
-            DropdownMenuEntry(value: 'EG', label: 'Egypt'),
-            DropdownMenuEntry(value: 'EG', label: 'Egypt'),
-            DropdownMenuEntry(value: 'EG', label: 'Egypt'),
-          ],
-        ).padOnly(bottom: 10),
-        DropDownMenuWidget(
-          text: AppStrings.city.tr(),
-          hintText: AppStrings.cityHint.tr(),
-          dropdownMenuEntries: [
-            DropdownMenuEntry(value: 'ef', label: 'sad'),
-            DropdownMenuEntry(value: 'ef', label: 'sad'),
-            DropdownMenuEntry(value: 'ef', label: 'sad'),
-          ],
-        ).padOnly(bottom: 10),
-        DropDownMenuWidget(
-          text: AppStrings.genderHint.tr(),
-          hintText: AppStrings.gender.tr(),
-          dropdownMenuEntries: [
-            DropdownMenuEntry(value: 'm', label: 'male'),
-            DropdownMenuEntry(value: 'f', label: 'female'),
-          ],
-        ).padOnly(bottom: 10),
-        CustomTextFormField(
-          text: AppStrings.dateOfBirth.tr(),
-          onTap: () {
-            showDatePicker(
-              context: context,
-              firstDate: DateTime(2000),
-              lastDate: DateTime(2100),
-              initialDate: DateTime.now(),
-            );
-          },
-          readOnly: true,
-          suffixIcon: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: SvgPicture.asset(AssetsData.calendarIcon),
+    return Form(
+      key: cubit.registerFormKey,
+      child: Column(
+        children: [
+          CustomTextFormField(
+            controller: cubit.nameController,
+            text: AppStrings.fullNameHint.tr(),
+            hintText: AppStrings.fullName.tr(),
+            textInputType: TextInputType.name,
+          ).padOnly(bottom: 10),
+
+          PhoneNumberTextField(
+            phoneNController: cubit.mobileNumberController,
+            controller: cubit.mobileCodeController,
+            onCountryChanged: (code) {
+              cubit.mobileCodeController.text = code.dialCode;
+              log("mobile code => ${code.dialCode}");
+            },
+            textFieldHint: AppStrings.phoneNumberHint.tr(),
+          ).padOnly(bottom: 10),
+
+          CustomTextFormField(
+            controller: cubit.emailController,
+            text: AppStrings.emailHint.tr(),
+            hintText: AppStrings.email.tr(),
+            textInputType: TextInputType.emailAddress,
+          ).padOnly(bottom: 10),
+
+          DropDownMenuWidget(
+            text: AppStrings.city.tr(),
+            hintText: AppStrings.cityHint.tr(),
+            dropdownMenuEntries: const [
+              DropdownMenuEntry(value: 1, label: 'Cairo'),
+              DropdownMenuEntry(value: 2, label: 'Giza'),
+              DropdownMenuEntry(value: 3, label: 'kafr Elshikh'),
+              DropdownMenuEntry(value: 4, label: 'Mansoura'),
+              DropdownMenuEntry(value: 5, label: 'Mahalla'),
+            ],
+            onSelected: (value) {
+              cubit.cityId = value ?? 0;
+            },
+          ).padOnly(bottom: 10),
+
+          DropDownMenuWidget(
+
+            text: AppStrings.gender.tr(),
+            hintText: AppStrings.genderHint.tr(),
+            dropdownMenuEntries: const [
+              DropdownMenuEntry(value: 1, label: 'Male'),
+              DropdownMenuEntry(value: 2, label: 'Female'),
+            ],
+            onSelected: (value) {
+              cubit.gender = value ?? 0;
+            },
+          ).padOnly(bottom: 10),
+
+          CustomTextFormField(
+            controller: cubit.birthDateController,
+            text: AppStrings.dateOfBirth.tr(),
+            hintText: AppStrings.dateOfBirthHint.tr(),
+            readOnly: true,
+            onTap: () async {
+              final DateTime? pickedDate = await showDatePicker(
+                context: context,
+                initialDate: DateTime(2000),
+                firstDate: DateTime(1900),
+                lastDate: DateTime.now(),
+              );
+
+              if (pickedDate != null) {
+                cubit.birthDateController.text =
+                pickedDate.toIso8601String().split('T')[0];
+              }
+            },
+            suffixIcon: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: SvgPicture.asset(AssetsData.calendarIcon),
+            ),
+            textInputType: TextInputType.datetime,
           ),
-          hintText: AppStrings.dateOfBirthHint.tr(),
-          textInputType: TextInputType.visiblePassword,
-          obscureText: true,
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

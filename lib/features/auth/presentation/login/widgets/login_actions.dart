@@ -10,8 +10,8 @@ import '../../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../../core/router/router.dart';
 import '../../widgets/have_account_hint.dart';
 import '../../widgets/social_login_buttons.dart';
-import '../cubit/login_cubit.dart';
-import '../cubit/login_state.dart';
+import '../login_cubit.dart';
+import '../login_state.dart';
 import 'forget_password_btn.dart';
 class LoginActions extends StatelessWidget {
   const LoginActions({super.key});
@@ -20,17 +20,16 @@ class LoginActions extends StatelessWidget {
     final theme = Theme.of(context).textTheme;
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
-        if (state.status == LoginStatus.failure) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(state.errorMessage ?? 'Error')),
-          );
-        }
-        if (state.status == LoginStatus.success) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              backgroundColor: Colors.green,
-              content: Text('Login Success')));
-        }
-      },
+          if (state.status == LoginStatus.failure) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(state.errorMessage ?? 'Error')),
+            );
+          } else if (state.status == LoginStatus.success) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                backgroundColor: Colors.green,
+                content: Text('Login Success')));
+          }
+        },
       builder: (context, state) {
         final cubit = context.read<LoginCubit>();
         return Column(

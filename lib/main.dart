@@ -21,7 +21,6 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   await Prefs.init();
-
   initServiceLocator();
   runApp(
     EasyLocalization(

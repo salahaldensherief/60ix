@@ -8,12 +8,13 @@ import '../../utils/font_styles.dart';
 class DropDownMenuWidget<T> extends StatelessWidget {
   final String? hintText;
   final String? text;
+  final void Function(T?)? onSelected;
   List<DropdownMenuEntry<T>> dropdownMenuEntries;
   DropDownMenuWidget({
     super.key,
     this.hintText,
     required this.dropdownMenuEntries,
-    this.text,
+    this.text, this.onSelected,
   });
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,7 @@ class DropDownMenuWidget<T> extends StatelessWidget {
           ),
         ],
         DropdownMenu(
+          onSelected: onSelected,
           menuStyle: MenuStyle(
             elevation: WidgetStatePropertyAll(.2),
             shape: MaterialStatePropertyAll(

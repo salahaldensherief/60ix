@@ -1,7 +1,7 @@
 class ApiEndPoint {
   static const String baseUrl = 'https://dashboard.60ix.com/api/';
   static const String login = 'auth/login';
-  // static const String register = 'auth/register';
+  static const String register = 'auth/register';
   // static const String logout = 'auth/logout';
   // static const String email = 'email';
   // static const String password = 'password';

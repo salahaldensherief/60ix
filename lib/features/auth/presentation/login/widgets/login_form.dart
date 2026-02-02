@@ -2,11 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ix/art_core/extensions/padding.dart';
-import 'package:ix/features/auth/presentation/login/cubit/login_cubit.dart';
-import 'package:ix/features/auth/presentation/login/cubit/login_state.dart';
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../widgets/password_text_field.dart';
 import '../../widgets/phone_number_text_field.dart';
+import '../login_cubit.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -18,6 +17,11 @@ class LoginForm extends StatelessWidget {
       child: Column(
         children: [
           PhoneNumberTextField(
+            phoneNController: cubit.signInPhoneNumber,
+            controller: cubit.signInPhoneNCode,
+            onCountryChanged: (code) {
+              cubit.signInPhoneNCode.text= code.dialCode.toString();
+            },
             textFieldHint: AppStrings.phoneNumberHint.tr(),
           ).padOnly(bottom: 10),
           PasswordTextField(

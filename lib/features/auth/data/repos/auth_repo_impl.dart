@@ -2,6 +2,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:ix/core/errors/exceptions.dart';
+import 'package:ix/features/auth/data/models/register_params.dart';
 import 'package:ix/features/auth/data/models/user_model.dart';
 
 import '../../../../core/api/api_service/api_endpoint.dart';
@@ -49,6 +50,23 @@ class AuthRepoImpl implements AuthRepo {
     } catch (e) {
       return Left(ServerException(
         errorModel: ErrorModel(message: 'Unexpected error.'),
+      ));
+    }
+  }
+
+  @override
+  Future<Either<ServerException, UserModel>> register(RegisterParams registerParams) async{
+    try{
+      final response = await dio.post(ApiEndPoint.register,data:
+        registerParams.toJson()
+      );
+      return right(UserModel.fromJson(response));
+    }on DioException catch (e){
+      return Left(_handleDioError(e));
+
+    }catch (e){
+      return Left(ServerException(
+        errorModel:  ErrorModel(message: 'Unexpected error.')
       ));
     }
   }

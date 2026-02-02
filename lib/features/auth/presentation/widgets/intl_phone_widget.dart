@@ -8,16 +8,16 @@ import '../../../../art_core/theme/text_field_theme.dart';
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/font_styles.dart';
 
-///TODO name
-
 class IntlPhoneWidget extends StatelessWidget {
   final void Function(Country)? onCountryChanged;
   final TextEditingController? controller;
 
-  const IntlPhoneWidget({super.key,  this.onCountryChanged, this.controller, });
+  const IntlPhoneWidget({super.key, this.onCountryChanged, this.controller});
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
       height: 40.h,
       decoration: BoxDecoration(
@@ -25,9 +25,7 @@ class IntlPhoneWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.r),
         border: Border.all(
           width: isDark ? 0.1 : 1,
-          color: isDark
-              ? AppColors.textFieldDarkBorderColor
-              : AppColors.textFieldLightBorderColor,
+          color: isDark ? Colors.grey.shade700 : Colors.grey.shade300,
         ),
       ),
       child: IntlPhoneField(
@@ -43,10 +41,9 @@ class IntlPhoneWidget extends StatelessWidget {
         ),
         showDropdownIcon: true,
         readOnly: true,
-         showCursor: false,
+        showCursor: false,
         disableLengthCheck: true,
         decoration: InputDecoration(
-
           border: OutlineInputBorder(borderSide: BorderSide.none),
           focusedBorder: OutlineInputBorder(borderSide: BorderSide.none),
           enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),

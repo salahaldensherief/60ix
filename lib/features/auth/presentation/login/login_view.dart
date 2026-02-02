@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/extensions/padding.dart';
-import 'package:ix/features/auth/presentation/login/cubit/login_cubit.dart';
-import 'package:ix/features/auth/presentation/login/widgets/login_bottons.dart';
+import 'package:ix/features/auth/presentation/login/widgets/login_actions.dart';
 import 'package:ix/features/auth/presentation/login/widgets/login_form.dart';
 import '../../../../art_core/utils/app_strings.dart';
 import '../../../../art_core/widgets/custom_app_bar.dart';
 import '../../../../core/di/service_locator.dart';
+import 'login_cubit.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
