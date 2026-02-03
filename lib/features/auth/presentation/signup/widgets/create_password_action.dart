@@ -5,7 +5,7 @@ import 'package:ix/art_core/widgets/buttons/custom_button.dart';
 import 'package:ix/art_core/utils/app_colors.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
 import 'package:ix/art_core/theme/text_botton_theme.dart';
-import 'package:ix/features/auth/presentation/signup/register_cubit.dart';
+import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
 
 import '../../../../../art_core/extensions/padding.dart';
 
@@ -14,7 +14,7 @@ class CreatePasswordAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<RegisterCubit>();
+    final cubit = context.read<SignupCubit>();
 
     return CustomButton(
       onPressed: () {
@@ -22,7 +22,6 @@ class CreatePasswordAction extends StatelessWidget {
           cubit.passwordController.text,
           cubit.passwordConfirmationController.text,
         );
-
         cubit.register();
       },
       text: AppStrings.signUp.tr(),

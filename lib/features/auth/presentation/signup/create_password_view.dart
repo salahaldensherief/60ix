@@ -9,27 +9,20 @@ import '../../../../art_core/utils/app_strings.dart';
 import '../../../../art_core/widgets/custom_app_bar.dart';
 
 class CreatePasswordView extends StatelessWidget {
-  const CreatePasswordView({super.key,  this.params});
- final RegisterParams? params;
+  const CreatePasswordView({super.key, this.params});
+  final RegisterParams? params;
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar:  CustomAppBar(
+    return Scaffold(
+      appBar: CustomAppBar(
         title: AppStrings.createPassword.tr(),
-        subtitle:
-        AppStrings.createPasswordSubTitle.tr(),
+        subtitle: AppStrings.createPasswordSubTitle.tr(),
         showBack: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-
-          CreatePasswordForm(),
-          ///TODO
-          CreatePasswordAction(),
-        ],
-      ).padSymmetric( horizontal: 18.w),
+        children: [CreatePasswordForm(), CreatePasswordAction()],
+      ).padSymmetric(horizontal: 18.w),
     );
   }
 }
-

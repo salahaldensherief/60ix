@@ -51,6 +51,7 @@ dependencies:
   cookie_jar: ^4.0.8
   dartz: ^0.10.1
   flutter_bloc: ^9.1.1
+  flutter_secure_storage: ^10.0.0
 #  intl_phone_number_input: ^0.7.5
 
 

@@ -8,7 +8,7 @@ import '../../../../art_core/utils/app_strings.dart';
 import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../auth/presentation/login/login_view.dart';
-import '../../../auth/presentation/signup/signup_view_body.dart';
+import '../../../auth/presentation/signup/signup_view.dart';
 class OnboardingActions extends StatelessWidget {
   const OnboardingActions({super.key});
 

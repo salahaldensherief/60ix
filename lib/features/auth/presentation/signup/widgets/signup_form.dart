@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ix/art_core/extensions/padding.dart';
-import 'package:ix/features/auth/presentation/signup/register_cubit.dart';
+import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/utils/assets_data.dart';
 import '../../../../../art_core/widgets/drop_down_menu/drop_down_menu_widget.dart';
@@ -17,7 +17,7 @@ class SignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<RegisterCubit>();
+    final cubit = context.read<SignupCubit>();
 
     return Form(
       key: cubit.registerFormKey,

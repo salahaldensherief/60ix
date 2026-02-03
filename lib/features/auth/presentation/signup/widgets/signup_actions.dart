@@ -4,14 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/art_core/widgets/buttons/custom_button.dart';
 import 'package:ix/features/auth/presentation/signup/create_password_view.dart';
-import 'package:ix/features/auth/presentation/signup/register_cubit.dart';
+import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
 import '../../../../../art_core/utils/app_colors.dart';
 import '../../../../../art_core/utils/app_strings.dart';
 import '../../../../../art_core/theme/text_botton_theme.dart';
 import '../../widgets/have_account_hint.dart';
 import '../../widgets/social_login_buttons.dart';
 import '../../../../../core/router/router.dart';
-import '../register_state.dart';
+import '../signup_state.dart';
 
 class SignupActions extends StatelessWidget {
   const SignupActions({super.key});
@@ -20,14 +20,14 @@ class SignupActions extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
 
-    return BlocBuilder<RegisterCubit, RegisterState>(
+    return BlocBuilder<SignupCubit, SignupState>(
       builder: (context, state) {
-        final cubit = context.read<RegisterCubit>();
+        final cubit = context.read<SignupCubit>();
 
         return Column(
           children: [
             CustomButton(
-              onPressed: state.status == RegisterStatus.loading
+              onPressed: state.status == SignupStatus.loading
                   ? null
                   : () {
                 cubit.saveStepOneData();

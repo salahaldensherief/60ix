@@ -1,7 +1,7 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:ix/core/errors/exceptions.dart';
+import 'package:ix/features/auth/data/models/otp_response.dart';
 import 'package:ix/features/auth/data/models/register_params.dart';
 import 'package:ix/features/auth/data/models/user_model.dart';
 
@@ -29,6 +29,7 @@ class AuthRepoImpl implements AuthRepo {
       );
     }
   }
+
   @override
   Future<Either<ServerException, UserModel>> login({
     required String phone,
@@ -48,26 +49,93 @@ class AuthRepoImpl implements AuthRepo {
     } on DioException catch (e) {
       return Left(_handleDioError(e));
     } catch (e) {
-      return Left(ServerException(
-        errorModel: ErrorModel(message: 'Unexpected error.'),
-      ));
+      return Left(
+        ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
+      );
     }
   }
 
   @override
-  Future<Either<ServerException, UserModel>> register(RegisterParams registerParams) async{
-    try{
-      final response = await dio.post(ApiEndPoint.register,data:
-        registerParams.toJson()
+  Future<Either<ServerException, UserModel>> register(
+    RegisterParams registerParams,
+  ) async {
+    try {
+      final response = await dio.post(
+        ApiEndPoint.register,
+        data: registerParams.toJson(),
       );
       return right(UserModel.fromJson(response));
-    }on DioException catch (e){
+    } on DioException catch (e) {
       return Left(_handleDioError(e));
-
-    }catch (e){
-      return Left(ServerException(
-        errorModel:  ErrorModel(message: 'Unexpected error.')
-      ));
+    } catch (e) {
+      return Left(
+        ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
+      );
     }
+  }
+
+  @override
+  Future<Either<ServerException, OtpResponse>> verifyOtpCode({
+    required String otpCode,
+    required String mobileNumber,
+    required String mobileCode,
+  }) async {
+    try {
+      final response = await dio.post(
+        ApiEndPoint.verifyOtp,
+        data: {
+          'mobile_code': mobileCode,
+          'mobile_number': mobileNumber,
+          'otp_code': otpCode,
+        },
+      );
+      return Right(OtpResponse.fromJson(response));
+    } on DioException catch (e) {
+      return Left(_handleDioError(e));
+    } catch (e) {
+      return Left(
+        ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
+      );
+    }
+  }
+
+  @override
+  Future<Either<ServerException, UserModel>> forgetPassword({
+    required String mobileNumber,
+    required String mobileCode,
+  }) async {
+    try {
+      final response = await dio.post(
+        ApiEndPoint.forgetPassword,
+        data: {'mobile_code': mobileCode, 'mobile_number': mobileNumber},
+      );
+      return Right(UserModel.fromJson(response));
+    } on DioException catch (e) {
+      return Left(_handleDioError(e));
+    } catch (e) {
+      return Left(
+        ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
+      );
+    }
+  }
+
+  @override
+  Future<Either<ServerException, UserModel>> passwordOtp({
+    required String mobileNumber,
+    required String mobileCode,
+  }) {
+    // TODO: implement passwordOtp
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Either<ServerException, UserModel>> setPassword({
+    required String mobileNumber,
+    required String mobileCode,
+    required String password,
+    required String confirmedPassword,
+  }) {
+    // TODO: implement setPassword
+    throw UnimplementedError();
   }
 }

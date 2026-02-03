@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/theme/theme.dart';
 import 'package:ix/art_core/utils/assets_data.dart';
@@ -10,10 +11,11 @@ import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/password_recovery_view.dart';
 import 'package:ix/features/auth/presentation/login/login_view.dart';
 import 'package:ix/features/auth/presentation/signup/create_password_view.dart';
+import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
 import 'package:ix/features/auth/presentation/signup/signup_verify_view.dart';
 import 'package:ix/features/splash/presntation/splash_view.dart';
 import 'core/shared_preferences_singleton.dart';
-import 'features/auth/presentation/signup/signup_view_body.dart';
+import 'features/auth/presentation/signup/signup_view.dart';
 import 'features/onboarding/presentation/onboarding_view.dart';
 
 void main() async {
@@ -57,7 +59,10 @@ class MyApp extends StatelessWidget {
           NavigatorKeys.onBoardingPage: (BuildContext context) =>
               OnboardingView(),
           NavigatorKeys.signIn: (BuildContext context) => LoginView(),
-          NavigatorKeys.signUp: (BuildContext context) => SignupView(),
+          NavigatorKeys.signUp: (BuildContext context) => BlocProvider(
+            create: (context) => SignupCubit(authRepo: sl()),
+            child: SignupView(),
+          ),
           NavigatorKeys.passwordRecovery: (BuildContext context) =>
               PasswordRecoveryView(),
           NavigatorKeys.forgetPasswordView: (BuildContext context) =>
@@ -65,8 +70,7 @@ class MyApp extends StatelessWidget {
           NavigatorKeys.createNewPasswordView: (BuildContext context) =>
               CreateNewPasswordView(),
           NavigatorKeys.signupVerify: (BuildContext context) => SignupVerify(),
-          NavigatorKeys.createPasswordView: (BuildContext context) =>
-              CreatePasswordView(),
+          NavigatorKeys.createPasswordView: (BuildContext context) => CreatePasswordView(),
         },
       ),
     );
