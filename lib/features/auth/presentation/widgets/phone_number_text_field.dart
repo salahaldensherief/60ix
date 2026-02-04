@@ -16,7 +16,9 @@ class PhoneNumberTextField extends StatelessWidget {
     this.controller,
     this.onCountryChanged,
     this.phoneNController,
+    this.validator,
   });
+  final String? Function(String?)? validator;
   final TextEditingController? controller;
   final TextEditingController? phoneNController;
   final void Function(Country)? onCountryChanged;

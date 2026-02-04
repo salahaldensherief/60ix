@@ -30,8 +30,10 @@ class DropDownMenuWidget<T> extends StatelessWidget {
           ),
         ],
         DropdownMenu(
+
           onSelected: onSelected,
           menuStyle: MenuStyle(
+
             elevation: WidgetStatePropertyAll(.2),
             shape: MaterialStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
@@ -56,6 +58,7 @@ class DropDownMenuWidget<T> extends StatelessWidget {
           width: width,
           textStyle: TextStyles.font12Small,
           hintText: text,
+
           dropdownMenuEntries: dropdownMenuEntries,
           trailingIcon: Icon(
             Icons.arrow_drop_down_sharp,

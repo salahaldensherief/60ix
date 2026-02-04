@@ -90,5 +90,12 @@
   "passwordRequired": "كلمة المرور مطلوبة",
   "passwordInvalid": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
   "loading": "جاري التحميل...",
-  "password_too_short": "كلمة المرور قصيرة جدًا"
+  "password_too_short": "كلمة المرور قصيرة جدًا",
+  "nameRequired": "الاسم مطلوب",
+  "nameTooShort": "الاسم قصير جدًا",
+  "emailRequired": "البريد الإلكتروني مطلوب",
+  "emailInvalid": "البريد الإلكتروني غير صالح",
+  "cityRequired": "المدينة مطلوبة",
+  "genderRequired": "الجنس مطلوب",
+  "birthDateRequired": "تاريخ الميلاد مطلوب"
 }

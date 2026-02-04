@@ -120,22 +120,25 @@ class AuthRepoImpl implements AuthRepo {
   }
 
   @override
-  Future<Either<ServerException, UserModel>> passwordOtp({
-    required String mobileNumber,
-    required String mobileCode,
-  }) {
-    // TODO: implement passwordOtp
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<Either<ServerException, UserModel>> setPassword({
+  Future<Either<ServerException, UserModel>> createNewPassword({
     required String mobileNumber,
     required String mobileCode,
     required String password,
     required String confirmedPassword,
-  }) {
-    // TODO: implement setPassword
-    throw UnimplementedError();
+  }) async{
+    try{
+      final response = await dio.post(ApiEndPoint.setPassword,data: {
+        'mobile_code': mobileCode,
+        'mobile_number': mobileNumber,
+        'password':password,
+        'password_confirmation': confirmedPassword,
+      });
+      return Right(UserModel.fromJson(response));
+
+    }on DioException catch (e){
+      return Left(_handleDioError(e));
+    }catch(e){
+      return Left(ServerException(errorModel: ErrorModel(message: 'Unexpected error.')));
+    }
   }
 }

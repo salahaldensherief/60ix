@@ -89,7 +89,14 @@
   "passwordRequired": "Password is required",
   "passwordInvalid": "Password must be at least 6 characters",
   "loading": "Loading...",
-  "password_too_short": "Password is too short"
+  "password_too_short": "Password is too short",
+  "nameRequired": "Name is required",
+  "nameTooShort": "Name is too short",
+  "emailRequired": "Email is required",
+  "emailInvalid": "Email is invalid",
+  "cityRequired": "City is required",
+  "genderRequired": "Gender is required",
+  "birthDateRequired": "Birth date is required"
 
 
 }

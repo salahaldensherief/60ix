@@ -4,6 +4,7 @@ class ApiEndPoint {
   static const String register = 'auth/register';
   static const String verifyOtp = 'auth/verify-code';
   static const String forgetPassword = 'auth/forget-password';
+static const String setPassword = 'auth/set-password';
 
 
 // static const String logout = 'auth/logout';
@@ -12,7 +13,6 @@ class ApiEndPoint {
   // static const String username = 'username';
   // static const String signOut = 'auth/logout';
   // static const String sendOtp = 'auth/otp/resend';
-  // static const String resetPassword = 'auth/reset-password';
   // static const String forgetPasswordOtp = 'auth/verify-reset-code';
 
 

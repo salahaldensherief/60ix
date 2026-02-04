@@ -22,10 +22,7 @@ abstract class AuthRepo {
   Future<Either<ServerException, UserModel>> forgetPassword({
     required String mobileNumber,
     required String mobileCode,
-  });Future<Either<ServerException, UserModel>> passwordOtp({
-    required String mobileNumber,
-    required String mobileCode,
-  });Future<Either<ServerException, UserModel>> setPassword({
+  });Future<Either<ServerException, UserModel>> createNewPassword({
     required String mobileNumber,
     required String mobileCode,
     required String password,

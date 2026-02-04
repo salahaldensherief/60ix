@@ -86,6 +86,16 @@ class AppStrings {
   static const String gettingStarted = 'gettingStarted';
   static const String agree = 'agree';
   static const String terms = 'terms';
+  static const nameRequired = "Name is required";
+  static const nameTooShort = "Name is too short";
+
+  static const emailRequired = "Email is required";
+  static const emailInvalid = "Email is invalid";
+
+  static const cityRequired = "City is required";
+  static const genderRequired = "Gender is required";
+  static const birthDateRequired = "Birth date is required";
+
   static const phoneRequired = 'phoneRequired';
   static const phoneInvalid = 'phoneInvalid';
 

@@ -10,10 +10,10 @@ import '../../domain/interfaces/auth_repo.dart';
 class VerifyOtpCubit extends Cubit<VerifyOtpState> {
   final AuthRepo authRepo;
 
-  VerifyOtpCubit({
-    required this.authRepo,
-  }) : super(VerifyOtpState(status: VerifyOtpStatus.initial));
+  VerifyOtpCubit({required this.authRepo})
+    : super(VerifyOtpState(status: VerifyOtpStatus.initial));
   TextEditingController otpCode = TextEditingController();
+  GlobalKey<FormState> otpFormKey = GlobalKey();
 
   Future<void> verifyOtp({
     required String code,
@@ -23,7 +23,7 @@ class VerifyOtpCubit extends Cubit<VerifyOtpState> {
     emit(state.copyWith(status: VerifyOtpStatus.loading));
 
     final res = await authRepo.verifyOtpCode(
-      mobileCode: mobileCode,
+      mobileCode: '+${mobileCode}',
       mobileNumber: mobileNumber,
       otpCode: otpCode.text,
     );

@@ -6,6 +6,7 @@ import 'package:ix/art_core/utils/app_colors.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
 import 'package:ix/art_core/theme/text_botton_theme.dart';
 import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
+import 'package:ix/features/auth/presentation/signup/signup_state.dart';
 
 import '../../../../../art_core/extensions/padding.dart';
 
@@ -15,19 +16,25 @@ class CreatePasswordAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<SignupCubit>();
+    return BlocConsumer<SignupCubit, SignupState>(
+      listener: (context, state) {
 
-    return CustomButton(
-      onPressed: () {
-        cubit.savePassword(
-          cubit.passwordController.text,
-          cubit.passwordConfirmationController.text,
-        );
-        cubit.register();
       },
-      text: AppStrings.signUp.tr(),
-      color: AppTextButtonStyles.primaryColor(context),
-      colorSide: AppColors.primaryBtnColor,
-      textStyle: const TextStyle(color: Colors.white),
+      builder: (context, state) {
+        return CustomButton(
+          onPressed: () {
+            cubit.savePassword(
+              cubit.passwordController.text,
+              cubit.passwordConfirmationController.text,
+            );
+            cubit.register();
+          },
+          text: AppStrings.signUp.tr(),
+          color: AppTextButtonStyles.primaryColor(context),
+          colorSide: AppColors.primaryBtnColor,
+          textStyle: const TextStyle(color: Colors.white),
+        );
+      },
     ).padOnly(top: 10);
   }
 }

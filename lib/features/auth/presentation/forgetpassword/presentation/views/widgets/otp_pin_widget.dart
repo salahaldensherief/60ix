@@ -6,14 +6,15 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../../../../../art_core/utils/app_colors.dart';
 
 class OtpPinWidget extends StatelessWidget {
-  const OtpPinWidget({super.key, this.controller});
+  const OtpPinWidget({super.key, this.controller, this.validator});
 
   final TextEditingController? controller;
+ final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
     return PinCodeTextField(
+      validator: validator,
       controller: controller,
       appContext: context,
       length: 6,

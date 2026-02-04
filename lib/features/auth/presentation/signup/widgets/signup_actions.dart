@@ -30,16 +30,25 @@ class SignupActions extends StatelessWidget {
               onPressed: state.status == SignupStatus.loading
                   ? null
                   : () {
-                cubit.saveStepOneData();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => BlocProvider.value(
-                      value: cubit,
-                      child: const CreatePasswordView(),
+                final form = cubit.registerFormKey.currentState;
+                if (form != null && form.validate()) {
+                  cubit.saveStepOneData();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => BlocProvider.value(
+                        value: cubit,
+                        child: const CreatePasswordView(),
+                      ),
                     ),
-                  ),
-                );
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("Please fill all required fields".tr()),
+                    ),
+                  );
+                }
               },
               text: AppStrings.next.tr(),
               color: AppTextButtonStyles.primaryColor(context),

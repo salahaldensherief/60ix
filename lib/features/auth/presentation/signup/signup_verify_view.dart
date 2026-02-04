@@ -24,18 +24,15 @@ import '../../../../core/router/router.dart';
 import '../forgetpassword/presentation/views/widgets/otp_pin_widget.dart';
 
 class SignupVerify extends StatelessWidget {
-
-
-  const SignupVerify({super.key, });
+  const SignupVerify({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => VerifyOtpCubit(authRepo: sl(),),
+      create: (_) => VerifyOtpCubit(authRepo: sl()),
       child: Builder(
         builder: (context) {
           final cubit = context.read<VerifyOtpCubit>();
-
           return Scaffold(
             appBar: CustomAppBar(
               showBack: true,
@@ -68,17 +65,15 @@ class SignupVerify extends StatelessWidget {
                           content: Text('Otp verify success'),
                         ),
                       );
-                      Future.delayed(Duration(seconds: 3));
-                      Navigator.of(context).pushNamed(NavigatorKeys.signIn);
+                      Navigator.pushNamed(context, NavigatorKeys.signIn);
+
                     }
                   },
                   builder: (context, state) {
-                   final regCubit = context.read<SignupCubit>();
-                    final mobile = regCubit.state.mobileNumber;
-                    final code = regCubit.state.mobileCode;
-
+                    final mobile = Prefs.getString(ConstStrings.mobileNumber);
+                    final code = Prefs.getString(ConstStrings.mobileCode);
                     return CustomButton(
-                      onPressed: (){
+                      onPressed: () {
                         cubit.verifyOtp(
                           mobileNumber: mobile.toString(),
                           mobileCode: code.toString(),
@@ -92,7 +87,6 @@ class SignupVerify extends StatelessWidget {
                         color: AppColors.whiteColor,
                       ),
                     );
-
                   },
                 ),
 

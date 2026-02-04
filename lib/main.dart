@@ -70,7 +70,8 @@ class MyApp extends StatelessWidget {
           NavigatorKeys.createNewPasswordView: (BuildContext context) =>
               CreateNewPasswordView(),
           NavigatorKeys.signupVerify: (BuildContext context) => SignupVerify(),
-          NavigatorKeys.createPasswordView: (BuildContext context) => CreatePasswordView(),
+          NavigatorKeys.createPasswordView: (BuildContext context) =>
+              CreatePasswordView(),
         },
       ),
     );

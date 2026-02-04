@@ -12,6 +12,7 @@ import '../signup_cubit.dart';
 
 class CreatePasswordForm extends StatelessWidget {
   const CreatePasswordForm({super.key});
+
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<SignupCubit>();
@@ -22,7 +23,13 @@ class CreatePasswordForm extends StatelessWidget {
             SnackBar(content: Text(state.errorMessage ?? 'Error')),
           );
         } else if (state.status == SignupStatus.success) {
-          Navigator.pushNamed(context, NavigatorKeys.signupVerify);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>
+                  BlocProvider.value(value: cubit, child: SignupVerify()),
+            ),
+          );
         }
       },
       builder: (BuildContext context, SignupState state) {
@@ -31,12 +38,9 @@ class CreatePasswordForm extends StatelessWidget {
             PasswordTextField(
               controller: cubit.passwordController,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value == null || value.isEmpty)
                   return AppStrings.passwordRequired.tr();
-                }
-                if (value.length < 6) {
-                  return AppStrings.passwordTooShort.tr();
-                }
+                if (value.length < 6) return AppStrings.passwordTooShort.tr();
                 return null;
               },
               hintText: AppStrings.newPassword.tr(),
@@ -44,12 +48,10 @@ class CreatePasswordForm extends StatelessWidget {
             PasswordTextField(
               controller: cubit.passwordConfirmationController,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value == null || value.isEmpty)
                   return AppStrings.passwordRequired.tr();
-                }
-                if (value != cubit.passwordController.text) {
+                if (value != cubit.passwordController.text)
                   return AppStrings.passwordsDoNotMatch.tr();
-                }
                 return null;
               },
               hintText: AppStrings.confirmPassword.tr(),

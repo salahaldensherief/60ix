@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +20,7 @@ class SignupForm extends StatelessWidget {
 
     return Form(
       key: cubit.registerFormKey,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
         children: [
           CustomTextFormField(
@@ -28,9 +28,19 @@ class SignupForm extends StatelessWidget {
             text: AppStrings.fullNameHint.tr(),
             hintText: AppStrings.fullName.tr(),
             textInputType: TextInputType.name,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return AppStrings.nameRequired.tr();
+              }
+              if (value.length < 3) {
+                return AppStrings.nameTooShort.tr();
+              }
+              return null;
+            },
           ).padOnly(bottom: 10),
 
           PhoneNumberTextField(
+
             phoneNController: cubit.mobileNumberController,
             controller: cubit.mobileCodeController,
             onCountryChanged: (code) {
@@ -45,6 +55,16 @@ class SignupForm extends StatelessWidget {
             text: AppStrings.emailHint.tr(),
             hintText: AppStrings.email.tr(),
             textInputType: TextInputType.emailAddress,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return AppStrings.emailRequired.tr();
+              }
+              final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
+              if (!emailRegex.hasMatch(value)) {
+                return AppStrings.emailInvalid.tr();
+              }
+              return null;
+            },
           ).padOnly(bottom: 10),
 
           DropDownMenuWidget(
@@ -53,7 +73,7 @@ class SignupForm extends StatelessWidget {
             dropdownMenuEntries: const [
               DropdownMenuEntry(value: 1, label: 'Cairo'),
               DropdownMenuEntry(value: 2, label: 'Giza'),
-              DropdownMenuEntry(value: 3, label: 'kafr Elshikh'),
+              DropdownMenuEntry(value: 3, label: 'Kafr Elshikh'),
               DropdownMenuEntry(value: 4, label: 'Mansoura'),
               DropdownMenuEntry(value: 5, label: 'Mahalla'),
             ],
@@ -63,7 +83,6 @@ class SignupForm extends StatelessWidget {
           ).padOnly(bottom: 10),
 
           DropDownMenuWidget(
-
             text: AppStrings.gender.tr(),
             hintText: AppStrings.genderHint.tr(),
             dropdownMenuEntries: const [
@@ -73,6 +92,7 @@ class SignupForm extends StatelessWidget {
             onSelected: (value) {
               cubit.gender = value ?? 0;
             },
+
           ).padOnly(bottom: 10),
 
           CustomTextFormField(
@@ -98,6 +118,12 @@ class SignupForm extends StatelessWidget {
               child: SvgPicture.asset(AssetsData.calendarIcon),
             ),
             textInputType: TextInputType.datetime,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return AppStrings.birthDateRequired.tr();
+              }
+              return null;
+            },
           ),
         ],
       ),

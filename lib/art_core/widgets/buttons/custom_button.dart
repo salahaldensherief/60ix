@@ -21,6 +21,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
+
       style: TextButton.styleFrom(
         alignment: alignment,
         backgroundColor: color,

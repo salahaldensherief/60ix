@@ -16,13 +16,9 @@ class _SplashViewState extends State<SplashView> {
     timerNavigation();
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-      body: SplashLogo(),
-    );
+    return Scaffold(body: SplashLogo());
   }
 
   ///TODO: keep correct spelling in mind

@@ -15,7 +15,7 @@ class SignupCubit extends Cubit<SignupState> {
   final LocalSecureStorage? localStorage;
 
   SignupCubit({required this.authRepo, this.localStorage})
-    : super(SignupState (status: SignupStatus.initial));
+    : super(SignupState(status: SignupStatus.initial));
 
   GlobalKey<FormState> registerFormKey = GlobalKey();
 
@@ -35,19 +35,18 @@ class SignupCubit extends Cubit<SignupState> {
     passwordController.text = password;
     passwordConfirmationController.text = confirmedPassword;
   }
+
   void saveMobileInfo({required String number, required String code}) {
-    emit(state.copyWith(
-      mobileNumber: number,
-      mobileCode: code,
-    ));
+    emit(state.copyWith(mobileNumber: number, mobileCode: code));
   }
+
   Future<void> register() async {
     emit(state.copyWith(status: SignupStatus.loading));
-    // Prefs.setString(ConstStrings.mobileCode, mobileCodeController.text);
-    // Prefs.setString(ConstStrings.mobileNumber, mobileNumberController.text);
+    Prefs.setString(ConstStrings.mobileCode, mobileCodeController.text);
+    Prefs.setString(ConstStrings.mobileNumber, mobileNumberController.text);
     final params = RegisterParams(
       name: nameController.text,
-      mobileCode: mobileCodeController.text,
+      mobileCode: '+${mobileCodeController.text}',
       mobileNumber: mobileNumberController.text,
       email: emailController.text,
       gender: gender,
@@ -65,8 +64,7 @@ class SignupCubit extends Cubit<SignupState> {
           errorMessage: failure.errorModel.message,
         ),
       ),
-      (user) =>
-          emit(state.copyWith(status: SignupStatus.success, user: user)),
+      (user) => emit(state.copyWith(status: SignupStatus.success, user: user)),
     );
   }
 }
