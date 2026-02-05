@@ -14,21 +14,16 @@ class AuthRepoImpl implements AuthRepo {
   final DioConsumer dio;
 
   AuthRepoImpl(this.dio);
-
   ServerException _handleDioError(DioException e) {
     try {
-      handleDioExceptions(e);
-      return ServerException(
-        errorModel: ErrorModel(message: 'Unexpected network error.'),
-      );
+      return handleDioExceptions(e);
     } on ServerException catch (serverError) {
       return serverError;
     } catch (e) {
-      return ServerException(
-        errorModel: ErrorModel(message: 'Unexpected error: ${e.toString()}'),
-      );
+      return ServerException(errorModel: ErrorModel(message: 'Unexpected error: ${e.toString()}'));
     }
   }
+
 
   @override
   Future<Either<ServerException, UserModel>> login({
@@ -46,8 +41,8 @@ class AuthRepoImpl implements AuthRepo {
         },
       );
       return Right(UserModel.fromJson(response));
-    } on DioException catch (e) {
-      return Left(_handleDioError(e));
+    } on ServerException catch (e) {
+      return Left(e);
     } catch (e) {
       return Left(
         ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
@@ -65,8 +60,8 @@ class AuthRepoImpl implements AuthRepo {
         data: registerParams.toJson(),
       );
       return right(UserModel.fromJson(response));
-    } on DioException catch (e) {
-      return Left(_handleDioError(e));
+    } on ServerException catch (e) {
+      return Left(e);
     } catch (e) {
       return Left(
         ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
@@ -90,8 +85,8 @@ class AuthRepoImpl implements AuthRepo {
         },
       );
       return Right(OtpResponse.fromJson(response));
-    } on DioException catch (e) {
-      return Left(_handleDioError(e));
+    } on ServerException catch (e) {
+      return Left(e);
     } catch (e) {
       return Left(
         ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
@@ -110,8 +105,8 @@ class AuthRepoImpl implements AuthRepo {
         data: {'mobile_code': mobileCode, 'mobile_number': mobileNumber},
       );
       return Right(UserModel.fromJson(response));
-    } on DioException catch (e) {
-      return Left(_handleDioError(e));
+    } on ServerException catch (e) {
+      return Left(e);
     } catch (e) {
       return Left(
         ServerException(errorModel: ErrorModel(message: 'Unexpected error.')),
@@ -135,8 +130,8 @@ class AuthRepoImpl implements AuthRepo {
       });
       return Right(UserModel.fromJson(response));
 
-    }on DioException catch (e){
-      return Left(_handleDioError(e));
+    }on ServerException catch (e){
+      return Left(e);
     }catch(e){
       return Left(ServerException(errorModel: ErrorModel(message: 'Unexpected error.')));
     }

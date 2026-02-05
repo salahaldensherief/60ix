@@ -10,7 +10,7 @@ class LoginCubit extends Cubit<LoginState> {
     : super(LoginState(status: LoginStatus.initial));
   GlobalKey<FormState> signInFormKey = GlobalKey();
   TextEditingController signInPhoneNumber = TextEditingController();
-  TextEditingController signInPhoneNCode = TextEditingController(text: "+20");
+  TextEditingController signInPhoneNCode = TextEditingController();
   TextEditingController signInPassword = TextEditingController();
   Future<void> login({
     required String phone,

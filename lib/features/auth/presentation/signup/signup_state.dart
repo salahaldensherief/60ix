@@ -5,7 +5,6 @@ enum SignupStatus {
   loading,
   success,
   failure;
-
   bool get isInitial => this == SignupStatus.initial;
 
   bool get isLoading => this == SignupStatus.loading;
@@ -14,7 +13,6 @@ enum SignupStatus {
 
   bool get isFailure => this == SignupStatus.failure;
 }
-
 class SignupState {
   final String? mobileNumber;
   final String? mobileCode;

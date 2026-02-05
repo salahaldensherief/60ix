@@ -17,7 +17,6 @@ import 'package:ix/features/splash/presntation/splash_view.dart';
 import 'core/shared_preferences_singleton.dart';
 import 'features/auth/presentation/signup/signup_view.dart';
 import 'features/onboarding/presentation/onboarding_view.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();

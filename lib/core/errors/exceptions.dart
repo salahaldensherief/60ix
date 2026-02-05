@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'error_model.dart';
 
@@ -7,16 +9,32 @@ class ServerException implements Exception {
   ServerException({required this.errorModel});
 }
 
-void handleDioExceptions(DioException e) {
+ServerException handleDioExceptions(DioException e) {
   String message = "Something went wrong, please try again later.";
 
-  if (e.response != null && e.response?.data != null) {
+  if (e.response != null && e.response!.data != null) {
     try {
-      if (e.response!.data is Map<String, dynamic> &&
-          e.response!.data.containsKey('message')) {
-        message = e.response!.data['message'];
-      } else if (e.response!.data is String) {
-        message = e.response!.data;
+      final data = e.response!.data;
+      Map<String, dynamic> jsonData;
+      if (data is String) {
+        jsonData = jsonDecode(data);
+      } else if (data is Map<String, dynamic>) {
+        jsonData = data;
+      } else {
+        jsonData = {};
+      }
+
+      if (jsonData.containsKey('message')) {
+        message = jsonData['message'];
+      } else if (jsonData.containsKey('errors')) {
+        final errors = jsonData['errors'] as Map<String, dynamic>;
+        if (errors.isNotEmpty) {
+          final firstKey = errors.keys.first;
+          final firstErrorList = errors[firstKey] as List<dynamic>;
+          if (firstErrorList.isNotEmpty) {
+            message = firstErrorList.first.toString();
+          }
+        }
       }
     } catch (_) {
       message = "Unexpected server error.";
@@ -66,8 +84,16 @@ void handleDioExceptions(DioException e) {
       case 409:
         message = "Conflict. This data may already exist.";
         break;
+
       case 422:
-        message = "Validation error. Please check your input.";
+        final data = e.response!.data;
+        try {
+          final jsonData = data is String ? jsonDecode(data) : data;
+          if (jsonData is Map<String, dynamic> &&
+              jsonData.containsKey('message')) {
+            message = jsonData['message'];
+          }
+        } catch (_) {}
         break;
       case 500:
         message = "Internal server error. Try again later.";
@@ -77,8 +103,9 @@ void handleDioExceptions(DioException e) {
         break;
       default:
         message = "Server error: ${e.response?.statusCode ?? 'Unknown'}";
+        break;
     }
   }
 
-  throw ServerException(errorModel: ErrorModel(message: message));
+  return ServerException(errorModel: ErrorModel(message: message));
 }

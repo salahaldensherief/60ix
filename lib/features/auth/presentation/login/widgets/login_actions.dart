@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -50,6 +52,7 @@ class LoginActions extends StatelessWidget {
                           password: cubit.signInPassword.text,
                         );
                       }
+                log('error : ${state.errorMessage}');
                     },
               text: state.status == LoginStatus.loading
                   ? AppStrings.loading.tr()

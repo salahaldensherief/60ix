@@ -16,10 +16,7 @@ class CreatePasswordAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<SignupCubit>();
-    return BlocConsumer<SignupCubit, SignupState>(
-      listener: (context, state) {
-
-      },
+    return BlocBuilder<SignupCubit, SignupState>(
       builder: (context, state) {
         return CustomButton(
           onPressed: () {
@@ -29,7 +26,9 @@ class CreatePasswordAction extends StatelessWidget {
             );
             cubit.register();
           },
-          text: AppStrings.signUp.tr(),
+          text: state.status.isLoading
+              ? AppStrings.loading.tr()
+              : AppStrings.signUp.tr(),
           color: AppTextButtonStyles.primaryColor(context),
           colorSide: AppColors.primaryBtnColor,
           textStyle: const TextStyle(color: Colors.white),
