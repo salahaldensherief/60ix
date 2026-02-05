@@ -39,6 +39,10 @@ class SignupCubit extends Cubit<SignupState> {
   void saveMobileInfo({required String number, required String code}) {
     emit(state.copyWith(mobileNumber: number, mobileCode: code));
   }
+  void changeTermsAcceptance(bool value) {
+    emit(state.copyWith(isTermsAccepted: value));
+  }
+
 
   Future<void> register() async {
     emit(state.copyWith(status: SignupStatus.loading));

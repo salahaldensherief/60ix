@@ -19,18 +19,21 @@ class CreatePasswordAction extends StatelessWidget {
     return BlocBuilder<SignupCubit, SignupState>(
       builder: (context, state) {
         return CustomButton(
-          onPressed: () {
+          onPressed:state.isTermsAccepted ? () {
             cubit.savePassword(
               cubit.passwordController.text,
               cubit.passwordConfirmationController.text,
             );
             cubit.register();
-          },
+          }
+          : null,
           text: state.status.isLoading
               ? AppStrings.loading.tr()
               : AppStrings.signUp.tr(),
-          color: AppTextButtonStyles.primaryColor(context),
-          colorSide: AppColors.primaryBtnColor,
+          color: state.isTermsAccepted ? AppTextButtonStyles.primaryColor(context)
+              : AppColors.gray300Color,
+          colorSide: state.isTermsAccepted ? AppTextButtonStyles.primaryColor(context)
+            : AppColors.gray300Color,
           textStyle: const TextStyle(color: Colors.white),
         );
       },

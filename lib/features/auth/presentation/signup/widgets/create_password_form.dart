@@ -56,7 +56,7 @@ class CreatePasswordForm extends StatelessWidget {
               },
               hintText: AppStrings.confirmPassword.tr(),
             ).padOnly(bottom: 12),
-            TermsAndConditions(onChanged: (value) {}).padOnly(bottom: 16),
+            TermsAndConditions().padOnly(bottom: 16),
           ],
         );
       },
