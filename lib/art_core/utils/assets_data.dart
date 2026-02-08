@@ -1,5 +1,4 @@
 class AssetsData{
-
   static const _pathImages = 'assets/images';
   static const _pathIcons = 'assets/icons';
   static const logo = '$_pathImages/logo.png';

@@ -11,11 +11,9 @@ final sl = GetIt.instance;
 
 void initServiceLocator() {
   sl.registerLazySingleton<Dio>(() => Dio());
-
   sl.registerLazySingleton<DioConsumer>(() => DioConsumer(dio: sl()));
   sl.registerLazySingleton<LoginCubit>(()=> LoginCubit(authRepo: sl()));
   sl.registerLazySingleton<SignupCubit>(()=> SignupCubit(authRepo: sl()));
-
   sl.registerLazySingleton<AuthRepo>(() => AuthRepoImpl(sl()));
   sl.registerLazySingleton<VerifyOtpCubit>(()=> VerifyOtpCubit(authRepo: sl(),));
 }

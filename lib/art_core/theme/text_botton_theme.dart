@@ -4,23 +4,18 @@ import '../utils/app_colors.dart';
 
 class AppTextButtonStyles {
   static Color primaryColor(BuildContext context) {
-    final isDark =
-        Theme.of(context).brightness == Brightness.dark;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    return isDark
-        ? AppColors.primaryBtnColor
-        : AppColors.primaryBtnColor;
+    return isDark ? AppColors.primaryBtnColor : AppColors.primaryBtnColor;
   }
 
   static Color secondaryColor(BuildContext context) {
-    final isDark =
-        Theme.of(context).brightness == Brightness.dark;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    return isDark
-        ? AppColors.transparent
-        : AppColors.secondaryBtnColor;
+    return isDark ? AppColors.transparent : AppColors.secondaryBtnColor;
   }
 }
+
 // class AppTextButtonTextStyles {
 //   static TextStyle headlinePrimary(BuildContext context) {
 //     final isDark =

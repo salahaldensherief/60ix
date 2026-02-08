@@ -22,4 +22,3 @@ class AppColors {
   static const Color colorBtnSecondaryLabel = Color(0xff1C1A30);
   static const Color greenColor = Color(0xff10A711);
 }
-
