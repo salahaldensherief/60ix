@@ -14,7 +14,7 @@ import '../../../../../../../art_core/utils/app_strings.dart';
 import '../../../../../../../art_core/utils/constants.dart';
 import '../../../../../../../art_core/utils/font_styles.dart';
 import '../../../../../../../art_core/widgets/buttons/custom_button.dart';
-import '../../../../../../../core/shared_preferences_singleton.dart';
+import '../../../../../../../core/local/shared_preferences_singleton.dart';
 
 class PasswordRecoveryActions extends StatelessWidget {
   const PasswordRecoveryActions({super.key});

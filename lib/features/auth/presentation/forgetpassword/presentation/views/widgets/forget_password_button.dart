@@ -1,8 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ix/art_core/utils/constants.dart';
-import 'package:ix/core/shared_preferences_singleton.dart';
 
 import '../../../../../../../art_core/theme/text_botton_theme.dart';
 import '../../../../../../../art_core/utils/app_colors.dart';

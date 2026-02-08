@@ -1,20 +1,18 @@
-import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:ix/core/shared_preferences_singleton.dart';
 import 'package:ix/features/auth/data/models/register_params.dart';
 import 'package:ix/features/auth/domain/interfaces/auth_repo.dart';
 import 'package:ix/features/auth/presentation/signup/signup_state.dart';
 
 import '../../../../art_core/utils/constants.dart';
-import '../../../../core/flutter_secure_storage.dart';
+import '../../../../core/local/flutter_secure_storage.dart';
+import '../../../../core/local/shared_preferences_singleton.dart';
 
 class SignupCubit extends Cubit<SignupState> {
   final AuthRepo authRepo;
-  final LocalSecureStorage? localStorage;
 
-  SignupCubit({required this.authRepo, this.localStorage})
+  SignupCubit({required this.authRepo,})
     : super(SignupState(status: SignupStatus.initial));
 
   GlobalKey<FormState> registerFormKey = GlobalKey();
@@ -39,10 +37,10 @@ class SignupCubit extends Cubit<SignupState> {
   void saveMobileInfo({required String number, required String code}) {
     emit(state.copyWith(mobileNumber: number, mobileCode: code));
   }
+
   void changeTermsAcceptance(bool value) {
     emit(state.copyWith(isTermsAccepted: value));
   }
-
 
   Future<void> register() async {
     emit(state.copyWith(status: SignupStatus.loading));

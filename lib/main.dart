@@ -14,7 +14,7 @@ import 'package:ix/features/auth/presentation/signup/create_password_view.dart';
 import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
 import 'package:ix/features/auth/presentation/signup/signup_verify_view.dart';
 import 'package:ix/features/splash/presntation/splash_view.dart';
-import 'core/shared_preferences_singleton.dart';
+import 'core/local/shared_preferences_singleton.dart';
 import 'features/auth/presentation/signup/signup_view.dart';
 import 'features/onboarding/presentation/onboarding_view.dart';
 void main() async {

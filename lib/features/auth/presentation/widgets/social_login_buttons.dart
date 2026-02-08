@@ -4,7 +4,6 @@ import 'package:ix/art_core/utils/url_links.dart';
 import 'package:ix/features/auth/presentation/widgets/social_icon_widget.dart';
 import 'package:ix/features/auth/presentation/widgets/social_model.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../../../art_core/utils/assets_data.dart';
 import 'auth_or_divider_widget.dart';
 

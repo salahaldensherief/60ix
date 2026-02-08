@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ix/art_core/extensions/padding.dart';
-
 import '../../../../art_core/theme/text_field_theme.dart';
 
 class SocialIconWidget extends StatelessWidget {

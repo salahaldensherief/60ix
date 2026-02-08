@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/countries.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:intl_phone_field/phone_number.dart';
-
 import '../../../../art_core/theme/text_field_theme.dart';
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/font_styles.dart';

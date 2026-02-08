@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import '../../shared_preferences_singleton.dart';
+import '../../local/shared_preferences_singleton.dart';
 class ApiInterceptors extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {

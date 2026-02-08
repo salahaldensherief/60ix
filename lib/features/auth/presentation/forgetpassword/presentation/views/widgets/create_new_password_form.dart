@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/set_password_cubit.dart';
-
 import '../../../../../../../art_core/utils/app_strings.dart';
 import '../../../../widgets/password_text_field.dart';
 

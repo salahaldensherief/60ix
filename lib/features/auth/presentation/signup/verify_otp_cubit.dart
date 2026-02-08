@@ -1,10 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:ix/core/flutter_secure_storage.dart';
 import 'package:ix/features/auth/presentation/signup/verify_otp_state.dart';
-import 'package:meta/meta.dart';
-
-import '../../../../art_core/utils/constants.dart';
 import '../../domain/interfaces/auth_repo.dart';
 
 class VerifyOtpCubit extends Cubit<VerifyOtpState> {

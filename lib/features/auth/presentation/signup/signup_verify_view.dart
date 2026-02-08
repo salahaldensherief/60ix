@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -6,9 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/art_core/utils/constants.dart';
-import 'package:ix/core/flutter_secure_storage.dart';
-import 'package:ix/core/shared_preferences_singleton.dart';
-import 'package:ix/features/auth/presentation/signup/signup_cubit.dart';
 import 'package:ix/features/auth/presentation/signup/verify_otp_cubit.dart';
 import 'package:ix/features/auth/presentation/signup/verify_otp_state.dart';
 import 'package:ix/features/auth/presentation/signup/widgets/resend_code_section.dart';
@@ -20,6 +16,7 @@ import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
 import '../../../../art_core/widgets/custom_app_bar.dart';
 import '../../../../core/di/service_locator.dart';
+import '../../../../core/local/shared_preferences_singleton.dart';
 import '../../../../core/router/router.dart';
 import '../forgetpassword/presentation/views/widgets/otp_pin_widget.dart';
 

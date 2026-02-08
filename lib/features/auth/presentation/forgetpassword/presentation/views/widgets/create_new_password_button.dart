@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ix/art_core/utils/constants.dart';
 import 'package:ix/core/router/router.dart';
-import 'package:ix/core/shared_preferences_singleton.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/set_password_cubit.dart';
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/set_password_state.dart';
-
 import '../../../../../../../art_core/theme/text_botton_theme.dart';
 import '../../../../../../../art_core/utils/app_colors.dart';
 import '../../../../../../../art_core/utils/app_strings.dart';
 import '../../../../../../../art_core/utils/font_styles.dart';
 import '../../../../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../../../../core/local/shared_preferences_singleton.dart';
 
 class CreateNewAccountAction extends StatelessWidget {
   const CreateNewAccountAction({super.key});
