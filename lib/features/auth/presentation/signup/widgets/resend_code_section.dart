@@ -13,7 +13,9 @@ class ResendCodeSection extends StatelessWidget {
       children: [
         TimeCountWidget(),
         SizedBox(height: 10.h),
-        ResendCodeHint(),
+        ResendCodeHint(
+
+        ),
       ],
     );
   }

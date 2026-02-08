@@ -16,27 +16,26 @@ class CreateNewPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  CustomAppBar(
+      appBar: CustomAppBar(
         title: AppStrings.createNewAccount.tr(),
         subtitle: AppStrings.appBarCreateNewPasswordHint.tr(),
         showBack: true,
       ),
+
       ///TODO
       body: BlocProvider(
-  create: (context) => SetPasswordCubit(sl()),
-  child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ///TODO
+        create: (context) => SetPasswordCubit(sl()),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ///TODO
+            CreateNewPasswordForm(),
 
-
-      CreateNewPasswordForm(),
-          ///TODO
-          CreateNewAccountAction().padOnly(top: 24),
-        ],
-      ),
-).padSymmetric( horizontal: 18.w),
+            ///TODO
+            CreateNewAccountAction().padOnly(top: 24),
+          ],
+        ),
+      ).padSymmetric(horizontal: 18.w),
     );
   }
 }
-

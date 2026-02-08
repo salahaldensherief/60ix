@@ -5,6 +5,7 @@ import 'package:ix/features/auth/data/models/otp_response.dart';
 import 'package:ix/features/auth/data/models/register_params.dart';
 import 'package:ix/features/auth/data/models/user_model.dart';
 
+import '../../../../art_core/utils/constants.dart';
 import '../../../../core/api/api_service/api_endpoint.dart';
 import '../../../../core/api/api_service/dio_consumer.dart';
 import '../../../../core/errors/error_model.dart';
@@ -35,9 +36,9 @@ class AuthRepoImpl implements AuthRepo {
       final response = await dio.post(
         ApiEndPoint.login,
         data: {
-          "mobile_number": phone,
-          "mobile_code": mobileCode,
-          "password": password,
+          ConstStrings.mobileNumber: phone,
+          ConstStrings.mobileCode: mobileCode,
+          ConstStrings.password: password,
         },
       );
       return Right(UserModel.fromJson(response));
@@ -79,9 +80,9 @@ class AuthRepoImpl implements AuthRepo {
       final response = await dio.post(
         ApiEndPoint.verifyOtp,
         data: {
-          'mobile_code': mobileCode,
-          'mobile_number': mobileNumber,
-          'otp_code': otpCode,
+          ConstStrings.mobileCode: mobileCode,
+          ConstStrings.mobileNumber: mobileNumber,
+          ConstStrings.otp: otpCode,
         },
       );
       return Right(OtpResponse.fromJson(response));
@@ -102,7 +103,7 @@ class AuthRepoImpl implements AuthRepo {
     try {
       final response = await dio.post(
         ApiEndPoint.forgetPassword,
-        data: {'mobile_code': mobileCode, 'mobile_number': mobileNumber},
+        data: {ConstStrings.mobileCode: mobileCode, ConstStrings.mobileNumber: mobileNumber},
       );
       return Right(UserModel.fromJson(response));
     } on ServerException catch (e) {
@@ -123,10 +124,10 @@ class AuthRepoImpl implements AuthRepo {
   }) async{
     try{
       final response = await dio.post(ApiEndPoint.setPassword,data: {
-        'mobile_code': mobileCode,
-        'mobile_number': mobileNumber,
-        'password':password,
-        'password_confirmation': confirmedPassword,
+        ConstStrings.mobileCode: mobileCode,
+        ConstStrings.mobileNumber: mobileNumber,
+        ConstStrings.password:password,
+        ConstStrings.passwordConfirmation: confirmedPassword,
       });
       return Right(UserModel.fromJson(response));
 

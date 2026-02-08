@@ -25,7 +25,7 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController birthDateController = TextEditingController();
   int gender = 1;
-  int cityId = 4;
+  int cityId = 1;
   TextEditingController passwordController = TextEditingController();
   TextEditingController passwordConfirmationController =
       TextEditingController();
