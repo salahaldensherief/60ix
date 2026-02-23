@@ -1,16 +1,33 @@
-class AssetsData{
+class AssetsData {
   static const _pathImages = 'assets/images';
   static const _pathIcons = 'assets/icons';
   static const logo = '$_pathImages/logo.png';
-static const onBoardingImage1 = '$_pathImages/onboarding1.png';
-static const eyeOff = '$_pathIcons/eye-off-svgrepo-com.svg';
-static const eye = '$_pathIcons/eye-svgrepo-com.svg';
-static const googleLogo = '$_pathIcons/google.svg';
-static const facebookLogo = '$_pathIcons/facebook.svg';
-static const appleLogo = '$_pathIcons/apple.svg';
-static const appleLogoDark = '$_pathIcons /logos_apple_dark.svg';
-static const backIcon = '$_pathIcons/Back Icon.svg';
-static const trueIcon = '$_pathIcons/Fill 6.svg';
-static const calendarIcon = '$_pathIcons/Calendar Icon.svg';
-static const translations = 'assets/translations';
+  static const onBoardingImage1 = '$_pathImages/onboarding1.png';
+  static const eyeOff = '$_pathIcons/eye-off-svgrepo-com.svg';
+  static const eye = '$_pathIcons/eye-svgrepo-com.svg';
+  static const googleLogo = '$_pathIcons/google.svg';
+  static const facebookLogo = '$_pathIcons/facebook.svg';
+  static const appleLogo = '$_pathIcons/apple.svg';
+  static const appleLogoDark = '$_pathIcons /logos_apple_dark.svg';
+  static const backIcon = '$_pathIcons/Back Icon.svg';
+  static const trueIcon = '$_pathIcons/Fill 6.svg';
+  static const calendarIcon = '$_pathIcons/Calendar Icon.svg';
+  static const translations = 'assets/translations';
+  static const person = '$_pathImages/person.png';
+  static const animalCareLogo = '$_pathImages/Animal Care.png';
+  static const rank = '$_pathImages/rank.png';
+  static const cartIcon = '$_pathImages/cart.svg';
+  static const horse = '$_pathImages/horse.png';
+  static const messagesIcon = '$_pathImages/message.svg';
+  static const notificationsIcon = '$_pathImages/notification.svg';
+  static const searchIcon = '$_pathIcons/serachIcons.svg';
+  static const searchSort = '$_pathIcons/SearchSort.svg';
+  static const flashDealsIcon = '$_pathIcons/FlashDealsIcon.svg';
+  static const exploreIcon = '$_pathIcons/ExploreIcon.svg';
+  static const roundArrowRightIcon = '$_pathIcons/Round Arrow Right.svg';
+  static const loveIcon = '$_pathIcons/loveIcon.svg';
+  static const commentIcon = '$_pathIcons/comment.svg';
+  static const horse2Image = '$_pathImages/horse2.png';
+  static const vectorImage = '$_pathImages/Vector.svg';
+  static const sortIcon = '$_pathIcons/sortIcon.svg';
 }

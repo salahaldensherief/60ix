@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 class AppColors {
   static const Color primaryColor = Color(0xffFE5D41);
   static const Color primaryBtnColor = Color(0xffFE5D41);
@@ -8,7 +7,7 @@ class AppColors {
   static const Color blue500 = Color(0xff1C1A30);
   static const Color whiteColor = Color(0xffFFFFFF);
   static const Color gray300Color = Color(0xff64646A);
-  static const Color textFieldLightFillColor = Color(0xffF7F6FC);
+  static const Color textFieldLightFillColor = Color(0xffF8F8F8);
   static const Color textFieldLightBorderColor = Color(0xffEEEEEE);
   static const Color textFieldDarkFillColor = Color(0xff1D1D28);
   static const Color textFieldDarkBorderColor = Color(0xffEEEEEE);
@@ -21,4 +20,7 @@ class AppColors {
   static const Color textColorDarkThree = Color(0xff64646A);
   static const Color colorBtnSecondaryLabel = Color(0xff1C1A30);
   static const Color greenColor = Color(0xff10A711);
+  static const Color borderColor = Color(0xffF2F2F2);
+  static const Color orangeShade100 = Color(0xffFFF2F0);
+  static const Color discountColor = Color(0xffD1FF06);
 }

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ix/art_core/theme/text_theme_toggle.dart';
-import '../utils/app_colors.dart';
-import '../utils/assets_data.dart';
-import '../utils/font_styles.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/assets_data.dart';
+import '../../utils/font_styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;

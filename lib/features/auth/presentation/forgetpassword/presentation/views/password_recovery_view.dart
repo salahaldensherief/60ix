@@ -7,7 +7,7 @@ import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/
 import 'package:ix/features/auth/presentation/forgetpassword/presentation/views/widgets/password_recovery_form.dart';
 import 'package:ix/features/auth/presentation/signup/verify_otp_cubit.dart';
 import '../../../../../../art_core/utils/app_strings.dart';
-import '../../../../../../art_core/widgets/custom_app_bar.dart';
+import '../../../../../../art_core/widgets/appbar/custom_app_bar.dart';
 import '../../../../../../core/di/service_locator.dart';
 
 ///PasswordRecovery what?

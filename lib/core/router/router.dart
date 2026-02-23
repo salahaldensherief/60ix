@@ -9,7 +9,8 @@ class NavigatorKeys {
   static const String createPasswordView = "/createPassword_View";
   static const String forgetPasswordView = "/forgetPassword_View";
   static const String createNewPasswordView = "/createNewPassword_View";
-  }
+  static const String homeScreen = "/home_screen";
+}
 
 
 

@@ -66,7 +66,7 @@
 
   "next": "Next",
 
-  "verifyYourPhone": " Verify your phone number",
+  "verifyYourPhone": "Verify your phone number",
   "verify": "Verify",
 
   "passwordRecovery": "Password Recovery",
@@ -83,12 +83,11 @@
   "gettingStarted": "Getting started!",
   "agree": "Agree to ",
   "terms": "Terms & Conditions",
+
   "phoneRequired": "Phone number is required",
   "phoneInvalid": "Invalid phone number",
-
   "passwordRequired": "Password is required",
   "passwordInvalid": "Password must be at least 6 characters",
-  "loading": "Loading...",
   "password_too_short": "Password is too short",
   "nameRequired": "Name is required",
   "nameTooShort": "Name is too short",
@@ -96,7 +95,34 @@
   "emailInvalid": "Email is invalid",
   "cityRequired": "City is required",
   "genderRequired": "Gender is required",
-  "birthDateRequired": "Birth date is required"
+  "birthDateRequired": "Birth date is required",
 
+  "loading": "Loading...",
 
+  "discounts": "Discounts",
+  "hi_user": "Hi, {name}",
+  "location": "{city}, {country}",
+  "search_hint": "Search for discounts, vendors...",
+
+  "flash": "Flash ",
+  "deals": "Deals",
+
+  "veterinary_care": "Veterinary Care",
+  "animal_care_center": "Animal Care Center",
+  "buy_sell": "Buy & Sell",
+  "get_discount": "Get Discount",
+  "percent_off": "{percent}% OFF",
+
+  "explore": "Explore ",
+  "categories": "Categories",
+
+  "equestrian_training": "Equestrian Training",
+  "horse_back_riding": "Horse Back Riding",
+  "safari": "Safari",
+  "free_ride": "Free Ride",
+  "horse_feeding": "Horse Feeding",
+
+  "filter_sort": "Filter & Sort",
+  "results": "{count} Results",
+  "rating": "{rating}"
 }

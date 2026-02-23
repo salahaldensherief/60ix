@@ -6,7 +6,7 @@ import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/features/auth/presentation/login/widgets/login_actions.dart';
 import 'package:ix/features/auth/presentation/login/widgets/login_form.dart';
 import '../../../../art_core/utils/app_strings.dart';
-import '../../../../art_core/widgets/custom_app_bar.dart';
+import '../../../../art_core/widgets/appbar/custom_app_bar.dart';
 import '../../../../core/di/service_locator.dart';
 import 'login_cubit.dart';
 

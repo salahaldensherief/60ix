@@ -32,7 +32,7 @@ class OnboardingActions extends StatelessWidget {
         CustomButton(
           textStyle: theme.headlineLarge!,
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed(NavigatorKeys.signIn
+            Navigator.of(context).pushReplacementNamed(NavigatorKeys.homeScreen
             );
           },
           text: AppStrings.guestLogin.tr(),

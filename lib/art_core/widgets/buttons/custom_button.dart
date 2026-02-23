@@ -10,7 +10,7 @@ class CustomButton extends StatelessWidget {
     this.text ='',
     this.color,
      this.colorSide = Colors.transparent,
-    this.textStyle,
+    this.textStyle, this.size, this.radius,
   });
   final VoidCallback? onPressed;
   final String? text;
@@ -18,6 +18,8 @@ class CustomButton extends StatelessWidget {
  final  Color? colorSide;
   final TextStyle? textStyle;
   final Alignment? alignment;
+  final Size? size;
+  final BorderRadius? radius;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -25,8 +27,8 @@ class CustomButton extends StatelessWidget {
       style: TextButton.styleFrom(
         alignment: alignment,
         backgroundColor: color,
-        fixedSize: Size(364, 50),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        fixedSize: size ?? Size(364, 50),
+        shape: RoundedRectangleBorder(  borderRadius: radius ??BorderRadius.circular(12)),
         side: BorderSide(color: colorSide!),
       ),
       onPressed: onPressed,

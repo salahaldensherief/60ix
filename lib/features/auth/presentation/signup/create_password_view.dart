@@ -6,7 +6,7 @@ import 'package:ix/features/auth/data/models/register_params.dart';
 import 'package:ix/features/auth/presentation/signup/widgets/create_password_action.dart';
 import 'package:ix/features/auth/presentation/signup/widgets/create_password_form.dart';
 import '../../../../art_core/utils/app_strings.dart';
-import '../../../../art_core/widgets/custom_app_bar.dart';
+import '../../../../art_core/widgets/appbar/custom_app_bar.dart';
 
 class CreatePasswordView extends StatelessWidget {
   const CreatePasswordView({super.key, this.params});

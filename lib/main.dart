@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ix/art_core/theme/theme.dart';
@@ -16,8 +17,11 @@ import 'package:ix/features/auth/presentation/signup/signup_verify_view.dart';
 import 'package:ix/features/splash/presntation/splash_view.dart';
 import 'core/local/shared_preferences_singleton.dart';
 import 'features/auth/presentation/signup/signup_view.dart';
+import 'features/discounts/presentation/discounts_screen.dart';
 import 'features/onboarding/presentation/onboarding_view.dart';
+
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
@@ -71,6 +75,7 @@ class MyApp extends StatelessWidget {
           NavigatorKeys.signupVerify: (BuildContext context) => SignupVerify(),
           NavigatorKeys.createPasswordView: (BuildContext context) =>
               CreatePasswordView(),
+          NavigatorKeys.homeScreen: (BuildContext context) => DiscountsScreen(),
         },
       ),
     );

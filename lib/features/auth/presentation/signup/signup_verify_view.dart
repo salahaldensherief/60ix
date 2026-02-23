@@ -14,7 +14,7 @@ import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/app_strings.dart';
 import '../../../../art_core/utils/font_styles.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
-import '../../../../art_core/widgets/custom_app_bar.dart';
+import '../../../../art_core/widgets/appbar/custom_app_bar.dart';
 import '../../../../core/di/service_locator.dart';
 import '../../../../core/local/shared_preferences_singleton.dart';
 import '../../../../core/router/router.dart';

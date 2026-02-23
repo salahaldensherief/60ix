@@ -74,6 +74,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                 borderRadius: BorderRadius.circular(24),
               ),
               dotDecoration: DotDecoration(
+                rotationAngle: 0,
                 width: 8,
                 height: 8,
                 color:  isDark ? AppColors.whiteColor : AppColors.primaryBtnColor.withOpacity(0.3),

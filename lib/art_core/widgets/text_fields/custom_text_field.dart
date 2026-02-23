@@ -12,25 +12,28 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
-    required this.textInputType,
+     this.textInputType,
     this.onSaved,
     this.text,
     this.controller,
     this.obscureText = false,
     this.validator,
-    this.onTap,
+    this.onTap,  this.radius, this.contentPadding, this.borderSide,
   });
   final String? hintText;
+  final BorderSide? borderSide;
   final String? text;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
-  final TextInputType textInputType;
+  final TextInputType? textInputType;
   final void Function(String?)? onSaved;
   final String? Function(String?)? validator;
   final void Function()? onTap;
   final TextEditingController? controller;
   final bool obscureText;
   final bool readOnly;
+  final BorderRadius? radius;
+  final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -68,22 +71,23 @@ class CustomTextFormField extends StatelessWidget {
 
             hintText: text,
             hintStyle: TextStyles.font12Small,
-            contentPadding: EdgeInsets.symmetric(
+            contentPadding:contentPadding ??  EdgeInsets.symmetric(
               vertical: 12.h,
               horizontal: 12.w,
             ),
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
 
-              borderSide: BorderSide(color: AppColors.textFieldLightBorderColor),
+              borderSide: borderSide ?? BorderSide(color: AppColors.textFieldLightBorderColor),
             ),
             focusColor: AppTextFieldTheme.textFieldColor(context),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
+              borderRadius:radius ?? BorderRadius.circular(8.r),
 
-              borderSide: BorderSide(
+
+              borderSide:borderSide?? BorderSide(
               width: isDark ? 0.1 : 1,
-              color: isDark
+              color:  isDark
               ? AppColors.textFieldDarkBorderColor.withOpacity(.5)
                   : AppColors.textFieldLightBorderColor,
               ),
@@ -91,7 +95,13 @@ class CustomTextFormField extends StatelessWidget {
             isDense: true,
             filled: true,
             fillColor: AppTextFieldTheme.textFieldColor(context),
-            prefixIcon: prefixIcon,
+            prefixIcon:  prefixIcon != null
+                ? Padding(
+              padding: EdgeInsets.only(left: 10.w),
+              child: prefixIcon,
+            )
+                : null,
+
             prefixIconColor: AppColors.textFieldLightBorderColor,
             suffixIcon: suffixIcon,
             border: InputBorder.none,
