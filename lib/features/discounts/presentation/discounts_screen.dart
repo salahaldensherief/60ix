@@ -6,18 +6,14 @@ import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
 import 'package:ix/art_core/utils/assets_data.dart';
 import 'package:ix/art_core/widgets/appbar/home_app_bar.dart';
-import 'package:ix/art_core/widgets/buttons/custom_button.dart';
 import 'package:ix/features/discounts/presentation/widgets/explore_categories_widget.dart';
 import 'package:ix/features/discounts/presentation/widgets/services_cards_grid_view.dart';
-import 'package:ix/features/discounts/presentation/widgets/buy_and_sell_widget.dart';
 import 'package:ix/features/discounts/presentation/widgets/categories_headline.dart';
-import 'package:ix/features/discounts/presentation/widgets/discount_container_widget.dart';
 import 'package:ix/features/discounts/presentation/widgets/flash_deals_card.dart';
 import 'package:ix/features/discounts/presentation/widgets/search_widget.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../../art_core/utils/app_colors.dart';
-import '../../../art_core/widgets/icons/fav_icon_widget.dart';
 
 class DiscountsScreen extends StatelessWidget {
   const DiscountsScreen({super.key});
