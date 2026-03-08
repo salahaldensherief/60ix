@@ -2,16 +2,12 @@
   "createAccount": "إنشاء حساب",
   "letsSignIn": "هيا نسجّل الدخول!",
   "loginToContinueAccount": "سجّل الدخول للمتابعة في حسابك",
-
   "userName": "اسم المستخدم",
   "userNameHint": "أدخل اسم المستخدم ...",
-
   "email": "البريد الإلكتروني",
   "emailHint": "أدخل عنوان بريدك الإلكتروني ...",
-
-  "phone_number": "رقم الهاتف",
-  "phone_number_hint": "أدخل رقم هاتفك ...",
-
+  "phoneNumber": "رقم الهاتف",
+  "phoneNumberHint": "أدخل رقم هاتفك ...",
   "password": "كلمة المرور",
   "passwordHint": "أدخل كلمة المرور ...",
   "confirmPassword": "تأكيد كلمة المرور",
@@ -19,76 +15,56 @@
   "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين",
   "createPassword": "إنشاء كلمة مرور",
   "createPasswordSubTitle": "أنشئ كلمة مرور قوية ومميزة لحماية حسابك",
-
   "signUp": "إنشاء حساب",
   "signIn": "تسجيل الدخول",
-
   "country": "الدولة",
   "countryHint": "اختر دولتك...",
-
   "alreadyHaveAccount": "لديك حساب بالفعل؟",
   "dontHaveAccount": "ليس لديك حساب؟",
   "signInToContinue": "سجّل الدخول للمتابعة",
-
   "onboardingTitle": "خدمات رعاية، منتجات عالية الجودة، ومجتمع داعم في تطبيق واحد",
-
   "createNewAccount": "إنشاء حساب جديد",
   "guestLogin": "الدخول كضيف",
   "orContinueWith": "أو المتابعة باستخدام",
-
   "forgotPassword": "نسيت كلمة المرور",
   "resetPassword": "إعادة تعيين كلمة المرور",
   "enterEmailToReceive": "أدخل بريدك الإلكتروني لاستلام تعليمات إعادة التعيين",
   "send": "إرسال",
   "backToLogin": "العودة إلى تسجيل الدخول",
-
   "newPassword": "كلمة المرور الجديدة",
   "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
   "passwordResetSuccessMessage": "تمت إعادة تعيين كلمة المرور بنجاح",
   "successfully": "بنجاح",
-
   "createAccountToContinueCourses": "أنشئ حسابًا للمتابعة",
-
   "fullName": "الاسم الكامل",
   "fullNameHint": "أدخل اسمك الكامل ...",
-
   "city": "المدينة",
   "cityHint": "اختر مدينتك...",
-
   "gender": "النوع",
   "genderHint": "اختر النوع...",
-
   "male": "ذكر",
   "female": "أنثى",
-
   "dateOfBirth": "تاريخ الميلاد",
   "dateOfBirthHint": "اختر تاريخ الميلاد...",
-
   "next": "التالي",
-
   "verifyYourPhone": "تحقق من رقم هاتفك",
   "verify": "تأكيد",
-
   "passwordRecovery": "استعادة كلمة المرور",
   "otpAppBarHint": "يرجى إدخال رمز التحقق المرسل إلى رقم هاتفك",
-
   "dontReceiveCode": "لم يصلك الرمز؟",
   "resendCode": "إعادة إرسال الرمز",
-
   "createNewPassword": "إنشاء كلمة مرور جديدة",
   "appBarForgetPasswordHint": "يرجى التحقق من رقم هاتفك",
   "appBarCreateNewPasswordHint": "أنشئ كلمة مرور قوية لتعزيز أمان حسابك",
-
   "continueText": "متابعة",
   "gettingStarted": "هيا نبدأ!",
   "agree": "أوافق على ",
   "terms": "الشروط والأحكام",
-
   "phoneRequired": "رقم الهاتف مطلوب",
   "phoneInvalid": "رقم الهاتف غير صحيح",
   "passwordRequired": "كلمة المرور مطلوبة",
   "passwordInvalid": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
-  "password_too_short": "كلمة المرور قصيرة جدًا",
+  "passwordTooShort": "كلمة المرور قصيرة جدًا",
   "nameRequired": "الاسم مطلوب",
   "nameTooShort": "الاسم قصير جدًا",
   "emailRequired": "البريد الإلكتروني مطلوب",
@@ -96,33 +72,27 @@
   "cityRequired": "المدينة مطلوبة",
   "genderRequired": "النوع مطلوب",
   "birthDateRequired": "تاريخ الميلاد مطلوب",
-
   "loading": "جاري التحميل...",
-
   "discounts": "الخصومات",
-  "hi_user": "مرحبًا، {name}",
+  "hiUser": "مرحبًا، {name}",
   "location": "{city}، {country}",
-  "search_hint": "ابحث عن خصومات أو متاجر...",
-
+  "searchHint": "ابحث عن خصومات أو متاجر...",
   "flash": "العروض ",
   "deals": "السريعة",
-
-  "veterinary_care": "رعاية بيطرية",
-  "animal_care_center": "مركز رعاية الحيوانات",
-  "buy_sell": "بيع وشراء",
-  "get_discount": "احصل على الخصم",
-  "percent_off": "خصم {percent}٪",
-
+  "veterinaryCare": "رعاية بيطرية",
+  "animalCareCenter": "مركز رعاية الحيوانات",
+  "buySell": "بيع وشراء",
+  "getDiscount": "احصل على الخصم",
+  "percentOff": "خصم {percent}٪",
   "explore": "استكشف ",
   "categories": "الفئات",
-
-  "equestrian_training": "تدريب الفروسية",
-  "horse_back_riding": "ركوب الخيل",
+  "equestrianTraining": "تدريب الفروسية",
+  "horseBackRiding": "ركوب الخيل",
   "safari": "سفاري",
-  "free_ride": "جولة حرة",
-  "horse_feeding": "إطعام الخيول",
-
-  "filter_sort": "تصفية وترتيب",
+  "freeRide": "جولة حرة",
+  "horseFeeding": "إطعام الخيول",
+  "filterSort": "تصفية وترتيب",
   "results": "{count} نتيجة",
-  "rating": "{rating}"
+  "rating": "{rating}",
+  "filterByCategory": "تصفية حسب الفئة"
 }

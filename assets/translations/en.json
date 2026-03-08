@@ -1,17 +1,13 @@
 {
   "createAccount": "Create account",
-  "letsSignIn": "Let’s Sign In!",
+  "letsSignIn": "Let's Sign In!",
   "loginToContinueAccount": "Login To Continue Your Account",
-
   "userName": "User name",
   "userNameHint": "Enter your user name",
-
   "email": "Email address",
   "emailHint": "Enter your email address",
-
-  "phone_number": "Phone Number",
-  "phone_number_hint": "Enter your phone number ...",
-
+  "phoneNumber": "Phone Number",
+  "phoneNumberHint": "Enter your phone number ...",
   "password": "Password",
   "passwordHint": "Enter your password ...",
   "confirmPassword": "Confirm password",
@@ -19,76 +15,56 @@
   "passwordsDoNotMatch": "Passwords do not match",
   "createPassword": "Create Password",
   "createPasswordSubTitle": "Create a strong, unique password to enhance the security of your account",
-
   "signUp": "SIGN UP",
   "signIn": "SIGN IN",
-
   "country": "Country",
   "countryHint": "Select your country...",
-
   "alreadyHaveAccount": "Already have an account?",
-  "dontHaveAccount": "Don’t have an account?",
+  "dontHaveAccount": "Don't have an account?",
   "signInToContinue": "Sign in to continue",
-
   "onboardingTitle": "Care services, quality products, and a loving community all in one app",
-
   "createNewAccount": "Create A New Account",
   "guestLogin": "Guest Login",
   "orContinueWith": "Or Continue With",
-
   "forgotPassword": "Forgot Password",
   "resetPassword": "Reset password",
   "enterEmailToReceive": "Enter your email to receive password reset instructions",
   "send": "Send",
   "backToLogin": "Back to login",
-
   "newPassword": "New Password",
   "confirmNewPassword": "Confirm new password",
   "passwordResetSuccessMessage": "Your password has been successfully reset. Please use your new password",
   "successfully": "Successfully",
-
   "createAccountToContinueCourses": "Create an Account to Continue your allCourses",
-
   "fullName": "Full name",
   "fullNameHint": "Enter your full name ...",
-
   "city": "City",
   "cityHint": "Select your city...",
-
   "gender": "Gender",
   "genderHint": "Select your gender...",
-
   "male": "Male",
   "female": "Female",
-
   "dateOfBirth": "Date of birth",
   "dateOfBirthHint": "Select date of birth...",
-
   "next": "Next",
-
   "verifyYourPhone": "Verify your phone number",
   "verify": "Verify",
-
   "passwordRecovery": "Password Recovery",
   "otpAppBarHint": "Please enter the verification code sent to your phone number",
-
-  "dontReceiveCode": "Don’t receive the code?",
+  "dontReceiveCode": "Don't receive the code?",
   "resendCode": "Resend code",
-
   "createNewPassword": "Create New Password",
   "appBarForgetPasswordHint": "Please verify your phone number",
   "appBarCreateNewPasswordHint": "Create a strong, unique password to enhance the security of your account.",
-
   "continueText": "Continue",
   "gettingStarted": "Getting started!",
   "agree": "Agree to ",
   "terms": "Terms & Conditions",
-
   "phoneRequired": "Phone number is required",
   "phoneInvalid": "Invalid phone number",
   "passwordRequired": "Password is required",
   "passwordInvalid": "Password must be at least 6 characters",
-  "password_too_short": "Password is too short",
+  "passwordTooShort": "Password is too short",
   "nameRequired": "Name is required",
   "nameTooShort": "Name is too short",
   "emailRequired": "Email is required",
@@ -96,33 +72,27 @@
   "cityRequired": "City is required",
   "genderRequired": "Gender is required",
   "birthDateRequired": "Birth date is required",
-
   "loading": "Loading...",
-
   "discounts": "Discounts",
-  "hi_user": "Hi, {name}",
+  "hiUser": "Hi, {name}",
   "location": "{city}, {country}",
-  "search_hint": "Search for discounts, vendors...",
-
+  "searchHint": "Search for discounts, vendors...",
   "flash": "Flash ",
   "deals": "Deals",
-
-  "veterinary_care": "Veterinary Care",
-  "animal_care_center": "Animal Care Center",
-  "buy_sell": "Buy & Sell",
-  "get_discount": "Get Discount",
-  "percent_off": "{percent}% OFF",
-
+  "veterinaryCare": "Veterinary Care",
+  "animalCareCenter": "Animal Care Center",
+  "buySell": "Buy & Sell",
+  "getDiscount": "Get Discount",
+  "percentOff": "{percent}% OFF",
   "explore": "Explore ",
   "categories": "Categories",
-
-  "equestrian_training": "Equestrian Training",
-  "horse_back_riding": "Horse Back Riding",
+  "equestrianTraining": "Equestrian Training",
+  "horseBackRiding": "Horse Back Riding",
   "safari": "Safari",
-  "free_ride": "Free Ride",
-  "horse_feeding": "Horse Feeding",
-
-  "filter_sort": "Filter & Sort",
+  "freeRide": "Free Ride",
+  "horseFeeding": "Horse Feeding",
+  "filterSort": "Filter & Sort",
   "results": "{count} Results",
-  "rating": "{rating}"
+  "rating": "{rating}",
+  "filterByCategory": "Filter By Category"
 }

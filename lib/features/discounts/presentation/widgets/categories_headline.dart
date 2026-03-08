@@ -37,9 +37,14 @@ class CategoriesHeadline extends StatelessWidget {
             ],
           ),
         ),
-        Spacer(),
-        SvgPicture.asset(suffixIcon??'')
-
+        if (suffixIcon != null) ...[
+          Spacer(),
+          SvgPicture.asset(
+            suffixIcon!,
+            width: 20.w,
+            height: 20.h,
+          ),
+        ],
       ],
     );
   }

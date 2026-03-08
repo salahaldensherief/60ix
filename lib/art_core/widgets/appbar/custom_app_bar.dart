@@ -8,72 +8,76 @@ import '../../utils/font_styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final String subtitle;
+  final double? size;
+  final String? subtitle;
   final bool showBack;
   final VoidCallback? onBack;
   final bool centerTitle;
   final Color? backgroundColor;
-  // final String? phoneNumber;
+  final bool showElevation;
 
   const CustomAppBar({
     super.key,
     required this.title,
     this.showBack = false,
     this.onBack,
-    this.centerTitle = true,
+    this.showElevation = false,
+    this.centerTitle = false,
     this.backgroundColor,
-    required this.subtitle, // this.phoneNumber,
+    this.subtitle,
+    this.size,
   });
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    return SafeArea(
-      minimum: EdgeInsets.symmetric(horizontal: 20),
-      child: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: AppColors.transparent,
-        elevation: 0,
-        flexibleSpace: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                if (showBack)
-                  GestureDetector(
-                    onTap:
-                        onBack ??
-                        () {
-                          Navigator.of(context).pop();
-                        },
-                    child: SvgPicture.asset(
-                      AssetsData.backIcon,
-                      color: isDark ? AppColors.appBarDarkColor : null,
-                    ),
-                  ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: showBack == true ? 12.w : 0,
-                  ),
-                  child: Text(
-                    title,
-                    style: TextThemeToggle.textTheme(context).headlineLarge,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 8.h),
-            Text(subtitle, style: TextStyles.font14mediumRegular.copyWith()),
-          ],
+    return AppBar(
+
+      automaticallyImplyLeading: false,
+      backgroundColor: backgroundColor ?? AppColors.whiteColor,
+
+      elevation: showElevation ? 0.2 : 0,
+
+      centerTitle: centerTitle,
+
+      leading: showBack
+          ? GestureDetector(
+        onTap: onBack ??
+                () {
+              Navigator.of(context).pop();
+            },
+        child: Padding(
+          padding: const EdgeInsets.all(18),
+          child: SvgPicture.asset(
+            AssetsData.backIcon,
+            color: isDark ? AppColors.appBarDarkColor : null,
+          ),
         ),
+      )
+          : null,
+
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextThemeToggle.textTheme(context).headlineLarge,
+          ),
+          subtitle?.isNotEmpty == true
+              ? Text(
+            subtitle!,
+            style: TextStyles.font14mediumRegular,
+          )
+              : const SizedBox.shrink(),
+        ],
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(75.h);
+  Size get preferredSize => Size.fromHeight(size ?? 60);
 }
-
 // Text(phoneNumber! ,style: TextStyles.font12Medium.copyWith(
 //   color: Colors.black
 // )

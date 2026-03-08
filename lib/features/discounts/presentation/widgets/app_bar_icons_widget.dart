@@ -10,9 +10,7 @@ class AppBarIconsWidget extends StatelessWidget {
   final String icon;
   final void Function()? onTap;
 
-   const AppBarIconsWidget({
-    super.key, required this.icon, this.onTap,
-  });
+  const AppBarIconsWidget({super.key, required this.icon, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +20,10 @@ class AppBarIconsWidget extends StatelessWidget {
         width: 32.w,
         height: 32.h,
         decoration: BoxDecoration(
-          border: Border.all(
-            color: AppColors.textFieldLightBorderColor,
-          ),
+          border: Border.all(color: AppColors.textFieldLightBorderColor),
           shape: BoxShape.circle,
         ),
-        child: SvgPicture.asset(
-         icon
-
-        ).padAll(6),
+        child: SvgPicture.asset(icon).padAll(6),
       ),
     );
   }

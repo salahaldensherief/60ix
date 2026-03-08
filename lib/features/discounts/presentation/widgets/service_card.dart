@@ -8,6 +8,7 @@ import '../../../../art_core/extensions/padding.dart';
 import '../../../../art_core/utils/app_colors.dart';
 import '../../../../art_core/utils/assets_data.dart';
 import '../../../../art_core/widgets/buttons/custom_button.dart';
+import '../../../../art_core/widgets/icons/comment_widget.dart';
 import '../../../../art_core/widgets/icons/fav_icon_widget.dart';
 import 'buy_and_sell_widget.dart';
 import 'discount_container_widget.dart';
@@ -104,11 +105,11 @@ class ServiceCard extends StatelessWidget {
 
           _buildTitleAndRate(theme),
 
-          _buildCenterRow(theme),
+          _buildCenterNameRow(theme),
           SizedBox(height: 4),
 
           _buildPriceRow(theme),
-          SizedBox(height: 4),
+          SizedBox(height: 2),
 
           _buildActionRow(theme),
         ],
@@ -132,16 +133,22 @@ class ServiceCard extends StatelessWidget {
             ),
           ),
         ),
-        Text('⭐ $rating'),
+        Row(
+          children: [
+            Text(rating),
+            SvgPicture.asset(AssetsData.starIcon)
+
+          ],
+        )
       ],
     );
   }
 
-  Widget _buildCenterRow(TextTheme theme) {
+  Widget _buildCenterNameRow(TextTheme theme) {
     return Row(
       children: [
-        Image.asset(serviceLogo, width: 20.w),
-        SizedBox(width: 5.w),
+        Image.asset(serviceLogo, width: 18.w),
+        SizedBox(width: 4.w),
         Text(
           centerName,
           maxLines: 1,
@@ -162,15 +169,16 @@ class ServiceCard extends StatelessWidget {
           '$price SAR',
           style: theme.labelMedium?.copyWith(color: AppColors.primaryColor),
         ),
-        SizedBox(width: 8.w),
+        SizedBox(width: 4.w),
         Text(
           '$oldPrice SAR',
           style: theme.titleMedium?.copyWith(
             decoration: TextDecoration.lineThrough,
           ),
         ),
-        const Spacer(),
-        DiscountContainerWidget(theme: theme),
+
+
+        DiscountContainerWidget(theme: theme,),
       ],
     );
   }
@@ -190,16 +198,13 @@ class ServiceCard extends StatelessWidget {
           ),
         ),
         SizedBox(width: 2.w),
-        Container(
+        CommentWidget(
+          padding: 7,
           width: 30.w,
           height: 30.h,
-          decoration: const BoxDecoration(
-            color: AppColors.textColorDarkPrimary,
-            shape: BoxShape.circle,
-          ),
-          child: SvgPicture.asset(AssetsData.commentIcon).padAll(7),
         ),
       ],
     );
   }
 }
+

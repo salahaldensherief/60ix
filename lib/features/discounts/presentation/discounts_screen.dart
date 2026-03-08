@@ -5,15 +5,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ix/art_core/extensions/padding.dart';
 import 'package:ix/art_core/utils/app_strings.dart';
 import 'package:ix/art_core/utils/assets_data.dart';
+import 'package:ix/art_core/widgets/appbar/custom_app_bar.dart';
 import 'package:ix/art_core/widgets/appbar/home_app_bar.dart';
 import 'package:ix/features/discounts/presentation/widgets/explore_categories_widget.dart';
+import 'package:ix/features/discounts/presentation/widgets/filter_by_widget.dart';
 import 'package:ix/features/discounts/presentation/widgets/services_cards_grid_view.dart';
 import 'package:ix/features/discounts/presentation/widgets/categories_headline.dart';
 import 'package:ix/features/discounts/presentation/widgets/flash_deals_card.dart';
 import 'package:ix/features/discounts/presentation/widgets/search_widget.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-
 import '../../../art_core/utils/app_colors.dart';
+import 'filter_and_sort_screen.dart';
 
 class DiscountsScreen extends StatelessWidget {
   const DiscountsScreen({super.key});
@@ -21,84 +23,77 @@ class DiscountsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
-    final RefreshController _refreshController =
-    RefreshController(initialRefresh: false);
+    final RefreshController _refreshController = RefreshController(
+      initialRefresh: false,
+    );
     return Scaffold(
       appBar: HomeAppBar(),
-      body:SmartRefresher(
-        controller:_refreshController ,
-        child: CustomScrollView(
-          physics: BouncingScrollPhysics(),
-          slivers: [
-
-            SliverAppBar(
-              backgroundColor: AppColors.whiteColor,
-              expandedHeight: 105,
-              floating: false,
-              pinned: false,
-              flexibleSpace: const FlexibleSpaceBar(
-                background: SearchWidget(),
+      body:
+          // SmartRefresher(
+          //
+          //   controller: _refreshController,
+          //   child:
+          CustomScrollView(
+            physics: BouncingScrollPhysics(),
+            slivers: [
+              SliverAppBar(
+                backgroundColor: AppColors.whiteColor,
+                expandedHeight: 105,
+                floating: false,
+                pinned: false,
+                flexibleSpace: const FlexibleSpaceBar(
+                  background: SearchWidget(),
+                ),
               ),
-            ),
 
-            SliverToBoxAdapter(
-              child: CategoriesHeadline(
-                icon: AssetsData.flashDealsIcon,
-                name1: AppStrings.flash.tr(),
-                name2: AppStrings.deals.tr(),
-              ).padSymmetric(horizontal: 16),
-            ),
+              SliverToBoxAdapter(
+                child: CategoriesHeadline(
+                  icon: AssetsData.flashDealsIcon,
+                  name1: AppStrings.flash.tr(),
+                  name2: AppStrings.deals.tr(),
+                ).padSymmetric(horizontal: 16),
+              ),
 
-            SliverToBoxAdapter(child: SizedBox(height: 16.h)),
+              SliverToBoxAdapter(child: SizedBox(height: 16.h)),
 
-            SliverToBoxAdapter(
-              child: FlashDealsCard().padOnly(left: 16),
-            ),
+              SliverToBoxAdapter(child: FlashDealsCard().padOnly(left: 16)),
 
-            SliverToBoxAdapter(child: SizedBox(height: 16.h)),
+              SliverToBoxAdapter(child: SizedBox(height: 16.h)),
 
-            SliverToBoxAdapter(
-              child: CategoriesHeadline(
-                name1: AppStrings.explore.tr(),
-                name2: AppStrings.categories.tr(),
-                icon: AssetsData.exploreIcon,
-              ).padSymmetric(horizontal: 16),
-            ),
+              SliverToBoxAdapter(
+                child: CategoriesHeadline(
+                  name1: AppStrings.explore.tr(),
+                  name2: AppStrings.categories.tr(),
+                  icon: AssetsData.exploreIcon,
+                ).padSymmetric(horizontal: 16),
+              ),
 
-            SliverToBoxAdapter(child: SizedBox(height: 16.h)),
+              SliverToBoxAdapter(child: SizedBox(height: 16.h)),
 
-            SliverToBoxAdapter(
-              child: ExploreCategories().padOnly(left: 16),
-            ),
+              SliverToBoxAdapter(child: ExploreCategories().padOnly(left: 16)),
 
-            SliverToBoxAdapter(child: SizedBox(height: 16.h)),
+              SliverToBoxAdapter(child: SizedBox(height: 16.h)),
 
-            SliverToBoxAdapter(
-              child: _buildFilterWidgetAndResults(
-                theme,
-                    () {
-                  showModalBottomSheet(
-                    context: context,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(25),
-                      ),
+              SliverToBoxAdapter(
+                child: _buildFilterWidgetAndResults(theme, () {
+                  Navigator.of(context).push(
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          FilterAndSortScreen(),
                     ),
-                    builder: (context) => Container(),
                   );
-                },
-              ).padOnly(left: 16),
-            ),
+                }).padOnly(left: 16),
+              ),
 
-            SliverToBoxAdapter(child: SizedBox(height: 16.h)),
+              SliverToBoxAdapter(child: SizedBox(height: 16.h)),
 
-            SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: 16.w),
-              sliver: const ServicesCardsGridView(),
-            ),
-          ],
-        ),
-      ),
+              SliverPadding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                sliver: const ServicesCardsGridView(),
+              ),
+            ],
+          ),
+      // ),
     );
   }
 

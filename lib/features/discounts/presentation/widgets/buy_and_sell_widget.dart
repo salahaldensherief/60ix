@@ -21,7 +21,7 @@ class BuyAndSellWidget extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          AppStrings.buyAndSell.tr(),
+          AppStrings.buySell.tr(),
           style: theme.bodySmall?.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.primaryColor,

@@ -9,7 +9,6 @@ class AssetsData {
   static const facebookLogo = '$_pathIcons/facebook.svg';
   static const appleLogo = '$_pathIcons/apple.svg';
   static const appleLogoDark = '$_pathIcons /logos_apple_dark.svg';
-  static const backIcon = '$_pathIcons/Back Icon.svg';
   static const trueIcon = '$_pathIcons/Fill 6.svg';
   static const calendarIcon = '$_pathIcons/Calendar Icon.svg';
   static const translations = 'assets/translations';
@@ -29,5 +28,14 @@ class AssetsData {
   static const commentIcon = '$_pathIcons/comment.svg';
   static const horse2Image = '$_pathImages/horse2.png';
   static const vectorImage = '$_pathImages/Vector.svg';
+  static const mapIcon = '$_pathIcons/mapIcon.svg';
+  static const mapColorsIcon = '$_pathIcons/mapColors.svg';
+  static const personStarIcon = '$_pathIcons/personStar.svg';
   static const sortIcon = '$_pathIcons/sortIcon.svg';
+  static const allIcon = '$_pathIcons/All.svg';
+  static const reloadIcon = '$_pathIcons/reloadIcon.svg';
+  static const backIcon = '$_pathIcons/backICon.svg';
+  static const starIcon = '$_pathIcons/star.svg';
+  static const couponIcon = '$_pathIcons/copon.svg';
+  static const arrowIcon = '$_pathIcons/arrowIcon.svg';
 }

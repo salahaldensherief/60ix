@@ -19,6 +19,7 @@ class SignupView extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: CustomAppBar(
+          size: 60,
           subtitle: AppStrings.createAccountToContinueCourses.tr(),
           title: AppStrings.gettingStarted.tr(),
         ),

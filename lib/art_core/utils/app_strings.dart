@@ -1,7 +1,6 @@
 class AppStrings {
   AppStrings._();
 
-  // Auth & Onboarding
   static const String createAccount = 'createAccount';
   static const String letsSignIn = 'letsSignIn';
   static const String loginToContinueAccount = 'loginToContinueAccount';
@@ -12,8 +11,8 @@ class AppStrings {
   static const String email = 'email';
   static const String emailHint = 'emailHint';
 
-  static const String phoneNumber = 'phone_number';
-  static const String phoneNumberHint = 'phone_number_hint';
+  static const String phoneNumber = 'phoneNumber';
+  static const String phoneNumberHint = 'phoneNumberHint';
 
   static const String password = 'password';
   static const String passwordHint = 'passwordHint';
@@ -87,12 +86,11 @@ class AppStrings {
   static const String agree = 'agree';
   static const String terms = 'terms';
 
-  // Validation
   static const String phoneRequired = 'phoneRequired';
   static const String phoneInvalid = 'phoneInvalid';
   static const String passwordRequired = 'passwordRequired';
   static const String passwordInvalid = 'passwordInvalid';
-  static const String passwordTooShort = 'password_too_short';
+  static const String passwordTooShort = 'passwordTooShort';
   static const String nameRequired = 'nameRequired';
   static const String nameTooShort = 'nameTooShort';
   static const String emailRequired = 'emailRequired';
@@ -103,31 +101,31 @@ class AppStrings {
 
   static const String loading = 'loading';
 
-  // Home & Dashboard
   static const String discounts = 'discounts';
-  static const String hiUser = 'hi_user'; // منفصل {name}
-  static const String location = 'location'; // منفصل {city}, {country}
-  static const String searchHint = 'search_hint';
+  static const String hiUser = 'hiUser';
+  static const String location = 'location';
+  static const String searchHint = 'searchHint';
 
   static const String flash = 'flash';
   static const String deals = 'deals';
 
-  static const String veterinaryCare = 'veterinary_care';
-  static const String animalCareCenter = 'animal_care_center';
-  static const String buyAndSell = 'buy_sell';
-  static const String getDiscount = 'get_discount';
-  static const String percentOff = 'percent_off'; // منفصل {percent}
+  static const String veterinaryCare = 'veterinaryCare';
+  static const String animalCareCenter = 'animalCareCenter';
+  static const String buySell = 'buySell';
+  static const String getDiscount = 'getDiscount';
+  static const String percentOff = 'percentOff';
 
   static const String explore = 'explore';
   static const String categories = 'categories';
 
-  static const String equestrianTraining = 'equestrian_training';
-  static const String horseBackRiding = 'horse_back_riding';
+  static const String equestrianTraining = 'equestrianTraining';
+  static const String horseBackRiding = 'horseBackRiding';
   static const String safari = 'safari';
-  static const String freeRide = 'free_ride';
-  static const String horseFeeding = 'horse_feeding';
+  static const String freeRide = 'freeRide';
+  static const String horseFeeding = 'horseFeeding';
 
-  static const String filterSort = 'filter_sort';
-  static const String results = 'results'; // منفصل {count}
-  static const String rating = 'rating'; // منفصل {rating}
+  static const String filterSort = 'filterSort';
+  static const String results = 'results';
+  static const String rating = 'rating';
+  static const String filterByCategory = 'filterByCategory';
 }
