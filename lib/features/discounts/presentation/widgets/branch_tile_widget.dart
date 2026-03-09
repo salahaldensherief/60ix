@@ -25,7 +25,6 @@ class BranchTileWidget extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
         decoration: BoxDecoration(
-
           color: AppColors.textFieldLightFillColor,
           borderRadius: BorderRadius.circular(24.r),
         ),
@@ -41,10 +40,12 @@ class BranchTileWidget extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: Center(
-                child: SvgPicture.asset(AssetsData.mapIcon,color:  isSelected
-                    ?  AppColors.whiteColor
-                    : AppColors.colorBtnSecondaryLabel, ),
-
+                child: SvgPicture.asset(
+                  AssetsData.mapIcon,
+                  color: isSelected
+                      ? AppColors.whiteColor
+                      : AppColors.colorBtnSecondaryLabel,
+                ),
               ),
             ),
 
@@ -67,7 +68,6 @@ class BranchTileWidget extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-
                     ],
                   ),
                   SizedBox(height: 3.h),
@@ -87,7 +87,6 @@ class BranchTileWidget extends StatelessWidget {
               ),
             ),
 
-
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -101,23 +100,28 @@ class BranchTileWidget extends StatelessWidget {
                         : AppColors.whiteColor,
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: isSelected                     ? AppColors.greenColor
-                      :Colors.grey.shade300,
+                      color: isSelected
+                          ? AppColors.greenColor
+                          : Colors.grey.shade300,
                       width: 2,
-                    )
+                    ),
                   ),
                   child: isSelected
                       ? Center(
-                    child: Icon(Icons.check,size: 10.sp,color: AppColors.whiteColor,),
-                  )
+                          child: Icon(
+                            Icons.check,
+                            size: 10.sp,
+                            color: AppColors.whiteColor,
+                          ),
+                        )
                       : null,
                 ),
-                SizedBox(height: 5,),
+                SizedBox(height: 5),
                 Text(
                   '${branch.price.toStringAsFixed(2)} SAR',
                   style: TextStyle(
                     fontSize: 12.sp,
-                    color: Colors.grey.shade600,
+                    color: isSelected ? AppColors.primaryColor: Colors.grey.shade600,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
